@@ -9,6 +9,7 @@ function App() {
     <Router>
       <Switch>
         <PrivatePage exact Component={Page.HomePage} path="/" />
+        <PrivatePage exact Component={Page.AddProduct} path="/add" />
 
         <Route exact path="/login">
           <Route component={Page.LoginPage} />
