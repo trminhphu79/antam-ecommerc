@@ -1,0 +1,28 @@
+.Header {
+    max-width: calc(100% - 360px);
+    justify-content: space-between;
+    margin: 0 auto;
+    .header-logo {
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 4px;
+        }
+        flex: 2;
+    }
+    .header-search {
+
+        width: 100%;
+        input {
+            border-radius: 4px;
+            height: 35px;
+            outline: none;
+        width: 100%;
+            border: 1px solid #333;
+        }
+        flex:1;
+    }
+    .header-contact {
+
+    }
+}

@@ -8,6 +8,7 @@ const pages = {
   HomePage,
   LoginPage,
   AddProduct,
+  
 };
 
 export default pages;
