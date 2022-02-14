@@ -5,8 +5,10 @@ import { Link, useHistory } from "react-router-dom";
 import { logoutAction } from "core/redux/actions/userActions";
 import { getList, removeById } from "app/const/firebase";
 import { deleteAction } from "core/redux/actions/productActions";
+import { ProductList } from "app/page/home/product-list";
+import { Slide } from "app/page/home/slide";
 
-function HomePage() {
+const HomePage = () => {
   const [listProduct, setListProduct] = useState([]);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -22,41 +24,35 @@ function HomePage() {
       });
   }, []);
 
-  const handleLogout = () => {
-    dispatch(logoutAction());
-    history.push("/login");
-  };
-
-  const handleDelete = (id) => {
-    removeById("product", id)
-      .then(() => {
-        let result = [...listProduct];
-        const index = result.findIndex((y) => y.id === id);
-
-        if (index !== -1) {
-          result.splice(index, 1);
-        }
-
-        setListProduct(result);
-        dispatch(deleteAction(id));
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
-  };
-
   return (
     <>
-      <div className="container py-5 text-center">
-        <h1 className="mb-5">Danh sách</h1>
+
+      <div className="d-flex justify-content-between">
+        <main className="Home">
+          <Slide />
+          Code những component có view thay đổi ở đây, còn lại giữ nguyên các  thẻ navbar footer header..
+          <ProductList />
+        </main>
+
+      </div>
+    </>
+  );
+}
+
+export default HomePage;
+
+
+
+{/* <div className="container py-5 text-center"> */ }
+{/* <h1 className="mb-5">Danh sách</h1>
 
         <div className="my-3">
-          <Link className="btn btn-success" to="/add">
+         <Link className="btn btn-success" to="/add">
             Thêm SP
-          </Link>
-        </div>
+          </Link> 
+        </div> */}
 
-        <div className="row my-5">
+{/* <div className="row my-5">
           {listProduct?.map((product, index) => {
             return (
               <div className="col-3 col-md-6 col-lg-3" key={index}>
@@ -86,14 +82,36 @@ function HomePage() {
               </div>
             );
           })}
-        </div>
+        </div> */}
 
-        <button className="btn btn-danger" onClick={handleLogout}>
+{/* <button className="btn btn-danger" onClick={handleLogout}>
           Fake Logout
-        </button>
-      </div>
-    </>
-  );
-}
+        </button> */}
+{/* </div> */ }
 
-export default HomePage;
+
+
+
+
+  // const handleLogout = () => {
+  //   dispatch(logoutAction());
+  //   history.push("/login");
+  // };
+
+  // const handleDelete = (id) => {
+  //   removeById("product", id)
+  //     .then(() => {
+  //       let result = [...listProduct];
+  //       const index = result.findIndex((y) => y.id === id);
+
+  //       if (index !== -1) {
+  //         result.splice(index, 1);
+  //       }
+
+  //       setListProduct(result);
+  //       dispatch(deleteAction(id));
+  //     })
+  //     .catch((error) => {
+  //       console.log("error", error);
+  //     });
+  // };
