@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-
 import { logoutAction } from "core/redux/actions/userActions";
 import { getList, removeById } from "app/const/firebase";
 import { deleteAction } from "core/redux/actions/productActions";
-import { ProductList } from "app/page/home/product-list";
 import { Slide } from "app/page/home/slide";
-
+import { Product } from "app/page/home/product-list";
 const HomePage = () => {
   const [listProduct, setListProduct] = useState([]);
   const dispatch = useDispatch();
@@ -28,10 +26,9 @@ const HomePage = () => {
     <>
 
       <div className="d-flex justify-content-between">
-        <main className="Home">
-          <Slide />
-          Code những component có view thay đổi ở đây, còn lại giữ nguyên các  thẻ navbar footer header..
-          <ProductList />
+        <main className="Home container">
+
+          <Product />
         </main>
 
       </div>

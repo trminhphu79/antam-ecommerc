@@ -7,6 +7,7 @@ export const Header = () => {
         </div>
         <div className="header-search">
             <input type="search" placeholder="" />
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div className="header-contact">
             <span>033.9841.31</span>
