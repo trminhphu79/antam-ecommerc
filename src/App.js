@@ -7,7 +7,7 @@ import { PrivatePage } from "./HOC/privatePage";
 import { Footer } from "app/components/footer";
 import { Product } from "app/page/product";
 import { Contact } from "app/page/contact";
-
+import { ProductDetail} from "app/page/product-detail";
 function App() {
   return (
     <Router>
@@ -24,6 +24,9 @@ function App() {
         </Route>
         <Route path="/san-pham">
           <Product />
+        </Route>
+        <Route path="/chi-tiet-san-pham">
+          <ProductDetail />
         </Route>
         <Route path="*">
           <Switch>
