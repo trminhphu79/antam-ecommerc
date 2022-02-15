@@ -26,7 +26,6 @@ const HomePage = () => {
 
   return (
     <>
-
       <div className="d-flex justify-content-between">
         <main className="Home">
           <Slide />
