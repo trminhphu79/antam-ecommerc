@@ -1,8 +1,8 @@
 import React from "react";
+import { phoneNumber } from "app/page/contact";
 import "./Header.scss";
 
 export const Header = () => {
-  const phoneNumber = "0865328664";
 
   return (
     <header className="header">
