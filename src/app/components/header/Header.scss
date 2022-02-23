@@ -1,28 +1,105 @@
-.Header {
-    max-width: calc(100% - 360px);
-    justify-content: space-between;
-    margin: 0 auto;
-    .header-logo {
-        img {
-            width: 80px;
-            height: 80px;
-            border-radius: 4px;
-        }
-        flex: 2;
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  margin: 41px 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    position: relative;
+    width: 180px;
+    &-name {
+      position: absolute;
+      top: 36.3px;
+      left: 34.3px;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--text-color);
     }
-    .header-search {
-
+  }
+  &-wrapper {
+    display: flex;
+    .header__search {
+      display: flex;
+      align-items: center;
+      width: 580px;
+      height: 50px;
+      margin-right: 40px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0px 7px 50px rgba(0, 0, 0, 0.05);
+      border-radius: 30px;
+      &-control {
         width: 100%;
-        input {
-            border-radius: 4px;
-            height: 35px;
-            outline: none;
-        width: 100%;
-            border: 1px solid #333;
-        }
-        flex:1;
+        height: 100%;
+        font-size: 1.4rem;
+        border: none;
+        outline: none;
+      }
+      &-icon {
+        cursor: pointer;
+        margin-left: 15px;
+      }
+      &:hover {
+        border: 1px solid var(--primary-color);
+      }
     }
-    .header-contact {
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    &-icon {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+    }
+    &-number {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--text-color);
+    }
+  }
+}
 
+
+
+
+/* Responsive */
+
+// Mobile: width < 740px 
+@media (max-width: 46.1875em) {
+  .header {
+    margin: 16px 16px 0;
+    &__logo {
+      margin-right: 16px;
+      &-name {
+        display: none;
+      }
     }
+    .header__search {
+      width: 274px;
+      margin-right: 18px;
+    }
+    &__contact-number {
+      display: none;
+    }
+    &__contact-icon {
+      margin-right: unset;
+    }
+  }
+}
+
+// Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .header {
+    &__logo-name {
+      display: none;
+    }
+    .header__search {
+      width: 350px;
+    }
+  }
 }

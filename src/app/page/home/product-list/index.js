@@ -46,10 +46,10 @@ const productList = [
 ]
 export const Product = () => {
 
-    return <div className="Product">
+    return <div className="container Product">
         <div className="row ">
-            {productList.map((product) =>
-                <ProductChild data={product} />
+            {productList.map((product, index) =>
+                <ProductChild key={index} data={product} />
             )}
         </div>
     </div>
