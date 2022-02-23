@@ -1,6 +1,9 @@
 import React from "react";
 import "./Header.scss";
+
 export const Header = () => {
+  const phoneNumber = "0865328664";
+
   return (
     <header className="header">
       <div className="header__logo">
@@ -75,7 +78,7 @@ export const Header = () => {
             </svg>
           </i>
         </div>
-        <div className="header__contact">
+        <a href={"tel:" + phoneNumber} className="header__contact">
           <i className="header__contact-icon">
             <svg
               viewBox="0 0 22 22"
@@ -90,8 +93,8 @@ export const Header = () => {
               />
             </svg>
           </i>
-          <p className="header__contact-number">0865328664</p>
-        </div>
+          <p className="header__contact-number">{phoneNumber}</p>
+        </a>
       </div>
     </header>
   );
