@@ -15,14 +15,12 @@ function App() {
   
   return (
     <Router>
-      <main id="main">
-        <Header />
-        <Navbar />
-        <div className="content">
-          <Switch>
-            <PrivatePage exact Component={Page.HomePage} path="/" />
-            <PrivatePage exact Component={Page.AddProduct} path="/add" />
-            {/* <Route exact path="/login">
+      <Header />
+      <Navbar />
+      <Switch>
+        <PrivatePage exact Component={Page.HomePage} path="/" />
+        <PrivatePage exact Component={Page.AddProduct} path="/add" />
+        {/* <Route exact path="/login">
           <Route component={Page.LoginPage} />
         </Route> */}
         <Route path="/lien-he">
