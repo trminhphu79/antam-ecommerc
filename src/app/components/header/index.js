@@ -4,8 +4,19 @@ import "./Header.scss";
 
 export const Header = () => {
 
+  const useState = React.useState;
+  const [sticky, setSticky] = useState("");
+  window.addEventListener("scroll", () => {
+    const scrolled = window.scrollY;
+    if(scrolled > 0) {
+      setSticky(" sticky");
+    } else {
+      setSticky("");
+    }
+  });
+
   return (
-    <header className="header">
+    <header className={"header" + sticky}>
       <div className="header__logo">
         <span>
           <svg

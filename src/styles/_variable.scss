@@ -1,40 +1,49 @@
 :root {
-    --primary-color: #FF477E;
-    --white-color: #fff;
-    --text-color: #252D2E;
+  --primary-color: #ff477e;
+  --white-color: #fff;
+  --text-color: #4d4d4d;
 
-    --navbar-width: 140px;
-    --navbar-height-mobile: 64px;
+  --navbar-width: 140px;
+  --navbar-height-mobile: 64px;
 }
 
 body {
-    background-color: #f9f9f9;
-    padding: 20px;
+  background: #f9f9f9;
 }
 
-#main {
-    background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20%20%20%20%20%20width%3D%22491%22%0A%20%20%20%20%20%20%20%20height%3D%222045%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%20491%202045%22%0A%20%20%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%2359C3FF%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22white%22%0A%20%20%20%20%20%20%20%20%20%20fill-opacity%3D%220.8%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    height: 100%;
+// Background Page
+.background-page {
+  background: #f9f9f9;
+  background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20%20%20%20%20%20width%3D%22491%22%0A%20%20%20%20%20%20%20%20height%3D%222045%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%20491%202045%22%0A%20%20%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%2359C3FF%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22white%22%0A%20%20%20%20%20%20%20%20%20%20fill-opacity%3D%220.8%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E");
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+  padding: 140px 160px 120px 140px;
 }
 
-.content {
-    padding: 140px;
+.background-page.contact {
+  background: #f9f9f9;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221408%22%20height%3D%22580%22%20viewBox%3D%220%200%201408%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22704%22%20cy%3D%22290%22%20rx%3D%22704%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 79px bottom -223px;
 }
+
+
+
+
 
 /* Responsive */
 
-// Mobile: width < 740px 
+// Mobile: width < 740px
 @media (max-width: 46.1875em) {
-    body {
-        padding: 0 16px 0;
-    }
+  // Background Page
+  .background-page {
+    background-image: unset;
+    padding: 90px 16px 140px;
+  }
 
-    #main {
-        background-image: unset;
-    }
-
-    .content {
-        padding: 87px 0 140px;
-    }
+  .background-page.contact {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22566%22%20height%3D%22580%22%20viewBox%3D%220%200%20566%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22283%22%20cy%3D%22290%22%20rx%3D%22283%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center bottom -137px;
+  }
 }

@@ -23,7 +23,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div className="background-page">
 
       <div className="d-flex justify-content-between">
         <main className="Home container">
@@ -32,7 +32,7 @@ const HomePage = () => {
         </main>
 
       </div>
-    </>
+    </div>
   );
 }
 
