@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <ul className="navbar__list">
-        <li className="navbar__item active">
+        <Link to={"/"} className="navbar__item active">
           <i className="navbar__item-icon">
             <svg
               width="24"
@@ -32,8 +32,8 @@ export const Navbar = () => {
             </svg>
           </i>
           <p className="navbar__item-name">Trang chủ</p>
-        </li>
-        <li className="navbar__item">
+        </Link>
+        <Link to={"/san-pham"} className="navbar__item">
           <i className="navbar__item-icon">
             <svg
               width="24"
@@ -63,8 +63,8 @@ export const Navbar = () => {
             </svg>
           </i>
           <p className="navbar__item-name">Sản phẩm</p>
-        </li>
-        <li className="navbar__item">
+        </Link>
+        <Link to={"/lien-he"} className="navbar__item">
           <i className="navbar__item-icon">
             <svg
               width="24"
@@ -97,7 +97,7 @@ export const Navbar = () => {
             </svg>
           </i>
           <p className="navbar__item-name">Liên hệ</p>
-        </li>
+        </Link>
       </ul>
     </nav>
   );
