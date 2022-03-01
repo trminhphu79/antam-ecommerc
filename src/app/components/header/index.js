@@ -1,10 +1,10 @@
 import React from "react";
+import { useState } from "react";
 import { phoneNumber } from "app/page/contact";
 import "./Header.scss";
 
 export const Header = () => {
 
-  const useState = React.useState;
   const [sticky, setSticky] = useState("");
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;

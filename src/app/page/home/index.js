@@ -5,11 +5,13 @@ import { logoutAction } from "core/redux/actions/userActions";
 import { getList, removeById } from "app/const/firebase";
 import { deleteAction } from "core/redux/actions/productActions";
 import { Slide } from "app/page/home/slide";
-import { Product } from "app/page/home/product-list";
+import ProductContainer from "../products/productContainer";
+import { getProducts } from "../server/productChaillo";
 const HomePage = () => {
   const [listProduct, setListProduct] = useState([]);
   const dispatch = useDispatch();
   const history = useHistory();
+  const products = getProducts();
 
   useEffect(() => {
     getList("product")
@@ -24,32 +26,28 @@ const HomePage = () => {
 
   return (
     <div className="background-page">
-
-      <div className="d-flex justify-content-between">
-        <main className="Home container">
-
-          <Product />
-        </main>
-
-      </div>
+      <ProductContainer products={products} />
     </div>
   );
-}
+};
 
 export default HomePage;
 
-
-
-{/* <div className="container py-5 text-center"> */ }
-{/* <h1 className="mb-5">Danh sách</h1>
+{
+  /* <div className="container py-5 text-center"> */
+}
+{
+  /* <h1 className="mb-5">Danh sách</h1>
 
         <div className="my-3">
          <Link className="btn btn-success" to="/add">
             Thêm SP
           </Link> 
-        </div> */}
+        </div> */
+}
 
-{/* <div className="row my-5">
+{
+  /* <div className="row my-5">
           {listProduct?.map((product, index) => {
             return (
               <div className="col-3 col-md-6 col-lg-3" key={index}>
@@ -79,36 +77,37 @@ export default HomePage;
               </div>
             );
           })}
-        </div> */}
+        </div> */
+}
 
-{/* <button className="btn btn-danger" onClick={handleLogout}>
+{
+  /* <button className="btn btn-danger" onClick={handleLogout}>
           Fake Logout
-        </button> */}
-{/* </div> */ }
+        </button> */
+}
+{
+  /* </div> */
+}
 
+// const handleLogout = () => {
+//   dispatch(logoutAction());
+//   history.push("/login");
+// };
 
+// const handleDelete = (id) => {
+//   removeById("product", id)
+//     .then(() => {
+//       let result = [...listProduct];
+//       const index = result.findIndex((y) => y.id === id);
 
+//       if (index !== -1) {
+//         result.splice(index, 1);
+//       }
 
-
-  // const handleLogout = () => {
-  //   dispatch(logoutAction());
-  //   history.push("/login");
-  // };
-
-  // const handleDelete = (id) => {
-  //   removeById("product", id)
-  //     .then(() => {
-  //       let result = [...listProduct];
-  //       const index = result.findIndex((y) => y.id === id);
-
-  //       if (index !== -1) {
-  //         result.splice(index, 1);
-  //       }
-
-  //       setListProduct(result);
-  //       dispatch(deleteAction(id));
-  //     })
-  //     .catch((error) => {
-  //       console.log("error", error);
-  //     });
-  // };
+//       setListProduct(result);
+//       dispatch(deleteAction(id));
+//     })
+//     .catch((error) => {
+//       console.log("error", error);
+//     });
+// };
