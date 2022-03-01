@@ -5,7 +5,7 @@ import { Header } from "app/components/header";
 import { Navbar } from "app/components/navbar";
 import { PrivatePage } from "./HOC/privatePage";
 import { Footer } from "app/components/footer";
-import { Product } from "app/page/product";
+import  Product  from "app/page/products/product";
 import { Contact } from "app/page/contact";
 import { ProductDetail} from "app/page/product-detail";
 function App() {
