@@ -11,6 +11,8 @@ class Products extends Component {
         products : getProducts(), 
         pageSize : 8 , 
         currentPage : 1 , 
+        sortProduct : { path : 'priceHight' , order : 'asc' },
+        selectedBtn : true ,
     }
 
     handlePageChange = (page) => {
@@ -18,14 +20,16 @@ class Products extends Component {
     }
 
     render() { 
-        const { products , currentPage , pageSize} = this.state ;
+        const { products , currentPage , pageSize , sortProduct} = this.state ;
         const { length : itemsCount } = products ; 
 
         const allProduct = paginate(products,currentPage,pageSize) ;
         
         return (
             <div className="product">
-                <Filter />
+                <Filter 
+                    sortProduct={sortProduct}
+                />
                 <ProductContainer 
                     products={allProduct}
                     itemsCount={itemsCount}
