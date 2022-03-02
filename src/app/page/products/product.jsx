@@ -15,8 +15,32 @@ class Products extends Component {
         selectedBtn : true ,
     }
 
+    buttons = {
+        priceAsc : {
+            name: 'price-asc' , 
+            path : 'priceHight' , 
+        },
+        priceDesc : {
+            name: 'price-desc' , 
+            path : 'priceHight' , 
+        },
+        titleAsc : {
+            name: 'title-asc' , 
+            path : 'title' , 
+        },
+        titleDesc : {
+            name: 'title-desc' , 
+            path : 'title' ,
+        },
+        
+    }
+
     handlePageChange = (page) => {
         this.setState({ currentPage : page }) ; 
+    }
+
+    handleSortProduct = (path) =>{
+
     }
 
     render() { 
@@ -29,6 +53,7 @@ class Products extends Component {
             <div className="product">
                 <Filter 
                     sortProduct={sortProduct}
+                    buttons={this.buttons}
                 />
                 <ProductContainer 
                     products={allProduct}
