@@ -12,7 +12,7 @@ import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 
 function App() {
-  
+
   return (
     <Router>
       <Header />

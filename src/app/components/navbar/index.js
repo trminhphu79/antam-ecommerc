@@ -5,11 +5,14 @@ import { listItemNavbar } from "./data/list-item-navbar";
 
 export const Navbar = () => {
 
-  /* Logic active navbar item */
-  const [active, setActive] = useState(1);
+  const localPathName = window.location.pathname;
 
-  const CurrentActive = (id) => {
-    if(active === id) {
+
+  /* Logic active navbar item */
+  const [active, setActive] = useState(localPathName);
+
+  const CurrentActive = (pathLink) => {
+    if(active === pathLink) {
       return " active"
     } else {
       return '';
@@ -23,8 +26,8 @@ export const Navbar = () => {
           <Link
            key={item.id} 
            to={item.link} 
-           className={"navbar__item " + (CurrentActive(item.id))} 
-           onClick={() => setActive(item.id)} >
+           className={"navbar__item " + (CurrentActive(item.link))} 
+           onClick={() => setActive(item.link)} >
             <i className="navbar__item-icon">{item.icon}</i>
             <p className="navbar__item-name">{item.itemName}</p>
           </Link>
