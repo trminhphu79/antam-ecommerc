@@ -137,7 +137,7 @@ html{
 .product-form form .input-group input{
     font-size: 1.6rem ; 
     padding: 1.2rem ; 
-    border-radius: 3rem ; 
+    border-radius: 3rem !important; 
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
     border: none ; 
     background: #fff ; 
