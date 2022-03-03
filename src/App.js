@@ -5,9 +5,10 @@ import { Header } from "app/components/header";
 import { Navbar } from "app/components/navbar";
 import { PrivatePage } from "./HOC/privatePage";
 import { Footer } from "app/components/footer";
-import  Product  from "app/page/products/product";
+import  Product  from "./app/page/products/product";
+import Home from './app/page/home/home' ; 
+import ProductDetail from './app/page/productDetail/productDetail' ; 
 import { Contact } from "app/page/contact";
-import { ProductDetail} from "app/page/product-detail";
 function App() {
   return (
     <Router>
@@ -19,13 +20,16 @@ function App() {
         {/* <Route exact path="/login">
           <Route component={Page.LoginPage} />
         </Route> */}
+        <Route path="/home">
+          <Home />
+        </Route>
         <Route path="/lien-he">
           <Contact />
         </Route>
         <Route path="/san-pham">
           <Product />
         </Route>
-        <Route path="/chi-tiet-san-pham">
+        <Route path="/product-detail">
           <ProductDetail />
         </Route>
         <Route path="*">
