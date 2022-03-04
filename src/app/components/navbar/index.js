@@ -1,10 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
-import {
-    BrowserRouter as Router,
-   
-    Link
-  } from "react-router-dom";
   
 export const Navbar = () => {
     return <div className="Navbar">
@@ -13,10 +9,10 @@ export const Navbar = () => {
                 <Link to="/">Trang chủ</Link>
             </li>
             <li>
-                <Link to="/san-pham">Sản phẩm</Link>
+                <Link to="/product">Sản phẩm</Link>
             </li>
             <li>
-                <Link to="/lien-he">Liên hệ</Link>
+                <Link to="/contact">Liên hệ</Link>
             </li>
         </ul>
     </div>

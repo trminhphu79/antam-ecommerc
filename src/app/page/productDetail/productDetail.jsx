@@ -22,14 +22,18 @@ class ProductDetail extends Component {
     }
 
     render() {
+        const { match , history } = this.props ;
         const { forms } = this.state ; 
-
+        console.log( match , history ) ; 
         return (
             <React.Fragment>
-                <ProductContent />
+                <ProductContent 
+                    match={match}
+                />
                 <ProductForm 
                     forms={forms} 
-                    onSubmit={this.handleSubmit}       
+                    onSubmit={this.handleSubmit}
+                    history={history}       
                 />
             </React.Fragment>
         );

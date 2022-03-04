@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../fakeServer/image-temp/image.png'
 
-const ProductContent = () => {
+const ProductContent = ({ match }) => {
     return (
         <div className='row product-content' image="true">
             <div className='image col-lg-6  col-md-6 col-xs-12'>
@@ -11,7 +11,7 @@ const ProductContent = () => {
             </div>
             <div className="content col-lg-6 col-md-6 col-xs-12">
                 <div className='wrapper'>
-                    <h2>chai Lo Acid</h2>
+                    <h2>{match.params._id}</h2>
                     <p>When we strive to become better than we are, 
                         everything around us becomes better, too.There is only one 
                         thing that makes a dream impossible to achieve: the fear of failure

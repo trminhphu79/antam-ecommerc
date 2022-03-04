@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from './form';
-import { getValue } from './getFormValue' ; 
+import { getValue } from '../utils/getFormValue' ; 
 import image from '../fakeServer/image-temp/image.png';
 
 class ProductForm extends Component {
@@ -8,6 +8,7 @@ class ProductForm extends Component {
     raiseFormValue = () => {    
         const values = getValue() ; 
         this.props.onSubmit(values) ; 
+        this.props.history.replace('/product') ; 
     }
 
     render() {

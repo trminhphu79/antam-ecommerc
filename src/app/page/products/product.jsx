@@ -7,7 +7,7 @@ import { getProducts } from '../fakeServer/productChaillo';
 import { paginate } from '../utils/paginate' ; 
 import _ from 'lodash'
 
-class Products extends Component {
+class Product extends Component {
     state = {
         products : getProducts(), 
         pageSize : 8 , 
@@ -77,4 +77,4 @@ class Products extends Component {
     }
 }
  
-export default Products;
+export default Product;
