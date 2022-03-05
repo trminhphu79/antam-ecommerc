@@ -4,7 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { logoutAction } from "core/redux/actions/userActions";
 import { getList, removeById } from "app/const/firebase";
 import { deleteAction } from "core/redux/actions/productActions";
-import { Slide } from "app/page/home/slide";
+import { Slide } from "./slide";
 import ProductContainer from "../products/productContainer";
 import { getProducts } from "../server/productChaillo";
 const HomePage = () => {
@@ -26,6 +26,9 @@ const HomePage = () => {
 
   return (
     <div className="background-page">
+      <Slide 
+      products={products}
+      productsSize={3} />
       <ProductContainer products={products} />
     </div>
   );

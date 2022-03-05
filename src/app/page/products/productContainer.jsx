@@ -9,7 +9,7 @@ const ProductContainer = (props) => {
         pageSize , 
         itemsCount,
         onPageChange } = props;
-
+        
     return ( 
         <div className="product-container">
             <ListProduct products={allProduct} />
