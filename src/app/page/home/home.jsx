@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import { Route } from "react-router-dom";
 import ListProduct from "../common/listProduct";
 import Pagination from "../common/pagination";
-import HomeSlide from "./homeSlide" ; 
+import HomeSlide from "./homeSlide";
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
 import "bootstrap/dist/css/bootstrap.css";

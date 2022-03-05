@@ -15,7 +15,7 @@ const HomeSlide = () => {
           <p>
           Lancome Glass Dòng Mỹ Phẩm MD Pore Therapy 148ml là dòng toner cao cấp dưỡng da, sản phẩm đến từ thương hiệu Obagi nổi tiếng của Mỹ. Toner BHA Obagi 148ml hỗ trợ làm sạch sâu, hỗ trợ thu nhỏ lỗ chân lông, hỗ trợ da khỏe mạnh và rạng rỡ hơn.
           </p>
-          <button className="btn">Xem chi tiết</button>
+          <a className="btn">Xem chi tiết {`>`}</a>
         </div>
       </div>
     </div>
