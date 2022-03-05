@@ -3,7 +3,7 @@ import { Redirect, Route } from "react-router-dom";
 import { KEY_TOKEN } from "app/const/App";
 
 export const PrivatePage = ({ Component, ...restProps }) => {
-  // const isLogined = localStorage.getItem(KEY_TOKEN);
+  const isLogined = localStorage.getItem(KEY_TOKEN);
 
   return (
     <Route
@@ -11,7 +11,11 @@ export const PrivatePage = ({ Component, ...restProps }) => {
       render={(propsRoute) => {
         return (
           <>
+            {isLogined ? (
               <Component {...propsRoute} />
+            ) : (
+              <Redirect to="/login" />
+            )}
           </>
         );
       }}
