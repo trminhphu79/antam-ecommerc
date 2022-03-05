@@ -35,11 +35,11 @@ html {
 .btn:focus {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, var(--primary), var(--primary));
 }
-
+/* 
 .home-below {
     width: 88%;
     margin: 3.6rem auto;
-}
+} */
 
 .home-below h2 {
     font-size: 3.4rem;

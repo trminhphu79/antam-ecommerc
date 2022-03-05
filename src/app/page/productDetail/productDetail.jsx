@@ -26,7 +26,7 @@ class ProductDetail extends Component {
         const { forms , products } = this.state ; 
 
         return (
-            <React.Fragment>
+            <div className="background-page">
                 <ProductContent 
                     id={match.params._id}
                     products={products}
@@ -36,7 +36,7 @@ class ProductDetail extends Component {
                     onSubmit={this.handleSubmit}
                     history={history}       
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

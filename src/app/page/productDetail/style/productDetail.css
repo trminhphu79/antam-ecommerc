@@ -44,8 +44,8 @@ html{
     display: flex  ; 
     flex: 1 1 40rem ;
     flex-wrap: wrap ;
-    width: calc(100% - 32rem ) ; 
-    margin: 12rem auto ; 
+    /* width: calc(100% - 32rem ) ; 
+    margin: 12rem auto ;  */
 }
 
 
@@ -100,9 +100,8 @@ html{
 .product-form{
     display: flex ; 
     flex-wrap: wrap-reverse ;
-    width: calc(100% - 32rem) ; 
-    margin: 0 auto ; 
     background: #F9F9F9 ; 
+    border-radius: 1.2rem ; 
 }
 
 #form-section{

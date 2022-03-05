@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { listItemNavbar } from "./list-item-navbar";
+import { listItemNavbar } from "./data/list-item-navbar";
 import "./Navbar.scss";
 
 export const Navbar = () => {
@@ -18,17 +18,17 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <ul className="navbar__list">
+    <nav className="navbar1">
+      <ul className="navbar1__list">
         {listItemNavbar.map((item) => (
           <Link
             key={item.id}
             to={item.link}
-            className={"navbar__item " + CurrentActive(item.link)}
+            className={"navbar1__item " + CurrentActive(item.link)}
             onClick={() => setActive(item.link)}
           >
-            <i className="navbar__item-icon">{item.icon}</i>
-            <p className="navbar__item-name">{item.itemName}</p>
+            <i className="navbar1__item-icon">{item.icon}</i>
+            <p className="navbar1__item-name">{item.itemName}</p>
           </Link>
         ))}
       </ul>

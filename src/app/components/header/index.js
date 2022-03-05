@@ -1,34 +1,38 @@
 import React from "react";
 import { useState } from "react";
-// import { phoneNumber } from "app/page/contact";
-import { icons } from "../assets/icons/icons-svg";
+import { phoneNumber } from "app/page/contact";
+import { icons } from "assets/icons/icons-svg";
 import "./Header.scss";
 
 export const Header = () => {
+
   /* Logic scroll show background header */
   const [sticky, setSticky] = useState("");
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
-    if (scrolled > 0) {
+    if(scrolled > 0) {
       setSticky(" sticky");
     } else {
       setSticky("");
     }
   });
 
+
   /* Logic toggle SearchBar */
-  const [open, setOpen] = useState("");
+  const [open, setOpen] = useState('')
 
   const HandleSearchBar = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth < 740) {
-      if (open === "") {
-        setOpen(" open");
-      } else {
-        setOpen("");
+    if(screenWidth < 740) {
+      if(open === '') {
+        setOpen(" open")
+      }
+      else {
+        setOpen("")
       }
     }
-  };
+    
+  }
 
   return (
     <header className={"header" + sticky}>
@@ -83,9 +87,11 @@ export const Header = () => {
             {icons.iconSearch}
           </i>
         </div>
-        <a href={"tel: 0333333333" } className="header__contact">
-          <i className="header__contact-icon">{icons.iconPhone}</i>
-          <p className="header__contact-number">03333333333</p>
+        <a href={"tel:" + phoneNumber} className="header__contact">
+          <i className="header__contact-icon">
+            {icons.iconPhone}
+          </i>
+          <p className="header__contact-number">{phoneNumber}</p>
         </a>
       </div>
     </header>
