@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { Header } from "app/components/header";
+import { Header } from "app/components/header/header";
 import { Navbar } from "app/components/navbar";
 import { Footer } from "app/components/footer";
 import Product from "./app/page/products/product";

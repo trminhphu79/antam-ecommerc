@@ -59,7 +59,7 @@ class Product extends Component {
     const allProduct = paginate(sorted, currentPage, pageSize);
 
     return (
-      <div className="product">
+      <div className="background-page product">
         <Filter
           sortProduct={sortProduct}
           buttons={this.buttons}
