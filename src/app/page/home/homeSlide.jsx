@@ -4,7 +4,7 @@ import Slider from "../common/slider" ;
 const HomeSlide = () => {
   return (
     <div className="home-slide row">
-      <div id="image" className="col-xl-4 col-lg-4 col-md-12 col-xs-12">
+      <div id="image" className="col-xl-5 col-lg-5 col-md-12 col-xs-12">
         <div className="wrapper-item">
           <Slider />
         </div>

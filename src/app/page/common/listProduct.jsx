@@ -9,7 +9,7 @@ const ListProduct = ({ products }) => {
             <div className="row list-product">
                 {
                     products.map(item => (
-                        <div key={item._id} className="col-xl-3 col-lg-4 col-md-4 col-xs-6">
+                        <div key={item._id} className="col-xl-3 col-lg-4 col-md-4 col-xs-4">
                             <div className='wrapper-item'>
                                 <img src={image} alt="" />
                                 <div className="content">
