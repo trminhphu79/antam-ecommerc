@@ -1,125 +1,129 @@
 :root {
-    --primary: #FF477E;
-    --price-text: #FF6259;
+  --primary: #ff477e;
+  --price-text: #ff6259;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-}
-
-.btn {
-    background: var(--primary);
-    text-align: center;
-    padding: 1rem 0;
-    box-shadow: 10px 9px 30px 0px #0C0E2008;
-    border-radius: 3rem;
-    margin: 3.2rem 0;
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 1.6rem;
-    padding: 1rem 1.6rem;
-    text-transform: capitalize;
-}
-
-.btn:hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(0deg, var(--primary), var(--primary));
-    color : #fff ; 
-}
-
-.btn:focus {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(0deg, var(--primary), var(--primary));
-    color: #fff ; 
+  font-size: 62.5%;
 }
 
 .product .filter {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .product .filter h6 {
-    font-size: 2rem;
-    font-weight: 400;
-    margin-right: 1.8rem;
-    text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-right: 1.8rem;
+  text-transform: capitalize;
 }
 
 .product .wrapper {
-    box-shadow: 0px 7px 30px 0px #0000000D;
-    background: #fff;
-    border-radius: 3rem;
-    border: .1rem solid var(--primary);
-    padding: .4rem .2rem;
+  box-shadow: 0px 7px 30px 0px #0000000d;
+  background: #fff;
+  border-radius: 3rem;
+  border: 0.1rem solid var(--primary);
+  padding: 0.4rem 0.2rem;
 }
 
 .product .filter button {
-    font-size: 1.4rem;
-    border-radius: 3rem;
-    border: .1rem solid var(--primary);
-    color: #999;
-    background: #fff ;
-    font-weight: 500 ; 
-    padding: .4rem .8rem;
-    margin: 0 .2rem ;
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0px 7px 30px 0px #0000000D;
-    text-transform: capitalize;
+  font-size: 1.4rem;
+  border-radius: 3rem;
+  border: 0.1rem solid var(--primary);
+  color: #999;
+  background: #fff;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 7px 30px 0px #0000000d;
+  text-transform: capitalize;
 }
 
 .product .filter button.active {
-    background: var(--primary) ;
-    color: #fff;
+  background: var(--primary);
+  color: #fff;
 }
 
 .product .filter button:hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(0deg, #FF477E, #FF477E);
-    color: #fff;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    linear-gradient(0deg, #ff477e, #ff477e);
+  color: #fff;
 }
 
 /* product container */
 
 .product .product-container {
-    margin-top: 3.6rem;
+  margin-top: 3.6rem;
 }
 
-
 @media (max-width: 1380px) {
-    html {
-        font-size: 60%;
-    }
-    .product .product-container .row div .wrapper-item .content {
-        padding: 1.2rem 0;
-    }
-    .product .product-container .row div .wrapper-item .content .btn {
-        font-size: 1.4rem;
-    }
+  html {
+    font-size: 60%;
+  }
+  .product .product-container .row div .wrapper-item .content {
+    padding: 1.2rem 0;
+  }
+  .product .product-container .row div .wrapper-item .content .btn {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 991px) {
-    .product {
-        width: 80%;
-    }
+  .product {
+    width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
-    .product .filter h6 {
-        width: 100%;
-    }
+  .product .filter h6 {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
-    .product .filter span {
-        margin: 0 .8rem;
-    }
-    .product {
-        width: 96%;
-    }
+  .product .filter span {
+    margin: 0 0.8rem;
+  }
+  .product {
+    width: 96%;
+  }
+
+.product .product-container {
+    margin-top: 0 ; 
+}
+
+.background-page{
+    margin-top: 8rem ; 
+}
+
+  .product .filter {
+    width: 90%;
+    margin: 0 auto;
+    justify-content : space-around ; 
+  }
+
+.product .filter button {
+    margin : .4rem .2rem ;
+    font-size: 1rem ;  
+}
+
+.product .wrapper {
+    border: none ;
+    background : transparent ; 
+    box-shadow: none;
+}
 }
