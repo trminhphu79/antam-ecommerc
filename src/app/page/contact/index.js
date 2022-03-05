@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../fakeServer/image-temp/image.png" ; 
 import "./Contact.scss";
 
 export const phoneNumber = "0865328664";
@@ -15,7 +16,7 @@ export const Contact = () => {
       <div className="contact__content">
         <img
           className="contact__content-image"
-          src="https://lh3.googleusercontent.com/dH9SjesIO9aSUxQmi3cnQJJa9QkAy7Lw7PCkKXlc20_ykj12ETozdVJ8FnfxX6qEcbyyxQ=s115"
+          src={image}
           alt=""
         />
         <ul className="contact__content-list">

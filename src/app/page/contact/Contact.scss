@@ -215,3 +215,22 @@
     }
   }
 }
+
+@media (max-width : 450px){
+  .contact{
+    &__card{
+      padding: 1.2rem .8rem ; 
+      &-item:last-child{
+        display: flex ;
+        align-items: flex-end ; 
+        
+      }
+      &-item{
+        &-text{
+          width:70% ;
+          font-size:1.2rem ;
+        }
+      }
+    }
+  }
+}
