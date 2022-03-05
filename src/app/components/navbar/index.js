@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { listItemNavbar } from "./list-item-navbar";
 import "./Navbar.scss";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import { listItemNavbar } from "./data/list-item-navbar";
 
 export const Navbar = () => {
   const localPathName = window.location.pathname;

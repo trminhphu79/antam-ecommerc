@@ -1,44 +1,32 @@
-import React, { Component } from 'react';
-import ProductContent from './productContent';
-import ProductForm from './productForm';
-import { getForms } from '../fakeServer/productChaillo';
-import { getProducts } from '../fakeServer/productChaillo';
-import './style/productDetail.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React, { Component } from "react";
+import ProductContent from "./productContent";
+import ProductForm from "./productForm";
+import { getForms } from "../server/productChaillo";
+import "./style/productDetail.css";
 
 class ProductDetail extends Component {
+  state = {
+    forms: [],
+  };
 
-    handleSubmit = (value) =>{
-        console.log('you have a new order!',value) ; 
-    }
+  componentDidMount() {
+    this.setState({
+      forms: getForms(),
+    });
+  }
 
-    constructor(){
-        super() ; 
-        this.state = {
-            forms: getForms(),
-            products : getProducts() ,
-        }
-    }
+  render() {
+    const { forms } = this.state;
 
-    render() {
-        const { match , history } = this.props ;
-        const { forms , products } = this.state ; 
-
-        return (
-            <React.Fragment>
-                <ProductContent 
-                    id={match.params._id}
-                    products={products}
-                />
-                <ProductForm 
-                    forms={forms} 
-                    onSubmit={this.handleSubmit}
-                    history={history}       
-                />
-            </React.Fragment>
-        );
-    }
+    return (
+      <React.Fragment>
+        <div className="background-page product-detail">
+          <ProductContent />
+          <ProductForm forms={forms} />
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
-export default ProductDetail; 
+export default ProductDetail;

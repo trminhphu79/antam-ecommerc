@@ -1,36 +1,20 @@
-import React, { Component } from 'react';
-import _ from "lodash";
-// waiting for sort featered in process.... 
+import React from 'react' ; 
 
-class Filter extends Component {
-    raiseSort = (button) => {
-        let sortProduct = { ...this.props.sortProduct };
-
-        sortProduct.id = button.id ; 
-        sortProduct.order = button.order ; 
-        sortProduct.path = button.path ; 
-
-        this.props.onSort(sortProduct) ;  
-    }
-
-    render() {
-        const { buttons , sortProduct } = this.props;
-
-        return (
-            <div className='filter'>
-                <h6>sắp xếp theo :</h6>
-                <div className="wrapper">
-                    {buttons.map(button => (
-                        <button
-                            className={sortProduct.id === button.id ? 'active' : ''}
-                            key={button.id}
-                            onClick={() => this.raiseSort(button)}
-                        >{ button.title }</button>
-                    ))}
-                </div>
+const Filter = () => {
+    return (
+        <div className='filter'>
+            <h6>sắp xếp theo :</h6>
+            <div className="wrapper">
+                <button className='active'>giảm - tăng</button>
+                <button>tăng - giảm</button>
             </div>
-        );
-    }
+            <span>|</span>
+            <div className='wrapper'>
+                <button className='active'>A - Z</button>
+                <button>Z - A</button>
+            </div>
+        </div>
+     );
 }
-
+ 
 export default Filter;

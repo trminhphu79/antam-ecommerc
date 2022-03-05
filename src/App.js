@@ -1,31 +1,45 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { Header } from "app/components/header/header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Page from "./app/page";
+import { Header } from "app/components/header";
 import { Navbar } from "app/components/navbar";
+import { PrivatePage } from "./HOC/privatePage";
 import { Footer } from "app/components/footer";
-import Product from "./app/page/products/product";
-import Home from "./app/page/home/home";
-import ProductDetail from "./app/page/productDetail/productDetail";
-import Contact from "app/page/contact/contact";
-import NotFound from "app/page/notFound/NotFound";
-import  ScrollToTop  from "app/page/utils/ScrollToTop" ; 
+import Products from "app/page/products/product";
+import { Contact } from "app/page/contact";
+import ProductDetail from "app/page/productDetail/productDetail";
+import "./styles/_reset.scss";
+import "./styles/_variable.scss";
 
 function App() {
+
   return (
-    <React.Fragment>
-      <ScrollToTop />
+    <Router>
       <Header />
       <Navbar />
       <Switch>
-        <Route path="/product/:_id" exact component={ProductDetail} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/product" component={Product} />
-        <Route path="/not-found" component={NotFound} />
-        <Route path="/" exact component={Home} />
-        <Redirect to="/not-found" />
+        <PrivatePage exact Component={Page.HomePage} path="/" />
+        <PrivatePage exact Component={Page.AddProduct} path="/add" />
+        {/* <Route exact path="/login">
+          <Route component={Page.LoginPage} />
+        </Route> */}
+        <Route path="/lien-he">
+          <Contact />
+        </Route>
+        <Route path="/san-pham">
+          <Products />
+        </Route>
+        <Route path="/chi-tiet-san-pham">
+          <ProductDetail />
+        </Route>
+        <Route path="*">
+          <Switch>
+            <Route component={Page.ErrorPage} />
+          </Switch>
+        </Route>
       </Switch>
       <Footer />
-    </React.Fragment>
+    </Router>
   );
 }
 

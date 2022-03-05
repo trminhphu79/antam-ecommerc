@@ -12,7 +12,6 @@
 html{
     font-size: 62.5% ; 
     text-decoration: none ;
-    scroll-behavior : smooth ;
 }
 
 .btn{
@@ -20,8 +19,7 @@ html{
     text-align:center ; 
     padding: .4rem 1.2rem ; 
     box-shadow: 10px 9px 30px 0px #0C0E2008 ; 
-    border-radius: 3rem ;
-    margin: 3.2rem 0 ;
+    border-radius: 0.8rem ;
     border: none ; 
     cursor: pointer ; 
     color: #fff ; 
@@ -44,8 +42,7 @@ html{
     display: flex  ; 
     flex: 1 1 40rem ;
     flex-wrap: wrap ;
-    width: calc(100% - 32rem ) ; 
-    margin: 12rem auto ; 
+    margin-bottom: 47px;
 }
 
 
@@ -68,6 +65,7 @@ html{
 }
 
 .product-content .content .wrapper a{
+    margin: 3.2rem 0;
     color: #fff ; 
 }
 
@@ -139,7 +137,7 @@ html{
 .product-form form .input-group input{
     font-size: 1.6rem ; 
     padding: 1.2rem ; 
-    border-radius: 3rem !important ; 
+    border-radius: 3rem !important; 
     box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
     border: none ; 
     background: #fff ; 
@@ -184,8 +182,41 @@ html{
 }
 
 @media (max-width : 768px){
-    .product-content .content .wrapper{
-        text-align: center ; 
+    .row.product-content {
+        --bs-gutter-x: unset;
     }
-    
+
+    .product-content {
+        margin: unset;
+        width: 100%;
+    }
+
+    .product-form {
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .product-content .image .wrapper {
+        width: 100%;
+    }
+
+    .product-content .content h2 {
+        margin: 1.6rem 0 1.2rem;
+        font-size: 2rem;
+    }
+
+    .product-content .content .wrapper a {
+        margin: 2.4rem 0;
+        width: 100%;
+    }
+
+    .product-form form h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 2rem;  
+    }
+
+    .product-form form .input-group label {
+        display: none;
+    }
 } 

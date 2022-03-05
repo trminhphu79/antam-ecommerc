@@ -75,7 +75,7 @@ function AddProduct() {
 
   return (
     <div className="container py-5">
-      <h1 className="mb-5">Thêm sản phẩm</h1>
+      {/* <h1 className="mb-5">Thêm sản phẩm</h1>
 
       <form>
         <input
@@ -134,7 +134,7 @@ function AddProduct() {
         >
           Thêm
         </button>
-      </form>
+      </form> */}
     </div>
   );
 }
