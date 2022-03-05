@@ -12,6 +12,37 @@ body {
   background: #f9f9f9;
 }
 
+.btn {
+  background: var(--primary-color);
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 10px 9px 30px 0px #0c0e2008;
+  border-radius: 0.8rem !important;
+  margin: 3.2rem 0;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 1rem 1.6rem;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  color: #fff ; 
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    linear-gradient(0deg, var(--primary-color), var(--primary-color));
+}
+
+.btn:focus {
+  color: #fff ; 
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(0deg, var(--primary-color), var(--primary-color));
+}
+
 // Background Page
 .background-page {
   background: #f9f9f9;
@@ -28,10 +59,6 @@ body {
   background-position: right 79px bottom -223px;
 }
 
-
-
-
-
 /* Responsive */
 
 // Mobile: width < 740px
@@ -46,5 +73,14 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22566%22%20height%3D%22580%22%20viewBox%3D%220%200%20566%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22283%22%20cy%3D%22290%22%20rx%3D%22283%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
     background-repeat: no-repeat;
     background-position: center bottom -137px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .background-page{
+    padding: 0 ; 
+    width: 96% ; 
+    margin: 48px auto ; 
   }
 }

@@ -25,7 +25,7 @@ class Home extends Component {
     const products = paginate(allProduct, currentPage, pageSize);
 
     return (
-      <div className="background-page">
+      <div className="background-page home-section">
         <HomeSlide />
         <div className="home-below">
           <h2>các sản phẩm nổi bật :</h2>

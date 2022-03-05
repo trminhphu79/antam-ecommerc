@@ -1,6 +1,5 @@
 :root{
-    --primary : #FF477E ; 
-    --price-text : #FF6259 ; 
+    --primary : #ff477e ; 
 }
 
 *{
@@ -15,39 +14,12 @@ html{
     scroll-behavior : smooth ;
 }
 
-.btn{
-    background: var(--primary) ; 
-    text-align:center ; 
-    padding: .4rem 1.2rem ; 
-    box-shadow: 10px 9px 30px 0px #0C0E2008 ; 
-    border-radius: 3rem ;
-    margin: 3.2rem 0 ;
-    border: none ; 
-    cursor: pointer ; 
-    color: #fff ; 
-    font-size: 1.6rem ; 
-    padding: 1rem 1.6rem ; 
-    text-transform : capitalize ; 
-}
-
-.btn:hover{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    linear-gradient(0deg, var(--primary), var(--primary));
-}
-
-.btn:focus{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(0deg, var(--primary), var(--primary));
-}
 
 .product-content {
     display: flex  ; 
     flex: 1 1 40rem ;
     flex-wrap: wrap ;
-    /* width: calc(100% - 32rem ) ; 
-    margin: 12rem auto ;  */
 }
-
 
 .product-content .image .wrapper{
     width: 99% ; 

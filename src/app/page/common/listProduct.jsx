@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import image from '../fakeServer/image-temp/image.png';
+import "./styles/listProduct.css" ; 
 
 const ListProduct = ({ products }) => {
 
     return (
-            <div className="row">
+            <div className="row list-product">
                 {
                     products.map(item => (
-                        <div key={item._id} className="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                        <div key={item._id} className="col-xl-3 col-lg-4 col-md-4 col-xs-6">
                             <div className='wrapper-item'>
                                 <img src={image} alt="" />
                                 <div className="content">
