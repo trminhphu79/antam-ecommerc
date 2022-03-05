@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../fakeServer/image-temp/image.png';
 import "./styles/listProduct.css" ; 
 
 const ListProduct = ({ products }) => {
@@ -11,7 +10,7 @@ const ListProduct = ({ products }) => {
                     products.map(item => (
                         <div key={item._id} className="col-xl-3 col-lg-4 col-md-4 col-xs-4">
                             <div className='wrapper-item'>
-                                <img src={image} alt="" />
+                                <img src={item.image} alt="" />
                                 <div className="content">
                                     <h4>{item.title}</h4>
                                     <div>

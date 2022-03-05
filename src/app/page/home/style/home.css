@@ -32,6 +32,8 @@ html {
   padding: 3.2rem;
   background: #fff;
   border-radius: 3rem;
+  box-shadow: 0px 7px 30px 0px #00000014;
+
 }
 
 .home-slide #image .wrapper-item img {

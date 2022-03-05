@@ -11,17 +11,9 @@ const HomeSlide = () => {
       </div>
       <div id="content" className="col-xl-6 col-lg-6 col-md-12 col-xs-12">
         <div className="wrapper-item">
-          <h2>chailo title acid</h2>
+          <h2>Lancome Glass Dòng Mỹ Phẩm Chai Và Lọ Kem</h2>
           <p>
-            content of chailo ...bla bla ...Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-            duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-            amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-            amet sint. Velit officia consequat duis enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-            non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-            officia consequat duis enim velit mollit. Exercitation veniam
-            consequat sunt nostrud amet.
+          Lancome Glass Dòng Mỹ Phẩm MD Pore Therapy 148ml là dòng toner cao cấp dưỡng da, sản phẩm đến từ thương hiệu Obagi nổi tiếng của Mỹ. Toner BHA Obagi 148ml hỗ trợ làm sạch sâu, hỗ trợ thu nhỏ lỗ chân lông, hỗ trợ da khỏe mạnh và rạng rỡ hơn.
           </p>
           <button className="btn">Xem chi tiết</button>
         </div>
