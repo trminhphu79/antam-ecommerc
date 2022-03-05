@@ -12,61 +12,51 @@ export const Slide = (props) => {
   );
 
   useEffect(() => {
-    document.querySelector('#radio1').checked = true;
-    const radiosBtn = document.querySelectorAll('[name= radio-btn]');
-    const timeChecked = setInterval(()=> {
-      const currentChecked = Array.from(radiosBtn).find(item => item.checked === true);
-      let dataIndex = currentChecked.getAttribute('data-index');
+    document.querySelector("#radio1").checked = true;
+    const radiosBtn = document.querySelectorAll("[name= radio-btn]");
+    const timeChecked = setInterval(() => {
+      const currentChecked = Array.from(radiosBtn).find(
+        (item) => item.checked === true
+      );
+      let dataIndex = currentChecked.getAttribute("data-index");
       dataIndex++;
-      if(dataIndex > 3) {
-        dataIndex = 1
+      if (dataIndex > 3) {
+        dataIndex = 1;
       }
-      document.querySelector('#radio' + dataIndex).checked = true;
-    }, 5000)
+      document.querySelector("#radio" + dataIndex).checked = true;
+    }, 5000);
 
     return () => clearInterval(timeChecked);
-  }, [])
+  }, []);
 
   return (
     <div className="slide">
       <div className="slide__images">
-        <div className="slide__images-wrapper">
-          <div className="slide__images-slides">
-            <input type="radio" name="radio-btn" data-index={1} id="radio1" />
-            <input type="radio" name="radio-btn" data-index={2} id="radio2" />
-            <input type="radio" name="radio-btn" data-index={3} id="radio3" />
+        <div className="slide__images-box">
+          <input type="radio" name="radio-btn" data-index={1} id="radio1" />
+          <input type="radio" name="radio-btn" data-index={2} id="radio2" />
+          <input type="radio" name="radio-btn" data-index={3} id="radio3" />
 
-            {slideProducts.map((item, index) => {
-              let first;
-              if (index === 0) {
-                first = " first";
-              } else {
-                first = "";
-              }
-              return (
-                <div key={index} className={"slide__image" + first}>
-                  <img src={item.img} alt="" />
-                </div>
-              );
-            })}
+          {slideProducts.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className={"slide__image"}
+                id={`slide__image${index + 1}`}
+              >
+                <img src={item.img} alt="" />
+              </div>
+            );
+          })}
 
-            <div className="slide__manual">
+          <div className="slide__manual">
+            {Array.from({ length: productsSize }).map((item, index) => (
               <label
-                htmlFor="radio1"
+                htmlFor={`radio${index + 1}`}
                 className="slide__manual-btn"
-                id="manual1"
+                id={`manual${index + 1}`}
               ></label>
-              <label
-                htmlFor="radio2"
-                className="slide__manual-btn"
-                id="manual2"
-              ></label>
-              <label
-                htmlFor="radio3"
-                className="slide__manual-btn"
-                id="manual3"
-              ></label>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react' ; 
-import ListProduct from './listProduct';
+import ListProduct from '../common/listProduct';
 import Pagination from '../common/pagination/pagination';
 
 const ProductContainer = (props) => {

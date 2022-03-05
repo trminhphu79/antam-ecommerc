@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Filter from "./filter";
 import ProductContainer from "./productContainer";
 import "./style/product.css";
-import { getProducts } from "../server/productChaillo";
+import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../common/pagination/paginate/paginate";
 
 class Products extends Component {

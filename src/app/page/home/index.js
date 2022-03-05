@@ -1,116 +1,45 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
-import { logoutAction } from "core/redux/actions/userActions";
-import { getList, removeById } from "app/const/firebase";
-import { deleteAction } from "core/redux/actions/productActions";
+import React, { Component } from "react";
+import ListProduct from "../common/listProduct";
+import Pagination from "../common/pagination/pagination";
+import { getProducts } from "../fakeServer/productChaillo";
+import { paginate } from "../utils/paginate";
 import { Slide } from "./slide";
-import ProductContainer from "../products/productContainer";
-import { getProducts } from "../server/productChaillo";
-const HomePage = () => {
-  const [listProduct, setListProduct] = useState([]);
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const products = getProducts();
+import "./Home.scss";
 
-  useEffect(() => {
-    getList("product")
-      .then((result) => {
-        console.log("result", result);
-        setListProduct(result);
-      })
-      .catch((error) => {
-        console.log({ error });
-      });
-  }, []);
+class Home extends Component {
+  state = {
+    products: getProducts(),
+    currentPage: 1,
+    pageSize: 8,
+  };
 
-  return (
-    <div className="background-page">
-      <Slide 
-      products={products}
-      productsSize={3} />
-      <ProductContainer products={products} />
-    </div>
-  );
-};
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
 
-export default HomePage;
+  render() {
+    const { products: allProduct, currentPage, pageSize } = this.state;
+    const { length: itemsCount } = allProduct;
 
-{
-  /* <div className="container py-5 text-center"> */
-}
-{
-  /* <h1 className="mb-5">Danh sách</h1>
+    const products = paginate(allProduct, currentPage, pageSize);
 
-        <div className="my-3">
-         <Link className="btn btn-success" to="/add">
-            Thêm SP
-          </Link> 
-        </div> */
+    return (
+      <div className="background-page home-below">
+        <Slide 
+            products={products} 
+            productsSize={3}
+        />
+        <h2>các sản phẩm nổi bật</h2>
+        <ListProduct products={products} />
+        <Pagination
+          itemsCount={itemsCount}
+          currentPage={currentPage}
+          pageSize={pageSize}
+          onPageChange={this.handlePageChange}
+        />
+      </div>
+    );
+  }
 }
 
-{
-  /* <div className="row my-5">
-          {listProduct?.map((product, index) => {
-            return (
-              <div className="col-3 col-md-6 col-lg-3" key={index}>
-                <div className="card" style={{ width: "18rem" }}>
-                  <img
-                    className="card-img-top"
-                    src={product.url[0]}
-                    alt={product.url[0]}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.description}</p>
-
-                    <Link className="btn btn-secondary mx-3" to="/edit">
-                      Sửa
-                    </Link>
-                    <button
-                      className="btn btn-danger"
-                      onClick={() => {
-                        handleDelete(product.id);
-                      }}
-                    >
-                      Xóa
-                    </button>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div> */
-}
-
-{
-  /* <button className="btn btn-danger" onClick={handleLogout}>
-          Fake Logout
-        </button> */
-}
-{
-  /* </div> */
-}
-
-// const handleLogout = () => {
-//   dispatch(logoutAction());
-//   history.push("/login");
-// };
-
-// const handleDelete = (id) => {
-//   removeById("product", id)
-//     .then(() => {
-//       let result = [...listProduct];
-//       const index = result.findIndex((y) => y.id === id);
-
-//       if (index !== -1) {
-//         result.splice(index, 1);
-//       }
-
-//       setListProduct(result);
-//       dispatch(deleteAction(id));
-//     })
-//     .catch((error) => {
-//       console.log("error", error);
-//     });
-// };
+export default Home;
