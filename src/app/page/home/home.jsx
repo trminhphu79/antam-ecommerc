@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ListProduct from "../common/listProduct";
 import Pagination from "../common/pagination";
+import HomeSlide from "./homeSlide" ; 
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
 import "bootstrap/dist/css/bootstrap.css";
@@ -25,6 +26,7 @@ class Home extends Component {
 
     return (
       <div className="background-page">
+        <HomeSlide />
         <div className="home-below">
           <h2>các sản phẩm nổi bật :</h2>
           <ListProduct products={products} />
