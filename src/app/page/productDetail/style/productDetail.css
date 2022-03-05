@@ -171,11 +171,6 @@ html{
         font-size: 60% ; 
     }
 
-    .product-form,
-    .product-content {
-        width: 90% ; 
-    }
-
     .product-form form .input-group label{
         width: 100% ; 
     }

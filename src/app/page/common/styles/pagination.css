@@ -1,0 +1,23 @@
+.pagination .page-item {
+  margin: 0 0.4rem;
+  box-shadow: 0px 1.5rem 6rem rgba(0, 0, 0, .4);
+
+}
+
+.pagination .page-item.active .page-link{
+  background: #ff477e !important;
+  color : #fff ; 
+}
+
+.pagination .page-item:hover .page-link{
+    opacity: .9 ; 
+}
+
+.pagination .page-item .page-link{
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: bold;
+  border: none ; 
+  border-radius: .4rem !important; 
+  padding: .6rem 1rem ; 
+}
