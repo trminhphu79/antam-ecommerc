@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import image from '../fakeServer/image-temp/image.png';
 
 const ListProduct = ({ products }) => {
 
     return (
-        <BrowserRouter>
             <div className="row">
                 {
                     products.map(item => (
@@ -25,7 +24,6 @@ const ListProduct = ({ products }) => {
                     ))
                 }
             </div>
-        </BrowserRouter>
     )
 }
 
