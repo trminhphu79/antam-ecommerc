@@ -23,7 +23,7 @@ class ProductContent extends Component {
             <div className='row product-content' image="true">
                 <div className='image col-lg-6  col-md-6 col-xs-12'>
                     <div className='wrapper'>
-                        <img src={image} alt="" />
+                        <img src={product.img} alt="" />
                     </div>
                 </div>
                 <div className="content col-lg-6 col-md-6 col-xs-12">

@@ -1,6 +1,11 @@
+import imgChailo1 from "./image-temp/image.png";
+import imgChailo2 from "./image-temp/chailo2.png";
+import imgChailo3 from "./image-temp/chailo3.png";
+import imgChailo4 from "./image-temp/chailo4.png";
+
 const products = [{
         _id: "5b21ca3eeb7f6fbccd471815",
-        img: "http://localhost:3000/static/media/image.4f52cb2a.png",
+        img: imgChailo1,
         title: "HŨ ĐỰNG KEM CAO CẤP CHÂN KHÔNG 15GR,30GR,50GR",
         priceHight: 5000,
         priceLow: 2000 , 
@@ -8,7 +13,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd471816",
-        img: "http://localhost:3000/static/media/chailo2.fd437fda.png",
+        img: imgChailo2,
         title: "CHAI LƯỚI,HŨ LƯỚI CAO CẤP 20GR,30GR",
         priceHight: 5000,
         priceLow: 1000 , 
@@ -16,7 +21,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd471817",
-        img: "http://localhost:3000/static/media/chailo3.95dd18fe.png",
+        img: imgChailo3,
         title: "HŨ KEM NHỰA CAO CẤP DÁNG VUÔNG NẮP MẠ VÀNG 20GR,30GR",
         priceHight: 3000,
         priceLow: 1000 , 
@@ -24,7 +29,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd471819",
-        img: "http://localhost:3000/static/media/chailo4.4d103ccf.png",
+        img: imgChailo4,
         title: "CHAI NHỰA PET TRẮNG SỨ NẮP VÒI NHẤN CAO CẤP 100ML,150ML,200ML",
         priceHight: 7000,
         priceLow: 4000 , 
@@ -32,7 +37,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181a",
-        img: "http://localhost:3000/static/media/image.4f52cb2a.png",
+        img: imgChailo1,
         title: "Chai xịt mũi có vòi dung tích 25ml",
         priceHight: 8000,
         priceLow: 6000 , 
@@ -40,7 +45,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181b",
-        img: "http://localhost:3000/static/media/chailo2.fd437fda.png",
+        img: imgChailo2,
         title: "CHAI TINH DẦU,SERUM THỦY TINH NÂU KHOEN BẠC MỜ,BẠC BÓNG 5ML,10ML,15ML,20ML,30ML,50ML,100ML",
         priceHight: 6000,
         priceLow: 3000 , 
@@ -48,7 +53,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181e",
-        img: "http://localhost:3000/static/media/chailo3.95dd18fe.png",
+        img: imgChailo3,
         title: "CHAI SERUM TINH DẦU THUỶ TINH TRẮNG TRONG NẮP XOÁY VÀNG 5ML,10ML,15ML,20ML,30ML,50ML,100ML",
         priceHight: 4000,
         priceLow: 1000 , 
@@ -57,7 +62,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181f",
-        img: "http://localhost:3000/static/media/chailo4.4d103ccf.png",
+        img: imgChailo4,
         title: "HŨ ĐỰNG YẾN THỦY TINH TRÒN NẮP THIẾT VÀNG,THIẾT ĐEN 75ML",
         priceHight: 6000,
         priceLow: 2000 , 
@@ -65,7 +70,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd471821",
-        img: "http://localhost:3000/static/media/image.4f52cb2a.png",
+        img: imgChailo1,
         title: "CHAI LƯỚI,HŨ LƯỚI CAO CẤP 20GR,30GR",
         priceHight: 9000,
         priceLow: 4000 , 
@@ -73,7 +78,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6bccd4718e",
-        img: "http://localhost:3000/static/media/chailo2.fd437fda.png",
+        img: imgChailo2,
         title: "CHAI SERUM TINH DẦU THUỶ TINH TRẮNG TRONG NẮP XOÁY VÀNG 5ML,10ML,15ML,20ML,30ML,50ML,100ML",
         priceHight: 4000,
         priceLow: 1000 , 
@@ -82,7 +87,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbcc4781f",
-        img: "http://localhost:3000/static/media/chailo3.95dd18fe.png",
+        img: imgChailo3,
         title: "HŨ ĐỰNG YẾN THỦY TINH TRÒN NẮP THIẾT VÀNG,THIẾT ĐEN 75ML",
         priceHight: 6000,
         priceLow: 2000 , 
@@ -90,7 +95,7 @@ const products = [{
     },
     {
         _id: "5b21ca3eeb7f6fbccd821",
-        img: "http://localhost:3000/static/media/chailo4.4d103ccf.png",
+        img: imgChailo4,
         title: "CHAI LƯỚI,HŨ LƯỚI CAO CẤP 20GR,30GR",
         priceHight: 9000,
         priceLow: 4000 , 
@@ -104,56 +109,56 @@ export function getProducts() {
 
 const forms = [{
         _id: '5fb5233v37',
-        img: "http://localhost:3000/static/media/image.4f52cb2a.png",
+        img: imgChailo1,
         name: 'Họ và tên',
         placeholder: 'Nhập họ và tên ...',
         type: 'name'
     },
     {
         _id: '5fb5233v36',
-        img: "http://localhost:3000/static/media/chailo2.fd437fda.png",
+        img: imgChailo2,
         name: 'Số điện thoại',
         placeholder: 'Nhập số điện thoại',
         type: 'number'
     },
     {
         _id: '5fb5233v35',
-        img: "http://localhost:3000/static/media/chailo3.95dd18fe.png",
+        img: imgChailo3,
         name: 'Tỉnh/ Thành Phố',
         placeholder: 'chọn tỉnh/thành phố',
         type: 'address'
     },
     {
         _id: '5fb5233v34',
-        img: "http://localhost:3000/static/media/chailo4.4d103ccf.png",
+        img: imgChailo4,
         name: 'Quận/ Huyện',
         placeholder: 'Chọn Quận/huyện',
         type: 'address'
     },
     {
         _id: '5fb5233v33',
-        img: "http://localhost:3000/static/media/image.4f52cb2a.png",
+        img: imgChailo1,
         name: 'Xã/Phường',
         placeholder: 'chọn Xã/ phường',
         type: 'address'
     },
     {
         _id: '5fb5233v32',
-        img: "http://localhost:3000/static/media/chailo2.fd437fda.png",
+        img: imgChailo2,
         name: 'địa chỉ cụ thể',
         placeholder: 'VD: 2a Lương Thế Vinh,Phước Long,Nha Trang,...',
         type: 'text'
     },
     {
         _id: '5fb5233v31',
-        img: "http://localhost:3000/static/media/chailo3.95dd18fe.png",
+        img: imgChailo3,
         name: 'Tên sản phẩm',
         placeholder: 'Nhập tên sản phẩm ...',
         type: 'text'
     },
     {
         _id: '5fb5233v30',
-        img: "http://localhost:3000/static/media/chailo4.4d103ccf.png",
+        img: imgChailo4,
         name: 'Số lượng',
         placeholder: 'Nhập số lượng ...',
         type: 'number'

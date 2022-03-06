@@ -26,8 +26,8 @@ class Home extends Component {
     return (
       <div className="background-page home-below">
         <Slide 
-            products={products} 
-            productsSize={3}
+            products={allProduct} 
+            slideSize={3}
         />
         <h2>các sản phẩm nổi bật</h2>
         <ListProduct products={products} />

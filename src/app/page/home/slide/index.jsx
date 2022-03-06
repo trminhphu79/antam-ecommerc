@@ -1,15 +1,19 @@
 import { first } from "lodash";
 import React from "react";
 import { useState, useEffect } from "react";
+import { SlideContent } from "./slideContent";
 import "./Slide.scss";
+import { getProducts } from "app/page/fakeServer/productChaillo";
 
 export const Slide = (props) => {
-  const { products, productsSize } = props;
+  const { products, slideSize } = props;
 
   const productsLength = products.length;
-  const slideProducts = products.filter(
-    (item, index) => index >= productsLength - productsSize
+  const newProducts = products.filter(
+    (item, index) => index >= productsLength - slideSize
   );
+
+  const [getProduct, setGetProduct] = useState(newProducts[0]);
 
   useEffect(() => {
     document.querySelector("#radio1").checked = true;
@@ -19,11 +23,16 @@ export const Slide = (props) => {
         (item) => item.checked === true
       );
       let dataIndex = currentChecked.getAttribute("data-index");
+      let indexProduct = Number(dataIndex);
       dataIndex++;
       if (dataIndex > 3) {
         dataIndex = 1;
       }
       document.querySelector("#radio" + dataIndex).checked = true;
+      if (indexProduct === slideSize) {
+        indexProduct = 0;
+      }
+      setGetProduct(newProducts[indexProduct]);
     }, 5000);
 
     return () => clearInterval(timeChecked);
@@ -37,7 +46,7 @@ export const Slide = (props) => {
           <input type="radio" name="radio-btn" data-index={2} id="radio2" />
           <input type="radio" name="radio-btn" data-index={3} id="radio3" />
 
-          {slideProducts.map((item, index) => {
+          {newProducts.map((item, index) => {
             return (
               <div
                 key={index}
@@ -50,8 +59,10 @@ export const Slide = (props) => {
           })}
 
           <div className="slide__manual">
-            {Array.from({ length: productsSize }).map((item, index) => (
+            {Array.from({ length: slideSize }).map((item, index) => (
               <label
+                onClick={() => setGetProduct(newProducts[index])}
+                key={index}
                 htmlFor={`radio${index + 1}`}
                 className="slide__manual-btn"
                 id={`manual${index + 1}`}
@@ -60,7 +71,7 @@ export const Slide = (props) => {
           </div>
         </div>
       </div>
-      <div className="slide__content"></div>
+      <SlideContent product={getProduct} />
     </div>
   );
 };

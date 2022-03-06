@@ -3,7 +3,7 @@ import React from "react";
 function ErrorPage() {
   return (
     <div>
-      <h1>Hello from Error</h1>
+      <h1>Welcome To Error</h1>
     </div>
   );
 }

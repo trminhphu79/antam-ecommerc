@@ -27,6 +27,7 @@ class ProductDetail extends Component {
         <div className="background-page">
           <ProductContent id={match.params._id} products={products} />
           <ProductForm
+            id={match.params._id}
             forms={forms}
             onSubmit={this.handleSubmit}
             history={history}
