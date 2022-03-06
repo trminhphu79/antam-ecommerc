@@ -3,7 +3,7 @@ import ListProduct from "../common/listProduct";
 import Pagination from "../common/pagination/pagination";
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
-import { Slide } from "./slide";
+import { Slide } from "./slide/silde";
 import "./Home.scss";
 
 class Home extends Component {
