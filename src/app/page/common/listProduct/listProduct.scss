@@ -66,3 +66,10 @@
       font-size: 1.4rem ; 
     }
   }
+
+  // Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .wrapper-item {
+    height: 42.6rem;
+  }
+}

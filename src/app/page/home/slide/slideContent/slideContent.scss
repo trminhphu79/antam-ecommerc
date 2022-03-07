@@ -46,3 +46,39 @@
     }
   }
 }
+
+
+
+
+
+/* Responsive */
+
+// Mobile: width < 740px 
+@media (max-width: 46.1875em) {
+  .slide-content {
+    display: none;
+  }
+}
+
+// Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .slide-content {
+    position: absolute;
+    width: 40rem;
+    bottom: 11rem;
+    &__title {
+      font-size: 2.8rem;
+      color: #000;
+    }
+    &__desc {
+      font-size: 1.6rem;
+      color: rgba(255, 255, 255, 0.9);
+      display:-webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+  }
+}

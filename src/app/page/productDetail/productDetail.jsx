@@ -24,7 +24,7 @@ class ProductDetail extends Component {
 
     return (
       <React.Fragment>
-        <div className="background-page">
+        <div className="background-page product-detail">
           <ProductContent id={match.params._id} products={products} />
           <ProductForm
             id={match.params._id}

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Contact.scss";
+import imageContact from "../../../assets/images/contact.jpg"
 
 export const phoneNumber = "0865328664";
 
@@ -15,7 +16,7 @@ export const Contact = () => {
       <div className="contact__content">
         <img
           className="contact__content-image"
-          src="https://lh3.googleusercontent.com/dH9SjesIO9aSUxQmi3cnQJJa9QkAy7Lw7PCkKXlc20_ykj12ETozdVJ8FnfxX6qEcbyyxQ=s115"
+          src={imageContact}
           alt=""
         />
         <ul className="contact__content-list">

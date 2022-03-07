@@ -26,10 +26,11 @@ html {
     margin-bottom: 8rem;
 }
 
+.home-below .row {
+    margin-bottom: 6rem;
+}
+
 @media (max-width: 1380px) {
-    html {
-        font-size: 60%;
-    }
     .home-below .row div .wrapper-item .content {
         padding: 1.2rem 0;
     }
@@ -40,12 +41,25 @@ html {
 
 @media (max-width: 991px) {
     .home-below {
-        width: 80%;
+        width: 100%;
+        & .row {
+            margin-bottom: 3rem;
+        }
     }
 }
 
+// Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .home-below {
+        width: 100%;
+        & .row {
+            margin-bottom: 0;
+        }
+    }
+  }
+
 @media (max-width: 450px) {
     .home-below {
-        width: 96%;
+        width: 100%;
     }
 }

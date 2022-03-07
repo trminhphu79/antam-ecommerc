@@ -80,3 +80,11 @@ body::-webkit-scrollbar-thumb {
     background-position: center bottom -137px;
   }
 }
+
+
+// Tablet: width >= 740px and width < 1024px
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+  .background-page {
+    padding: 140px 160px 120px 40px;
+  }
+}

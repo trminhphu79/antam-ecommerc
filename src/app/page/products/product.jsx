@@ -10,22 +10,10 @@ class Product extends Component {
     products: getProducts(),
     pageSize: 8,
     currentPage: 1,
-    sortProduct: { id: "asc322ssaf1", order: "asc", path: "priceLow" },
+    sortProduct: { id: "asc322ssa21", order: "asc", path: "title" },
   };
 
   buttons = [
-    {
-      id: "asc322ssaf1",
-      title: "giảm - tăng",
-      path: "priceLow",
-      order: "asc",
-    },
-    {
-      id: "asc322ssa31",
-      title: "tăng - giảm",
-      path: "priceLow",
-      order: "desc",
-    },
     {
       id: "asc322ssa21",
       title: "A - Z",

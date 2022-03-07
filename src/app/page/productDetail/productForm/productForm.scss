@@ -67,7 +67,14 @@
 
 @media (max-width : 991px){
     .product-form{
-        width: 90% ; 
+      position: relative;
+        width: 100%;
+        padding: 0 10px;
+        & .image .wrapper .btn {
+          width: 348px;
+          position: absolute;
+          bottom: -5.2rem;
+        }
     }
 
     .product-form form .input-group label{
