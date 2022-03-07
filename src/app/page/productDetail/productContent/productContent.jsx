@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import image from '../fakeServer/image-temp/chailo4.png' ; 
 import _ from 'lodash' ; 
+import "./productContent.scss"
 
 class ProductContent extends Component {
 

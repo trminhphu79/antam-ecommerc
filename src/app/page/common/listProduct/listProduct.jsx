@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image from '../fakeServer/image-temp/image.png';
+import "./listProduct.scss"
 
 const ListProduct = ({ products }) => {
 

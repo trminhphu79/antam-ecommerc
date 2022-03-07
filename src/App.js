@@ -11,6 +11,7 @@ import ScrollToTop from "app/page/utils/ScrollToTop";
 import NotFound from "app/page/notFound/NotFound";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
+import "./styles/_common.scss"
 
 function App() {
   return (

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import _ from "lodash";
+import "./filter.scss"
 // waiting for sort featered in process.... 
 
 class Filter extends Component {

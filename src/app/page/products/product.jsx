@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import Filter from "./filter";
-import ProductContainer from "./productContainer";
+import Filter from "./filter/filter";
+import ProductContainer from "./productContainer/productContainer";
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
-import "./style/product.css";
+import "./product.scss";
 class Product extends Component {
   state = {
     products: getProducts(),

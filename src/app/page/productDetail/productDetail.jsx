@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import ProductContent from "./productContent";
-import ProductForm from "./productForm";
+import ProductContent from "./productContent/productContent";
+import ProductForm from "./productForm/productForm";
 import { getForms } from "../fakeServer/productChaillo";
 import { getProducts } from "../fakeServer/productChaillo";
-import "./style/productDetail.css";
+import "./productDetail.scss";
 
 class ProductDetail extends Component {
   handleSubmit = (value) => {

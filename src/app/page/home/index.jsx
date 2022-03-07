@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ListProduct from "../common/listProduct";
+import ListProduct from "../common/listProduct/listProduct";
 import Pagination from "../common/pagination/pagination";
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";

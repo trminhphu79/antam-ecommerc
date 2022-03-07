@@ -1,6 +1,6 @@
 import React from 'react' ; 
-import ListProduct from '../common/listProduct';
-import Pagination from '../common/pagination/pagination';
+import ListProduct from 'app/page/common/listProduct/listProduct';
+import Pagination from '../../common/pagination/pagination';
 
 const ProductContainer = (props) => {
     const {
