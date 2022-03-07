@@ -7,6 +7,7 @@ import Product from "./app/page/products/product";
 import Home from "./app/page/home/home";
 import ProductDetail from "./app/page/productDetail/productDetail";
 import { Contact } from "app/page/contact";
+import Admin from './app/page/admin' ; 
 import NotFound from "app/page/notFound/NotFound";
 import  ScrollToTop  from "app/page/utils/ScrollToTop" ; 
 import "./styles/_reset.scss";
@@ -16,9 +17,10 @@ function App() {
   return (
     <React.Fragment>
       <ScrollToTop />
-      <Header />
-      <Navbar />
+      {/* <Header />
+      <Navbar /> */}
       <Switch>
+        <Route path="/admin" component={Admin}/>
         <Route path="/product/:_id" exact component={ProductDetail} />
         <Route path="/contact" component={Contact} />
         <Route path="/product" component={Product} />
@@ -26,7 +28,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Redirect to="/not-found" />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 }
