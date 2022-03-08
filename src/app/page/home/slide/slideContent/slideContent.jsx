@@ -9,7 +9,7 @@ export const SlideContent = ({ product }) => {
       mẫu vỏ son cao cấp. Nhận in ấn trực tiếp chai lọ không bong tróc, đẹp,
       chất lượng nươc ngoài .
       <button className="slide-content__btn">
-          Thông tin liên hệ
+          Xem chi tiết
           <i className="slide-content__btn-icon">{icons.iconArrowNext}</i>
       </button>
     </div>

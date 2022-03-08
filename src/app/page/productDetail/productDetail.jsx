@@ -3,11 +3,15 @@ import ProductContent from "./productContent/productContent";
 import ProductForm from "./productForm/productForm";
 import { getForms } from "../fakeServer/productChaillo";
 import { getProducts } from "../fakeServer/productChaillo";
+import { Toast } from 'app/page/common/toast/toast';
 import "./productDetail.scss";
 
 class ProductDetail extends Component {
   handleSubmit = (value) => {
     console.log("you have a new order!", value);
+    if(value) {
+
+    }
   };
 
   constructor() {
