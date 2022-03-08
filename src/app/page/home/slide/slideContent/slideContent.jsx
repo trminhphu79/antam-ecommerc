@@ -5,10 +5,11 @@ import { icons } from "assets/icons/icons-svg";
 export const SlideContent = ({ product }) => {
   return (
     <div className="slide-content">
-      <h1 className="slide-content__title">{product.title}</h1>
-      <p className="slide-content__desc">{product.content}</p>
+      Công ty chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn, tuýp,
+      mẫu vỏ son cao cấp. Nhận in ấn trực tiếp chai lọ không bong tróc, đẹp,
+      chất lượng nươc ngoài .
       <button className="slide-content__btn">
-          Xem chi tiết
+          Thông tin liên hệ
           <i className="slide-content__btn-icon">{icons.iconArrowNext}</i>
       </button>
     </div>

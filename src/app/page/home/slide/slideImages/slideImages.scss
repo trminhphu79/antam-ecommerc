@@ -79,11 +79,17 @@
 // Mobile: width < 740px
 @media (max-width: 46.1875em) {
   .slide__images {
-    margin: 0 -16px;
     padding: 10px 10px 0;
-    height: 464px;
+    width: unset;
+    height: 383px;
     &-box {
       height: 80%;
+    }
+    .slide__image img {
+      height: 363px;
+    }
+    .slide__manual-btn {
+      background-color: #fff;
     }
   }
 }
@@ -93,5 +99,8 @@
   .slide__images {
     width: 100%;
     padding: 16px 16px 78px;
+    .slide__image img {
+      opacity: 0.9;
+    }
   }
 }

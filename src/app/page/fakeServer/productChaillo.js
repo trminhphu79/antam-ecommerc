@@ -57,7 +57,7 @@ const products = [{
         title: "CHAI SERUM TINH DẦU THUỶ TINH TRẮNG TRONG NẮP XOÁY VÀNG 5ML,10ML,15ML,20ML,30ML,50ML,100ML",
         priceHight: 4000,
         priceLow: 1000 , 
-        content : " , Cocoon rất vinh dự khi là thương hiệu mỹ phẩm Việt Nam đầu tiên được chấp thuận bởi chương trình Leaping Bunny của tổ chức Cr "
+        content : "Cocoon rất vinh dự khi là thương hiệu mỹ phẩm Việt Nam đầu tiên được chấp thuận bởi chương trình Leaping Bunny của tổ chức Cr "
 
     },
     {
@@ -91,7 +91,7 @@ const products = [{
         title: "HŨ ĐỰNG YẾN THỦY TINH TRÒN NẮP THIẾT VÀNG,THIẾT ĐEN 75ML",
         priceHight: 6000,
         priceLow: 2000 , 
-        content : " chai bi lăn, Chai chiết nước hoa, chai dầu gội sữa tắm, Chai đựng dầu gội sữa tắm, chai đựng nước hoa, chai đựng nước hoa cao cấp, chai đựng toner lotion, Chai lọ chiết mỹ phẩm, Chai lọ đựng mỹ phẩm, chai lọ mỹ phẩm, chai lọ nhôm đựng mỹ phẩm, chai lọ thủy tinh, chai nước hoa vai vuông, "
+        content : "Cocoon rất vinh dự khi là thương hiệu mỹ phẩm Việt Nam đầu tiên được chấp thuận bởi chương trình Leaping Bunny của tổ chức Cr "
     },
     {
         _id: "5b21ca3eeb7f6fbccd821",

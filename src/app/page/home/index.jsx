@@ -24,7 +24,7 @@ class Home extends Component {
             products={allProduct} 
             slideSize={3}
         />
-        <h2>các sản phẩm nổi bật</h2>
+        <h2 id="hot-product">các sản phẩm nổi bật</h2>
         <ListProduct products={hotProducts} />
       </div>
     );

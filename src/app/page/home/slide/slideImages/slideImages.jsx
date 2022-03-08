@@ -1,7 +1,7 @@
 import React from "react";
 import "./slideImages.scss";
 
-export const SlideImages = ( {products, manualSize, onClick} ) => {
+export const SlideImages = ( {products, manualSize} ) => {
   return (
     <div className="slide__images">
       <div className="slide__images-box">
@@ -24,7 +24,6 @@ export const SlideImages = ( {products, manualSize, onClick} ) => {
         <div className="slide__manual">
           {Array.from({ length: manualSize }).map((item, index) => (
             <label
-              onClick={() => onClick(index)}
               key={index}
               htmlFor={`radio${index + 1}`}
               className="slide__manual-btn"
