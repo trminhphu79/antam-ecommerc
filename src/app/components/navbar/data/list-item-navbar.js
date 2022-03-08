@@ -11,12 +11,12 @@ export const listItemNavbar = [
       id: 2,
       itemName: 'Sản phẩm',
       icon: icons.iconProduct,
-      link: '/product'
+      link: '/san-pham'
     },
     {
       id: 3,
       itemName: 'Liên hệ',
       icon: icons.iconContact,
-      link: '/contact'
+      link: '/lien-he'
     },
   ]
