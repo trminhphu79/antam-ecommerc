@@ -115,6 +115,150 @@ export function getProducts() {
     return products;
 }
 
+const customsers = [
+    {
+        _id : "cus123",
+        name : "Lĩnh beautiful girl" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "users A" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "Tuyến Ok" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "Dat G" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "abcd" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "nothing 111" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,
+        address : 'phuoc long - nha trang' , 
+    },
+    {
+        _id : "cus123",
+        name : "ten user" , 
+        number_phone : '0392312345' , 
+        list_order : [] ,// abstraction . 
+        address : 'phuoc long - nha trang' , 
+    },
+] ; 
+ 
+const orders = [
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    {
+        _id: 'order1' , 
+        customer : customsers[0] ,
+        products : products[0] , 
+        date : '1-2-2022 - 2h30' , 
+        states : {
+            waiting : true ,
+            success : "thành công" , 
+            failed : "thất bại" ,
+        }
+    },
+    
+]
+
 const forms = [{
         _id: '5fb5233v37',
         name: 'Họ và tên',
