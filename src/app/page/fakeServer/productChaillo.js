@@ -115,149 +115,156 @@ export function getProducts() {
     return products;
 }
 
-const customsers = [
+const customers = [
     {
-        _id : "cus123",
+        _id : "cus13",
         name : "Lĩnh beautiful girl" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus1343",
         name : "users A" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus122343",
         name : "Tuyến Ok" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus823",
         name : "Dat G" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus923",
         name : "abcd" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus2923",
         name : "nothing 111" , 
         number_phone : '0392312345' , 
         list_order : [] ,
         address : 'phuoc long - nha trang' , 
     },
     {
-        _id : "cus123",
+        _id : "cus1993",
         name : "ten user" , 
         number_phone : '0392312345' , 
         list_order : [] ,// abstraction . 
         address : 'phuoc long - nha trang' , 
     },
 ] ; 
+
+export function getCustomers () {
+    return customers  ; 
+}
  
 const orders = [
     {
         _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false  ,
+            success : false, 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order2' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order3' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order4' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order5' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order6' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order7' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
     {
-        _id: 'order1' , 
-        customer : customsers[0] ,
-        products : products[0] , 
+        _id: 'order8' , 
+        customer : "customersID" ,
+        products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : true ,
-            success : "thành công" , 
-            failed : "thất bại" ,
+            waiting : false,
+            success : false , 
+            failed : false ,
         }
     },
-    
 ]
+
+export function getOrders () {
+    return orders  ; 
+}
 
 const forms = [{
         _id: '5fb5233v37',
