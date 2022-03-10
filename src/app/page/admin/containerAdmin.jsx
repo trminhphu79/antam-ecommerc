@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
-import { getProducts , getCustomers , getOrders } from "app/page/fakeServer/productChaillo";
 import "./styles/containerAdmin.css";
 
 class ContainerAdmin extends Component {
