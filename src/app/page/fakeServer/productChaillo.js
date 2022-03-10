@@ -170,7 +170,7 @@ const customers = [
 export function getCustomers () {
     return customers  ; 
 }
- 
+
 const orders = [
     {
         _id: 'order1' , 
@@ -178,9 +178,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false  ,
-            success : false, 
-            failed : false ,
+            waiting : null  ,
+            success : null, 
+            failed : null ,
         }
     },
     {
@@ -189,9 +189,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -200,9 +200,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -211,9 +211,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -222,9 +222,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -233,9 +233,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -244,9 +244,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
     {
@@ -255,9 +255,9 @@ const orders = [
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
         states : {
-            waiting : false,
-            success : false , 
-            failed : false ,
+            waiting : null,
+            success : null , 
+            failed : null ,
         }
     },
 ]

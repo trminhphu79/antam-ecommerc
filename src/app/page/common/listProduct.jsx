@@ -12,11 +12,7 @@ const ListProduct = ({ products }) => {
                             <div className='wrapper-item'>
                                 <img src={item.image} alt="" />
                                 <div className="content">
-                                    <h4>{item.title}</h4>
-                                    <div>
-                                        <span>{item.priceLow} - {item.priceHight}</span>
-                                        <p>VND/1 Cái</p>
-                                    </div>
+                                    <h4>{item.title}</h4>       
                                     <Link to={`/product/${item._id}`} className="btn">chi tiết sản phẩm</Link>
                                 </div>
                             </div>

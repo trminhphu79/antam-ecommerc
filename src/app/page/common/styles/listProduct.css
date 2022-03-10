@@ -40,23 +40,10 @@ html {
   margin-bottom: 1rem;
 }
 
-.list-product div .wrapper-item .content div span {
-  font-size: 1.8rem;
-  color: var(--price-text);
-  font-weight: 700;
-  height: 3.2rem;
-  line-height: 3.2rem;
-  margin-right: 0.4rem;
+.list-product div .wrapper-item .content h4{
+  margin-bottom: 1.2rem ; 
 }
 
-.list-product div .wrapper-item .content div p {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #252d2e;
-  margin: 0;
-  height: 3.2rem;
-  line-height: 3.2rem;
-}
 
 .list-product div .wrapper-item .content .btn {
   margin: 0;

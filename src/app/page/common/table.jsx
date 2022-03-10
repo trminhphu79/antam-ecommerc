@@ -1,40 +1,20 @@
-import React from 'react';
-import { getProducts } from 'app/page/fakeServer/productChaillo';
+import React, { Component } from "react";
+import _ from "lodash";
+import TableBody from "./tableBody";
+import TableHead from './tableHead' ; 
 
-const Table = () => {
-    const products = getProducts();
+class Table extends Component {
+    
+  render() {
+    const { columns, data } = this.props;
+
     return (
-        <table className="table">
-            <thead>
-                <tr>
-                    <th>title</th>
-                    <th>Price Low</th>
-                    <th>Price Hight</th>
-                    <th>Id</th>
-                    <th>
-                        <button className=" btn-success">create</button>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {products.map((item, index) => {
-                    if (index < 4) {
-                        return (
-                        <tr key={item._id}>
-                            <td>{item.title}</td>
-                            <td>{item.priceLow}</td>
-                            <td>{item.priceHight}</td>
-                            <td>{item._id}</td>
-                            <td>
-                                <button className=' btn-danger' >delete</button>
-                            </td>
-                        </tr>)
-                    }
-                    return null ; 
-                })}
-            </tbody>
-        </table>
+      <table className="table">
+        <TableHead columns={columns}/>
+        <TableBody columns={columns} data={data}/>
+      </table>
     );
+  }
 }
 
 export default Table;

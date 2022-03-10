@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom" ; 
 
 const ListGroup = () => {
     return ( 
         <div className="list-group-section">
             <ul className="list-group">
-                <li className="list-group-item active">All Products</li>
-                <li className="list-group-item">Orders</li>
-                <li className="list-group-item">Customers</li>
-                <li className="list-group-item">Other</li>
+                <Link to="/admin/all-products" className="list-group-item active">All Products</Link>
+                <Link to="/admin/table-order" className="list-group-item">Orders</Link>
+                <Link to="/admin/table-customer" className="list-group-item">Customers</Link>
+                <Link to="/admin/all-products" className="list-group-item">Other</Link>
             </ul>    
         </div>
      );

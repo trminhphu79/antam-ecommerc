@@ -16,10 +16,11 @@ import "./styles/_variable.scss";
 function App() {
   return (
     <React.Fragment>
-      <ScrollToTop />
+      <ScrollToTop />            
       {/* <Header />
       <Navbar /> */}
       <Switch>
+        {/* <Route path="/admin/"/> */}
         <Route path="/admin" component={Admin}/>
         <Route path="/product/:_id" exact component={ProductDetail} />
         <Route path="/contact" component={Contact} />
