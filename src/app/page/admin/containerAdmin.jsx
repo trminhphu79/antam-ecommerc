@@ -15,7 +15,7 @@ class ContainerAdmin extends Component {
       { value: "address", label: "address" },
       {
         key: "123",
-        content: item => <button className=" btn-danger">delete</button>,
+        content: item => <button  onClick={() => this.props.onDelete(item,"customers")} className=" btn-danger">delete</button>,
       },
       { key: "1232", content: item => <button className=" btn-info">edit</button> },
     ],
@@ -26,7 +26,7 @@ class ContainerAdmin extends Component {
       { value: "date", label: "date" },
       {
         key: "1233",
-        content: (item) => <button className=" btn-danger">delete</button>,
+        content: (item) => <button onClick={() => this.props.onDelete(item,"orders")} className=" btn-danger">delete</button>,
       },
       { key: "12232", content: (item) =>  <button className=" btn-info">edit</button> },
       {
@@ -37,9 +37,8 @@ class ContainerAdmin extends Component {
   };
 
   render() {
-    const products = getProducts();
-    const customers = getCustomers() ; 
-    const orders = getOrders() ; 
+    
+    const { customers , products , orders } = this.props ; 
 
     return (
       <main className="container">
@@ -64,7 +63,7 @@ class ContainerAdmin extends Component {
               <Route
                 path="/admin/all-products"
                 render={(props) => (
-                  <AllProducts products={products} {...props} />
+                  <AllProducts products={products} {...props} onDelete={this.props.onDelete} />
                 )}
               />
             </Switch>
