@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-import Modal from 'app/page/common/modal' ; 
+import Modal from 'app/page/common/modal';
 
-const AllProducts = ({ products , onDelete ,inputField }) => {
- 
+const AllProducts = ({ products, onDelete, inputField, onCreate }) => {
+
   return (
     <div>
-      <Modal inputField={inputField}/>
+      <Modal
+        onCreate={onCreate}
+        inputField={inputField}
+        products={products}
+      />
       <div className="row">
         {products.map((item) => (
           <div key={item._id} className="col-xl-3 col-lg-3 col-md-4 col-xs-6">
@@ -15,7 +19,7 @@ const AllProducts = ({ products , onDelete ,inputField }) => {
                 <h4>{item.title}</h4>
                 <div>
                   <button className="btn-info">edit</button>
-                  <button  onClick={() => onDelete(item,'products')} className="btn-danger">remove</button>
+                  <button onClick={() => onDelete(item, 'products')} className="btn-danger">remove</button>
                 </div>
               </div>
             </div>

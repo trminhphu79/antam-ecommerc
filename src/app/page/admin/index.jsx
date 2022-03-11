@@ -30,6 +30,12 @@ class Admin extends Component {
     }
   };
 
+  handleCreate = (item) =>{
+    const items = [...this.state.products] ;
+    items.push(item) ; 
+    this.setState({ products : items }) ; 
+  }
+
   render() {
     const { products, orders, customers } = this.state;
 
@@ -41,6 +47,7 @@ class Admin extends Component {
           orders={orders}
           customers={customers}
           onDelete={this.handleDelete}
+          onCreate={this.handleCreate}
         />
       </React.Fragment>
     );

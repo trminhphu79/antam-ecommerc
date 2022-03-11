@@ -57,9 +57,9 @@ class ContainerAdmin extends Component {
   };
 
   inputField = [
-    { label: "title", type: "text" },
-    { label: "content", type: "text" },
-    { label: "price", type: "number" },
+    { name: "title", type: "text" },
+    { name: "content", type: "text" },
+    { name: "price", type: "number" },
   ];
 
   render() {
@@ -101,6 +101,7 @@ class ContainerAdmin extends Component {
                     inputField={this.inputField}
                     {...props}
                     onDelete={this.props.onDelete}
+                    onCreate={this.props.onCreate}
                   />
                 )}
               />
