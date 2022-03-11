@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import Modal from 'app/page/common/modal' ; 
 
-const AllProducts = ({ products , onDelete }) => {
+const AllProducts = ({ products , onDelete ,inputField }) => {
+ 
   return (
     <div>
-      <button className="btn-success">create a product</button>
+      <Modal inputField={inputField}/>
       <div className="row">
         {products.map((item) => (
           <div key={item._id} className="col-xl-3 col-lg-3 col-md-4 col-xs-6">

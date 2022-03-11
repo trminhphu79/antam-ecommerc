@@ -1,0 +1,41 @@
+.modal-create {
+    position: fixed ; 
+    top: 0 ; 
+    bottom : 0 ; 
+    z-index : 11111 ; 
+    width: 100% ; 
+    background: rgba(0 , 0 , 0 ,.2) ;
+     display: none ; 
+}
+
+.modal-create.active {
+    display: block ;  
+}
+
+.modal-create .modal-body{
+    background: #fff ; 
+    display: flex ; 
+    flex-direction: column;
+    width: 80% ; 
+    margin : 20rem auto ; 
+}
+
+.modal-create .modal-body form {
+    display: flex ; 
+    flex-direction: column ; 
+}
+
+.modal-create .modal-body form input{
+    margin: 1rem ; 
+    width : 100% ; 
+    border: .1rem solid #ddd ; 
+}
+
+.modal-create .modal-body .modal-button button {
+    margin : .8rem ; 
+}
+
+
+
+
+
