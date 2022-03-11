@@ -1,39 +1,47 @@
 import React, { Component } from 'react';
-import { displayModal, hiddenModal } from "../utils/displayModal";
 import { getValueModal } from '../utils/getValueModal';
-import "./styles/modal.css" ;
+import "./styles/modal.css";
 
 class Modal extends Component {
 
-  raiseCreateModal = () =>{
-    const value = getValueModal(this.props.products) ; 
-    this.props.onCreate(value) ; 
+  raiseCreateModal = () => {
+    const value = getValueModal(this.props.products);
+    this.props.onCreate(value);
+    this.props.history.replace('/admin/all-products');
+  }
+
+  cancelModal = () => {
+    this.props.history.replace('/admin/all-products');
+  }
+
+  getEditValue = (id,products) => {
+    for (let item of products) {
+      if (item._id === id)
+        return item ; 
+    };
+
+    return console.log('error at productContent component');
   }
 
   render() {
-    const { inputField } = this.props;
-
-    return (
-      <React.Fragment>
-        <button
-          className="modal-control btn-success"
-          onClick={() => displayModal()}
-        >
-          create
-        </button>
+    const { inputField , match , products } = this.props;
+    if (match.params._id) {
+      const value = this.getEditValue(match.params._id ,products);
+      console.log(value)
+      return (
         <div className="modal-create">
           <div className="modal-body">
-            <h2>create a new product : </h2>
+            <h2>edit a product : </h2>
             <form action="">
               {inputField.map((item) => (
-                <input key={item.name} type={item.type} placeholder={item.name} name={item.name} />
+                <input key={item.name} type={item.type} placeholder={item.name} value={value[item.name]} name={item.name} />
               ))}
               <input type="file" id="image_input" multiple />
             </form>
             <div className="modal-button">
               <button
                 className="cancel btn-primary"
-                onClick={() => hiddenModal()}
+                onClick={this.cancelModal}
               >
                 cancel
               </button>
@@ -41,7 +49,30 @@ class Modal extends Component {
             </div>
           </div>
         </div>
-      </React.Fragment>
+      )
+    }
+
+    return (
+      <div className="modal-create">
+        <div className="modal-body">
+          <h2>create a new product : </h2>
+          <form action="">
+            {inputField.map((item) => (
+              <input key={item.name} type={item.type} placeholder={item.name} name={item.name} />
+            ))}
+            <input type="file" id="image_input" multiple />
+          </form>
+          <div className="modal-button">
+            <button
+              className="cancel btn-primary"
+              onClick={this.cancelModal}
+            >
+              cancel
+            </button>
+            <button onClick={this.raiseCreateModal} className="save btn-success">save change</button>
+          </div>
+        </div>
+      </div>
     );
   }
 }

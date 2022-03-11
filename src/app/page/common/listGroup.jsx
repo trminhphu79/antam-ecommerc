@@ -8,10 +8,9 @@ const ListGroup = () => {
                 <Link to="/admin/all-products" className="list-group-item active">All Products</Link>
                 <Link to="/admin/table-order" className="list-group-item">Orders</Link>
                 <Link to="/admin/table-customer" className="list-group-item">Customers</Link>
-                <Link to="/admin/all-products" className="list-group-item">Other</Link>
             </ul>    
         </div>
-     );
+    );
 }
  
 export default ListGroup;
