@@ -34,6 +34,7 @@ class ContainerAdmin extends Component {
       { value: "customer", label: "customer name" },
       { value: "products", label: "product name" },
       { value: "date", label: "date" },
+      { value: "state" , label : 'state'} , 
       {
         key: "1233",
         content: (item) => (
@@ -48,10 +49,6 @@ class ContainerAdmin extends Component {
       {
         key: "12232",
         content: (item) => <button className=" btn-info">edit</button>,
-      },
-      {
-        key: " 234",
-        content: (item) => <button className=" btn-primary">state</button>,
       },
     ],
   };

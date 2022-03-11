@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { displayModal, hiddenModal } from "../utils/displayModal";
 import { getValueModal } from '../utils/getValueModal';
-import "./styles/modal.css";
+import "./styles/modal.css" ;
 
 class Modal extends Component {
 

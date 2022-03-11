@@ -177,88 +177,56 @@ const orders = [
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null  ,
-            success : null, 
-            failed : null ,
-        }
+        state : 'success'
     },
     {
         _id: 'order2' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order3' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order4' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order5' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order6' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order7' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
     {
         _id: 'order8' , 
         customer : "customersID" ,
         products : "productsID" , 
         date : '1-2-2022 - 2h30' , 
-        states : {
-            waiting : null,
-            success : null , 
-            failed : null ,
-        }
+        state : "success"
     },
 ]
 
