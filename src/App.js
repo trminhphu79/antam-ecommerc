@@ -17,12 +17,11 @@ import Admin from "./app/page/admin/index.jsx";
 function App() {
   return (
     <React.Fragment>
-      <ScrollToTop />            
-      {/* <Header />
-      <Navbar /> */}
+      <ScrollToTop />
+      <Header />
+      <Navbar />
       <Switch>
-        {/* <Route path="/admin/"/> */}
-        <Route path="/admin" component={Admin}/>
+        <Route path="/admin" component={Admin} />
         <Route path="/product/:_id" exact component={ProductDetail} />
         <Route path="/lien-he" component={Contact} />
         <Route path="/dang-nhap" component={LoginPage} />
