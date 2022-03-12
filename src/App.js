@@ -13,7 +13,7 @@ import LoginPage from "app/page/login/login";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss"
-
+import Admin from "./app/page/admin/index.jsx";
 function App() {
   return (
     <React.Fragment>
