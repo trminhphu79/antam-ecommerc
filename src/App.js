@@ -1,17 +1,18 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { Header } from "app/components/header/";
+import { Header } from "app/components/header";
 import { Navbar } from "app/components/navbar";
 import { Footer } from "app/components/footer";
-import Product from "./app/page/products/product";
-import Home from "./app/page/home/home";
+import Products from "app/page/products/product";
+import Home from "app/page/home";
 import ProductDetail from "./app/page/productDetail/productDetail";
 import { Contact } from "app/page/contact";
-import Admin from './app/page/admin' ; 
+import ScrollToTop from "app/page/utils/ScrollToTop";
 import NotFound from "app/page/notFound/NotFound";
-import  ScrollToTop  from "app/page/utils/ScrollToTop" ; 
+import LoginPage from "app/page/login/login";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
+import "./styles/_common.scss"
 
 function App() {
   return (
@@ -23,13 +24,14 @@ function App() {
         {/* <Route path="/admin/"/> */}
         <Route path="/admin" component={Admin}/>
         <Route path="/product/:_id" exact component={ProductDetail} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/product" component={Product} />
-        <Route path="/not-found" component={NotFound} />
+        <Route path="/lien-he" component={Contact} />
+        <Route path="/dang-nhap" component={LoginPage} />
+        <Route path="/san-pham" component={Products} />
         <Route path="/" exact component={Home} />
+        <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 }
