@@ -9,6 +9,7 @@ import ProductDetail from "./app/page/productDetail/productDetail";
 import { Contact } from "app/page/contact";
 import ScrollToTop from "app/page/utils/ScrollToTop";
 import NotFound from "app/page/notFound/NotFound";
+import LoginPage from "app/page/login/login";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss"
@@ -22,6 +23,7 @@ function App() {
       <Switch>
         <Route path="/product/:_id" exact component={ProductDetail} />
         <Route path="/lien-he" component={Contact} />
+        <Route path="/dang-nhap" component={LoginPage} />
         <Route path="/san-pham" component={Products} />
         <Route path="/" exact component={Home} />
         <Route path="/not-found" component={NotFound} />

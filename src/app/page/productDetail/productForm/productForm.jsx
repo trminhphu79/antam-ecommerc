@@ -10,7 +10,6 @@ class ProductForm extends Component {
     raiseFormValue = () => {    
         const values = getValue() ; 
         this.props.onSubmit(values) ; 
-        this.props.history.replace('/') ; 
     }
 
     render() {

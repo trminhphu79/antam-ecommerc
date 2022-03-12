@@ -3,14 +3,21 @@ import ProductContent from "./productContent/productContent";
 import ProductForm from "./productForm/productForm";
 import { getForms } from "../fakeServer/productChaillo";
 import { getProducts } from "../fakeServer/productChaillo";
-import { Toast } from 'app/page/common/toast/toast';
+import { Toasts } from "../common/toasts/toasts";
+import { CreateToast } from "../utils/createToast";
 import "./productDetail.scss";
 
 class ProductDetail extends Component {
   handleSubmit = (value) => {
     console.log("you have a new order!", value);
+    let state = '';
+    let timeOut = 4000;
     if(value) {
-
+      state = 'success';
+      CreateToast(state, timeOut, 'Thành công! Đã gửi thông tin đặt hàng.')
+    } else {
+      state = 'error'
+      CreateToast(state, timeOut, 'Lỗi! Không tin đặt hàng không được gửi đi.')
     }
   };
 
@@ -37,6 +44,7 @@ class ProductDetail extends Component {
             history={history}
           />
         </div>
+        <Toasts/>
       </React.Fragment>
     );
   }

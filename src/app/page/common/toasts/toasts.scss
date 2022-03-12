@@ -10,12 +10,12 @@
 
 .toasts {
   position: fixed;
-  z-index: 100;
+  z-index: 120;
   top: 10rem;
   right: 1rem;
   .toast-box {
     margin-bottom: 1rem;
-    padding: 2rem;
+    padding: 2.6rem 3rem;
     padding-right: 4rem;
     font-size: 2.6rem;
     border-radius: 0.6rem;
@@ -25,34 +25,42 @@
     align-items: center;
     overflow: hidden;
     animation: slide-show 1.5s ease forwards;
+    &__msg {
+      font-size: 1.8rem;
+      margin-left: 2rem;
+    }
+    &__countdown {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      animation: count-down 4s ease forwards;
+    }
     &.success {
       background: var(--success-light-color);
       border-left: 0.6rem solid var(--success-color);
+      & .toast-box__countdown {
+        border-bottom: 0.4rem solid var(--success-color);
+      }
     }
 
     &.warning {
       background: var(--warn-light-color);
       border-left: 0.6rem solid var(--warn-color);
+      & .toast-box__countdown {
+        border-bottom: 0.4rem solid var(--warn-color);
+      }
     }
 
     &.error {
       background: var(--error-light-color);
       border-left: 0.6rem solid var(--error-color);
+      & .toast-box__countdown {
+        border-bottom: 0.4rem solid var(--error-color);
+      }
     }
-
-    &__message {
-      font-size: 1.6rem;
-      margin-left: 2rem;
-    }
-
-    &__count-down {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 0.4rem;
-      background-color: var(--success-color);
-      animation: count-down 2s ease forwards;
+    &.hide {
+      animation: slide-hide 1.5s ease forwards;
     }
   }
 }
