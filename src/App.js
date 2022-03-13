@@ -18,8 +18,8 @@ function App() {
   return (
     <React.Fragment>
       <ScrollToTop />
-      <Header />
-      <Navbar />
+      {/* <Header />
+      <Navbar /> */}
       <Switch>
         <Route path="/admin" component={Admin} />
         <Route path="/product/:_id" exact component={ProductDetail} />
@@ -30,7 +30,7 @@ function App() {
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </React.Fragment>
   );
 }

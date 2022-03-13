@@ -5,12 +5,12 @@ import { icons } from "assets/icons/icons-svg";
 import "./styles/headerAdmin.scss";
 
 const HeaderAdmin = () => {
-   
+
   /* Logic scroll show background header */
   const [sticky, setSticky] = useState("");
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
-    if(scrolled > 0) {
+    if (scrolled > 0) {
       setSticky(" sticky");
     } else {
       setSticky("");
@@ -22,15 +22,15 @@ const HeaderAdmin = () => {
 
   const HandleSearchBar = () => {
     const screenWidth = window.innerWidth;
-    if(screenWidth < 740) {
-      if(open === '') {
+    if (screenWidth < 740) {
+      if (open === '') {
         setOpen(" open")
       }
       else {
         setOpen("")
       }
     }
-    
+
   }
 
   return (
