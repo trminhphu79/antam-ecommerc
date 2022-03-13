@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link , Route , Switch } from 'react-router-dom' ; 
 import Modal from 'app/page/common/modal';
+import "../styles/allProducts.scss";
 
 const AllProducts = ({ products, onDelete, inputField, onCreate }) => {
 
   return (
-    <div>
+    <section className="product-section">
       <Link to="/admin/all-products/create-product"
         className="modal-control btn-success"
       >
@@ -38,7 +39,7 @@ const AllProducts = ({ products, onDelete, inputField, onCreate }) => {
         products={products} {...props}/>} />
       </Switch>
       
-    </div>
+    </section>
   );
 };
 

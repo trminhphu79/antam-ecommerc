@@ -41,7 +41,6 @@ class Admin extends Component {
 
     return (
       <React.Fragment>
-        <HeaderAdmin />
         <ContainerAdmin
           products={products}
           orders={orders}

@@ -13,9 +13,9 @@ class TableBody extends Component {
 
     return (
       <tbody>
-        {data.map((item) => (
-          <tr>
-            {columns.map((column) => ( <td>{this.renderCell(item, column)}</td>))}
+        {data.map((item, index) => (
+          <tr key={index} className="value-row">
+            {columns.map((column, index) => ( <td key={index} className="value-column">{this.renderCell(item, column)}</td>))}
           </tr>
         ))}
       </tbody>

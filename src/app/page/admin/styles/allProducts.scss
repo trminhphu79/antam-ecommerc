@@ -1,0 +1,7 @@
+.product-section {
+  position: relative;
+  top: 0;
+  left: var(--width-menu);
+  width: calc(100% - var(--width-menu));
+  padding: 4rem 4rem 0;
+}
