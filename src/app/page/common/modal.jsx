@@ -40,12 +40,12 @@ class Modal extends Component {
             </form>
             <div className="modal-button">
               <button
-                className="cancel btn-primary"
+                className="modal-button-cancel"
                 onClick={this.cancelModal}
               >
                 cancel
               </button>
-              <button onClick={this.raiseCreateModal} className="save btn-success">save change</button>
+              <button onClick={this.raiseCreateModal} className="modal-button-save">save change</button>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ class Modal extends Component {
     return (
       <div className="modal-create">
         <div className="modal-body">
-          <h2>create a new product : </h2>
+          <h1>Tạo Mới Sản Phẩm</h1>
           <form action="">
             {inputField.map((item) => (
               <input key={item.name} type={item.type} placeholder={item.name} name={item.name} />
@@ -64,12 +64,12 @@ class Modal extends Component {
           </form>
           <div className="modal-button">
             <button
-              className="cancel btn-primary"
+              className="modal-button-cancel"
               onClick={this.cancelModal}
             >
               cancel
             </button>
-            <button onClick={this.raiseCreateModal} className="save btn-success">save change</button>
+            <button onClick={this.raiseCreateModal} className="modal-button-save">save change</button>
           </div>
         </div>
       </div>

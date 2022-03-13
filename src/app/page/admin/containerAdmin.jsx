@@ -1,34 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
 import { icons } from "assets/icons/icons-svg";
+import { Toasts } from "../common/toasts/toasts";
 import "./styles/containerAdmin.scss";
 
 class ContainerAdmin extends Component {
   columns = {
-    customer: [
-      { value: "_id", label: "id" },
-      { value: "name", label: "name" },
-      { value: "number_phone", label: "phone" },
-      { value: "address", label: "address" },
-      {
-        key: "123",
-        content: (item) => (
-          <div
-            onClick={() => this.props.onDelete(item, "customers")}
-            className="btn-delete"
-          >
-            {icons.iconDelete}
-          </div>
-        ),
-      },
-      {
-        key: "1232",
-        content: (item) => <div className=" btn-edit">{icons.iconEdit}</div>,
-      },
-    ],
     order: [
       { value: "_id", label: "id" },
       { value: "customer", label: "customer name" },
@@ -39,7 +19,9 @@ class ContainerAdmin extends Component {
         key: "1233",
         content: (item) => (
           <div
-            onClick={() => this.props.onDelete(item, "orders")}
+            onClick={() => {
+              return this.props.onDelete(item, "orders");
+            }}
             className=" btn-delete"
           >
             {icons.iconDelete}
@@ -62,8 +44,9 @@ class ContainerAdmin extends Component {
   render() {
     const { customers, products, orders } = this.props;
 
+
     return (
-      <main className="container">
+      <main className="container container-admin">
         <ListGroup />
         <Switch>
           <Route

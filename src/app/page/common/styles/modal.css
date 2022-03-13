@@ -1,40 +1,91 @@
 .modal-create {
-    position: fixed ; 
-    top: 0 ; 
-    bottom : 0 ; 
-    z-index : 11111 ; 
-    width: 100% ; 
-    background: rgba(0 , 0 , 0 ,.2) ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 110;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .modal-create.active {
-    display: block ;  
+  display: block;
 }
 
-.modal-create .modal-body{
-    background: #fff ; 
-    display: flex ; 
-    flex-direction: column;
-    width: 80% ; 
-    margin : 20rem auto ; 
+.modal-create .modal-body {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  margin: 20rem auto;
+  padding: 2rem 6rem;
+  border-radius: 2.4rem;
+}
+
+.modal-create .modal-body h1 {
+    color: var(--text-color);
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 
 .modal-create .modal-body form {
-    display: flex ; 
-    flex-direction: column ; 
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
 }
 
-.modal-create .modal-body form input{
-    margin: 1rem ; 
-    width : 100% ; 
-    border: .1rem solid #ddd ; 
+.modal-create .modal-body form input {
+  font-size: 1.8rem;
+  margin: 1.4rem 0;
+  padding: 1.4rem 1.8rem;  
+  border-radius: 3rem !important;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+  border: none;
+  background: #fff;
+  flex: 1;
 }
 
 .modal-create .modal-body .modal-button button {
-    margin : .8rem ; 
+  margin: 0.8rem;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.8rem;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.modal-create .modal-body .modal-button button:hover {
+    opacity: 0.8;
+  }
+
+.modal-create .modal-body .modal-button .modal-button-cancel {
+    background-color: #ff6464;
+}
+
+.modal-create .modal-body .modal-button .modal-button-save {
+    background-color: #44be44;
 }
 
 
+/* Responsive */
 
+/*  Mobile: width < 740px  */
+@media (max-width: 46.1875em) {
+ 
+}
 
+/*  Tablet: width >= 740px and width < 1024px */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .modal-create .modal-body h1 {
+        font-size: 2.6rem;
+    }
+      
+      .modal-create .modal-body form input {
+        font-size: 1.6rem;
+      }
 
+      .modal-create .modal-body .modal-button button {
+        font-size: 1.6rem;
+      }
+}

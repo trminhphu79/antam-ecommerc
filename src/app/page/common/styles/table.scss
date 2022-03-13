@@ -14,7 +14,7 @@
       padding: 2rem;
     .table-wrapper {
       overflow: auto;
-      max-height: 100vh;
+      max-height: calc(100vh - 20rem);
       .table {
         border-radius: 0.6rem 0.6rem 0 0;
         overflow: hidden;
@@ -37,6 +37,7 @@
           color: var(--text-color);
         }
         & .value-column {
+          padding: 1.6rem 0;
           color: #5a5a5a;
         }
       }
