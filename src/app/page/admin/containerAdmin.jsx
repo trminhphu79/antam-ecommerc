@@ -28,18 +28,37 @@ class ContainerAdmin extends Component {
           </div>
         ),
       },
-      {
-        key: "12232",
-        content: (item) => <div className=" btn-edit">{icons.iconEdit}</div>,
-      },
     ],
-  };
+    allProducts: [
+      { value: '_id', label: "Id" },
+      { value: 'title', label: "Title" },
+      { value: 'content', label: "Content" },
+      {
+        key: "13233",
+        content: (item) => (
+          <div
 
-  inputField = [
-    { name: "title", type: "text" },
-    { name: "content", type: "text" },
-    { name: "price", type: "number" },
-  ];
+            className=" btn-edit"
+          >
+            {icons.iconEdit}
+          </div>
+        ),
+      },
+      {
+        key: "6233",
+        content: (item) => (
+          <div
+            onClick={() => {
+              return this.props.onDelete(item, "orders");
+            }}
+            className=" btn-delete"
+          >
+            {icons.iconDelete}
+          </div>
+        ),
+      },
+    ]
+  };
 
   render() {
     const { customers, products, orders } = this.props;
@@ -49,16 +68,6 @@ class ContainerAdmin extends Component {
       <main className="container container-admin">
         <ListGroup />
         <Switch>
-          <Route
-            path="/admin/table-customer"
-            render={(props) => (
-              <Table
-                columns={this.columns.customer}
-                data={customers}
-                {...props}
-              />
-            )}
-          />
           <Route
             path="/admin/table-order"
             render={(props) => (
@@ -75,10 +84,10 @@ class ContainerAdmin extends Component {
             render={(props) => (
               <AllProducts
                 products={products}
-                inputField={this.inputField}
+                columns={this.columns.allProducts}
                 {...props}
-                onDelete={this.props.onDelete}
-                onCreate={this.props.onCreate}
+                // onDelete={this.props.onDelete}
+                // onCreate={this.props.onCreate}
               />
             )}
           />

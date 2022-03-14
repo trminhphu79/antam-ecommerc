@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import HeaderAdmin from "./headerAdmin";
 import ContainerAdmin from "./containerAdmin";
 import {
   getOrders,
@@ -40,7 +39,6 @@ class Admin extends Component {
     const { products, orders, customers } = this.state;
 
     return (
-      <React.Fragment>
         <ContainerAdmin
           products={products}
           orders={orders}
@@ -48,7 +46,6 @@ class Admin extends Component {
           onDelete={this.handleDelete}
           onCreate={this.handleCreate}
         />
-      </React.Fragment>
     );
   }
 }
