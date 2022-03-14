@@ -1,4 +1,4 @@
-.modal-create {
+.modal-form {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,11 +9,11 @@
   text-align: center;
 }
 
-.modal-create.active {
+.modal-form.active {
   display: block;
 }
 
-.modal-create .modal-body {
+.modal-form .modal-body {
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -23,19 +23,19 @@
   border-radius: 2.4rem;
 }
 
-.modal-create .modal-body h1 {
+.modal-form .modal-body h1 {
     color: var(--text-color);
     font-size: 2.8rem;
     font-weight: 700;
 }
 
-.modal-create .modal-body form {
+.modal-form .modal-body form {
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
 }
 
-.modal-create .modal-body form input {
+.modal-form .modal-body form input {
   font-size: 1.8rem;
   margin: 1.4rem 0;
   padding: 1.4rem 1.8rem;  
@@ -46,7 +46,7 @@
   flex: 1;
 }
 
-.modal-create .modal-body .modal-button button {
+.modal-form .modal-body .modal-button button {
   margin: 0.8rem;
   border: none;
   padding: 0.8rem 1.8rem;
@@ -55,15 +55,15 @@
   font-size: 1.8rem;
 }
 
-.modal-create .modal-body .modal-button button:hover {
+.modal-form .modal-body .modal-button button:hover {
     opacity: 0.8;
   }
 
-.modal-create .modal-body .modal-button .modal-button-cancel {
+.modal-form .modal-body .modal-button .modal-button-cancel {
     background-color: #ff6464;
 }
 
-.modal-create .modal-body .modal-button .modal-button-save {
+.modal-form .modal-body .modal-button .modal-button-save {
     background-color: #44be44;
 }
 
@@ -77,15 +77,15 @@
 
 /*  Tablet: width >= 740px and width < 1024px */
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-    .modal-create .modal-body h1 {
+    .modal-form .modal-body h1 {
         font-size: 2.6rem;
     }
       
-      .modal-create .modal-body form input {
+      .modal-form .modal-body form input {
         font-size: 1.6rem;
       }
 
-      .modal-create .modal-body .modal-button button {
+      .modal-form .modal-body .modal-button button {
         font-size: 1.6rem;
       }
 }

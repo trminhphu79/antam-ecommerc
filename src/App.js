@@ -10,6 +10,7 @@ import { Contact } from "app/page/contact";
 import ScrollToTop from "app/page/utils/ScrollToTop";
 import NotFound from "app/page/notFound/NotFound";
 import LoginPage from "app/page/login/login";
+import Form from 'app/page/common/form' ; 
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss"
@@ -21,6 +22,7 @@ function App() {
       {/* <Header />
       <Navbar /> */}
       <Switch>
+        <Route path="/form" component={Form} />
         <Route path="/admin" component={Admin} />
         <Route path="/product/:_id" exact component={ProductDetail} />
         <Route path="/lien-he" component={Contact} />

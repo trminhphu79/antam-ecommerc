@@ -23,9 +23,6 @@ class Admin extends Component {
       case "orders":
         this.setState({ orders: newItems });
         break ; 
-      case "customers":
-        this.setState({ customers: newItems });
-        break ; 
     }
   };
 

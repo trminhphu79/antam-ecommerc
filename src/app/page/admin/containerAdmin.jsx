@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route , Link } from "react-router-dom";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
@@ -36,12 +36,12 @@ class ContainerAdmin extends Component {
       {
         key: "13233",
         content: (item) => (
-          <div
-
+          <Link
+            to={`/admin/all-products/${item._id}`}
             className=" btn-edit"
           >
             {icons.iconEdit}
-          </div>
+          </Link>
         ),
       },
       {
@@ -49,7 +49,7 @@ class ContainerAdmin extends Component {
         content: (item) => (
           <div
             onClick={() => {
-              return this.props.onDelete(item, "orders");
+              return this.props.onDelete(item, "products");
             }}
             className=" btn-delete"
           >
@@ -61,8 +61,7 @@ class ContainerAdmin extends Component {
   };
 
   render() {
-    const { customers, products, orders } = this.props;
-
+    const { products, orders , onCreate } = this.props;
 
     return (
       <main className="container container-admin">
@@ -85,9 +84,9 @@ class ContainerAdmin extends Component {
               <AllProducts
                 products={products}
                 columns={this.columns.allProducts}
+                onCreate={onCreate}
                 {...props}
-                // onDelete={this.props.onDelete}
-                // onCreate={this.props.onCreate}
+                onDelete={this.props.onDelete}
               />
             )}
           />
