@@ -6,7 +6,7 @@
   padding: 4rem 4rem 0;
   .table-heading {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   .table-container {
       border: 1px solid #e0e0e0;
@@ -15,10 +15,11 @@
     .table-wrapper {
       overflow: auto;
       max-height: calc(100vh - 20rem);
+      max-width: 1632px; 
+      // 1632
       .table {
         border-radius: 0.6rem 0.6rem 0 0;
         overflow: hidden;
-        text-align: center;
         & > :not(:first-child) {
           border-top: none !important;
         }
@@ -34,11 +35,15 @@
           border-radius: 1.4rem;
         }
         & .field-column {
-          color: var(--text-color);
+        padding: 1.2rem 2.2rem;
+        color: var(--text-color);
         }
         & .value-column {
-          padding: 1.6rem 0;
+          margin: auto 0;
+          padding: 1.6rem 2.2rem;
           color: #5a5a5a;
+          height: 3rem;
+          line-height: 3rem;
         }
       }
     }

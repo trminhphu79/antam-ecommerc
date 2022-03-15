@@ -9,8 +9,9 @@ const AllProducts = ({ products  , columns , products : data }) => {
   return (
     <section className="product-section">
       <Link to="/admin/all-products/create-product"
-        className="modal-control btn-success">
-          create</Link>
+        className="product-btn-create">
+        <i class="fal fa-plus"></i>
+          Thêm</Link>
       <Table heading="Sản Phẩm" columns={columns} data={data}/>
       <Switch>
         <Route path="/admin/all-products/create-product" render={(props) => <Modal

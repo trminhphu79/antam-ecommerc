@@ -24,26 +24,39 @@
 }
 
 .modal-form .modal-body h1 {
-    color: var(--text-color);
+    color: #555555;
     font-size: 2.8rem;
     font-weight: 700;
+    margin-bottom: 1.5rem;
 }
 
-.modal-form .modal-body form {
+
+.modal-form .modal-body form .form-group {
   display: flex;
-  flex-direction: column;
-  margin: 2rem 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.modal-form .modal-body form input {
+.modal-form .modal-body form .form-group label {
+  text-align: left;
+  flex: 1;
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.modal-form .modal-body form .form-group input {
   font-size: 1.8rem;
-  margin: 1.4rem 0;
+  margin: 1.6rem 0;
   padding: 1.4rem 1.8rem;  
   border-radius: 3rem !important;
   box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
   border: none;
   background: #fff;
-  flex: 1;
+  flex: 4;
+}
+
+.modal-form .modal-body .modal-button {
+  margin-top: 2rem;
 }
 
 .modal-form .modal-body .modal-button button {
@@ -53,6 +66,7 @@
   border-radius: 0.8rem;
   color: #fff;
   font-size: 1.8rem;
+  width: 10rem;
 }
 
 .modal-form .modal-body .modal-button button:hover {
@@ -65,6 +79,7 @@
 
 .modal-form .modal-body .modal-button .modal-button-save {
     background-color: #44be44;
+    width: 15rem;
 }
 
 
