@@ -95,6 +95,19 @@ export function getProducts() {
     return products;
 }
 
+export function saveProduct(product){
+    let productInDb = products.find(p => p._id === product._id) || {} ; 
+    productInDb.title = product.title ; 
+    productInDb.content = product.content ; 
+
+    if(!productInDb._id){
+        productInDb._id = Date.now().toString() ; 
+        products.push(productInDb) ; 
+    }
+
+    return productInDb ; 
+}
+
 const customers = [
     {
         _id : "cus13",

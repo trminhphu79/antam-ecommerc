@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { saveProduct } from '../fakeServer/productChaillo';
 import { getValueModal } from '../utils/getValueModal';
 
 class Form extends Component {
     state = {
         data: {
+            _id : '' , 
             title: '',
             content: '',
         }
@@ -29,6 +31,7 @@ class Form extends Component {
 
     mapToViewModel (item){
         return {
+            _id : item._id , 
             title : item.title , 
             content : item.content ,
         }
@@ -47,8 +50,9 @@ class Form extends Component {
     handleSubmit = e => {
         e.preventDefault();
 
-        // call the server . 
-        console.log('submitted');
+        saveProduct(this.state.data) ; 
+
+        this.props.history.push('/admin/all-products') ; 
     }
 
     handleChange = ({ currentTarget: input }) => {
@@ -76,7 +80,7 @@ class Form extends Component {
                     </div>
                     <div className='button-control'>
                         <button onClick={this.cancelModal} className="btn-info">cancel</button>
-                        <button onClick={this.raiseCreateModal} className="btn-success">create</button>
+                        <button onClick={this.handleSubmit} className="btn-success">save change</button>
                     </div>
                 </form>
             </div>
