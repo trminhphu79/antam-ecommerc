@@ -61,7 +61,7 @@ class ContainerAdmin extends Component {
   };
 
   render() {
-    const { products, orders , onCreate } = this.props;
+    const { products, orders  } = this.props;
 
     return (
       <main className="container container-admin">
@@ -84,7 +84,6 @@ class ContainerAdmin extends Component {
               <AllProducts
                 products={products}
                 columns={this.columns.allProducts}
-                onCreate={onCreate}
                 {...props}
                 onDelete={this.props.onDelete}
               />

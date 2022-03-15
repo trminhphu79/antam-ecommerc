@@ -5,13 +5,12 @@ import "./styles/modal.css";
 class Modal extends Component {
 
   render() {
-    const { history , onCreate , products , match } = this.props;
+    const { history , products , match } = this.props;
   
     return (
       <Form 
         match={match}
         history={history}
-        onCreate={onCreate}
         products={products}
       />
     );
