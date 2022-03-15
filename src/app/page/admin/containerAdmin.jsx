@@ -1,10 +1,10 @@
 import React, { Component, useState } from "react";
-import { Switch, Route , Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import { icons } from "assets/icons/icons-svg";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
-import { icons } from "assets/icons/icons-svg";
-import { Toasts } from "../common/toasts/toasts";
+import Delete from "../common/delete";
 import "./styles/containerAdmin.scss";
 
 class ContainerAdmin extends Component {
@@ -17,15 +17,7 @@ class ContainerAdmin extends Component {
       { value: "state", label: "state" },
       {
         key: "1233",
-        content: (item) => (
-          <div
-            onClick={() => {
-              return this.props.onDelete(item, "orders");
-            }}
-            className=" btn-delete"
-          >
-            {icons.iconDelete}
-          </div>
+        content: (item) => (<Delete item={item} list='orders' onDelete={this.props.onDelete} />
         ),
       },
     ],
@@ -46,22 +38,13 @@ class ContainerAdmin extends Component {
       },
       {
         key: "6233",
-        content: (item) => (
-          <div
-            onClick={() => {
-              return this.props.onDelete(item, "products");
-            }}
-            className=" btn-delete"
-          >
-            {icons.iconDelete}
-          </div>
-        ),
+        content: (item) => (<Delete item={item} list='products' onDelete={this.props.onDelete} />),
       },
     ]
   };
 
   render() {
-    const { products, orders  } = this.props;
+    const { products, orders } = this.props;
 
     return (
       <main className="container container-admin">

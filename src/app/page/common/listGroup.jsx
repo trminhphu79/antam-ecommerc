@@ -36,7 +36,6 @@ const ListGroup = () => {
             key={index}
             to={item.pathLink}
             className={"menu__item " + (linkBrowserName.includes(item.pathLink)? "active": "")}
-            
           >
             <i className="menu__item-icon">{item.icon}</i>
             <p className="menu__item-name">{item.name}</p>
