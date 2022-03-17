@@ -21,6 +21,7 @@
   margin: 20rem auto;
   padding: 2rem 6rem;
   border-radius: 2.4rem;
+  animation: TopSlide  0.25s linear;
 }
 
 .modal-form .modal-body h1 {
@@ -103,4 +104,14 @@
       .modal-form .modal-body .modal-button button {
         font-size: 1.6rem;
       }
+}
+
+
+@keyframes TopSlide {
+  0% {
+      transform: translateY(-100px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }

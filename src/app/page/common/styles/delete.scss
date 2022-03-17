@@ -1,19 +1,21 @@
 .box-message {
     position : absolute ; 
-    top: 16rem; 
+    top: 0; 
     right : 0 ; 
     left: 0 ; 
     margin: auto ; 
+    padding-top: 16rem;
     z-index: 1000111 ;
     display: flex;
     justify-content: center;
     &-wrapper {
         width: 30rem;
-        background-color: #fafafa;
-        box-shadow: 0px 10px 30px 0px #00000014;
+        background: #fff;
+        box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.12);
         text-align: center;
         padding: 2.5rem;
         border-radius: 1.6rem;
+        border: 1px solid var(--primary-color);
         height: 16rem;
         animation: TopSlide 0.25s linear;
         & h2 {

@@ -24,7 +24,7 @@ class Form extends Component {
     title: Joi.string().required().label("Title"),
     content: Joi.string().required().label("Content"),
   };
-
+  
   validate = () => {
     const options = { abortEarly: false };
     const { error } = Joi.validate(this.state.data, this.schema, options);
@@ -91,7 +91,7 @@ class Form extends Component {
     return (
       <div className="modal-form">
         <div className="modal-body">
-          <h1>Thêm Sản Phẩm</h1>
+          <h1>{this.props.heading}</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="title">Title :</label>

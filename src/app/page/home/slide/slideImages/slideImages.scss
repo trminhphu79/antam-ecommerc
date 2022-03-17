@@ -14,31 +14,6 @@
       display: none;
     }
   }
-  #radio1:checked ~ #slide__image1 {
-    opacity: 1;
-  }
-
-  #radio2:checked ~ #slide__image2 {
-    opacity: 1;
-  }
-
-  #radio3:checked ~ #slide__image3 {
-    opacity: 1;
-  }
-
-  #radio1:checked ~ .slide__manual #manual1,
-  #radio2:checked ~ .slide__manual #manual2,
-  #radio3:checked ~ .slide__manual #manual3 {
-    width: 47px;
-    height: 15px;
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.4),
-        rgba(255, 255, 255, 0.4)
-      ),
-      #ff477e;
-    border-radius: 28.158px;
-  }
   .slide__image {
     position: absolute;
     width: 100%;
@@ -50,6 +25,9 @@
       height: 100%;
       object-fit: center;
       border-radius: 16px;
+    }
+    &.active {
+      opacity: 1;
     }
   }
   .slide__manual {
@@ -69,6 +47,17 @@
       cursor: pointer;
       &:not(:last-child) {
         margin-right: 7.5px;
+      }
+      &.active {
+        width: 47px;
+        height: 15px;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.4)
+          ),
+          #ff477e;
+        border-radius: 28.158px;
       }
     }
   }

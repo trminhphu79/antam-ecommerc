@@ -41,7 +41,9 @@
     & h4 {
       font-size: 1.4rem;
       color: #252d2e;
-      line-height: center;
+      display: flex;
+      align-items: center;
+      line-height: 1.4rem;
       & span {
         font-size: 2.6rem;
         color: var(--primary-color);

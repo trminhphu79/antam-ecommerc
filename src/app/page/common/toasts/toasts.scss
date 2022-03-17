@@ -1,11 +1,13 @@
 :root {
-  --success-color: rgb(0, 128, 0);
-  --warn-color: rgb(255, 165, 0);
-  --error-color: rgb(255, 0, 0);
 
-  --success-light-color: rgba(0, 128, 0, 0.5);
-  --warn-light-color: rgba(255, 165, 0, 0.5);
-  --error-light-color: rgba(255, 0, 0, 0.5);
+  --success-color: #68e354;
+  --warn-color: #e0e417;
+  --error-color: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    #ef233c;
 }
 
 .toasts {
@@ -19,15 +21,27 @@
     padding-right: 4rem;
     font-size: 2.6rem;
     border-radius: 0.6rem;
-    color: #fff;
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     animation: slide-show 1.5s ease forwards;
-    &__msg {
-      font-size: 1.8rem;
+    &__content {
       margin-left: 2rem;
+    }
+    &__title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+    &__msg {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #888;
+      margin-top: 6px;
+      line-height: 1.5;
     }
     &__countdown {
       position: absolute;
@@ -37,26 +51,32 @@
       animation: count-down 2s ease forwards;
     }
     &.success {
-      background: var(--success-light-color);
       border-left: 0.6rem solid var(--success-color);
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--success-color);
       }
+      & i {
+        color: var(--success-color);
+      }
     }
 
     &.warning {
-      background: var(--warn-light-color);
       border-left: 0.6rem solid var(--warn-color);
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--warn-color);
       }
+      & i {
+        color: var(--warn-color);
+      }
     }
 
     &.error {
-      background: var(--error-light-color);
       border-left: 0.6rem solid var(--error-color);
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--error-color);
+      }
+      & i {
+        color: var(--error-color);
       }
     }
     &.hide {

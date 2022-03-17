@@ -1,5 +1,5 @@
 import { first } from "lodash";
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { SlideContent } from "./slideContent/slideContent";
 import { SlideImages } from "./slideImages/slideImages";
@@ -14,33 +14,31 @@ export const Slide = (props) => {
   const newProducts = products.filter(
     (item, index) => index >= productsLength - slideSize
   );
+
+  const [count, setCount] = useState(0)
+
   useEffect(() => {
-    // set first slide
-    document.querySelector("#radio1").checked = true;
+    const timeoutId = setTimeout(() => {
+      if(count === slideSize - 1) {
+        setCount(0);
+      } else setCount(count + 1)
+    }, 5000)
+    return () => {
+      clearTimeout(timeoutId);
+    }
+  }, [count]);
 
-    const radiosBtn = document.querySelectorAll("[name= radio-btn]");
-    const timeSlide = setInterval(() => {
-      // get current slide
-      const getCurrentSlide = Array.from(radiosBtn).find(
-        (item) => item.checked === true
-      );
-      let dataIndex = Number(getCurrentSlide.getAttribute("data-index"));
-      dataIndex++;
-      if (dataIndex > 3) {
-        dataIndex = 1;
-      }
-      // next slide
-      document.querySelector("#radio" + dataIndex).checked = true;
-    }, 5000);
-
-    return () => clearInterval(timeSlide);
-  }, []);
+  const HandleNextSlider = (index) => {
+    setCount(index)
+  }
 
   return (
     <div className="slide">
       <SlideImages
         products={newProducts}
         manualSize={slideSize}
+        countSlider={count}
+        manualClick={HandleNextSlider}
       />
       <SlideContent />
     </div>
