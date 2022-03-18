@@ -19,8 +19,8 @@ function App() {
   return (
     <React.Fragment>
       <ScrollToTop />
-      {/* <Header />
-      <Navbar /> */}
+      <Header />
+      <Navbar />
       <Switch>
         <Route path="/form" component={Form} />
         <Route path="/admin" component={Admin} />
@@ -32,7 +32,7 @@ function App() {
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 }

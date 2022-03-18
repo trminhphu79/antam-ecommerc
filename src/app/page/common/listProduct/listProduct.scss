@@ -17,9 +17,10 @@
     & .content {
       margin-top: 1.6rem;
       & h4 {
-        color: #252d2e;
+        color: #202020;
         height: 4.4rem;
         font-size: 1.8rem;
+        font-weight: 700;
         text-transform: capitalize;
         display: -webkit-box;
         overflow: hidden;
@@ -29,15 +30,22 @@
       }
       & div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         margin-bottom: 2rem;
         & span {
-          color: #252d2e;
+          color: #5e5b5b;
           font-size: 1.8rem;
           font-weight: 600;
           height: 3.2rem;
           line-height: 3.2rem;
           margin-right: 0.8rem;
+          display:-webkit-box;
+          -webkit-line-clamp:1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
         }
         & p {
           font-size: 2rem;
