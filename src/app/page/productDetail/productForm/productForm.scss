@@ -65,39 +65,59 @@
 /* Reponsive */
 
 @media (max-width: 991px) {
-  .product-form {
-    position: relative;
-    width: 100%;
-    padding: 0 10px;
-    & .image .wrapper .btn {
-      width: 348px;
-      position: absolute;
-      bottom: -5.2rem;
+  #form-section {
+    overflow: hidden;
+    border-radius: 1.6rem;
+    .product-form {
+      width: 100%;
+      padding: 0 10px;
+      & .image .wrapper {
+        position: relative;
+        & .btn {
+          width: 70%;
+          position: absolute;
+          left: 25%;
+          bottom: -2.2rem;
+        }
+      }
+      & form .input-group label {
+        margin-bottom: 0.6rem;
+      }
     }
-  }
 
-  .product-form form .input-group label {
-    width: 100%;
+    .product-form form .input-group label {
+      width: 100%;
+    }
   }
 }
 
 @media (max-width: 768px) {
-  .product-form {
-    width: 100%;
-    margin-bottom: 5rem;
-  }
+  #form-section {
+    .product-form {
+      position: relative;
+      width: 100%;
+      margin-bottom: 5rem;
+      & .image .wrapper {
+        position: unset;
+        & .btn {
+          bottom: -5.2rem;
+          width: 50%;
+        }
+      }
+    }
 
-  .product-form .image .wrapper img {
-    margin: 0 auto;
-  }
+    .product-form .image .wrapper img {
+      margin: 0 auto;
+    }
 
-  .product-form form h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2rem;
-  }
+    .product-form form h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 2rem;
+    }
 
-  .product-form form .input-group label {
-    display: none;
+    .product-form form .input-group label {
+      display: none;
+    }
   }
 }

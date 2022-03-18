@@ -5,6 +5,7 @@
   margin-bottom: 47px;
   & .image {
     & .wrapper {
+      background: #fff;
       width: calc(100% - 4rem);
       border-radius: 3rem;
       box-shadow: 0px 15px 60px 0px #0000001f;
@@ -26,7 +27,13 @@
       }
     }
     & h2 {
-      font-size: 4.8rem;
+      font-size: 3.4rem;
+      display:-webkit-box;
+      -webkit-line-clamp:5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
       font-weight: bold;
       color: #252d2e;
       margin: 1.2rem 0;
@@ -39,13 +46,13 @@
       margin: 1.2rem 0;
     }
     & h4 {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       color: #252d2e;
       display: flex;
       align-items: center;
-      line-height: 1.4rem;
       & span {
-        font-size: 2.6rem;
+        margin-left: 0.6rem;
+        font-size: 2.4rem;
         color: var(--primary-color);
       }
     }
@@ -75,9 +82,9 @@
     }
     & .content {
       width: 80%;
-      margin: 0 auto 2.6rem;
+      margin: 0 auto 8rem;
       & h2 {
-        margin: 1.6rem 0 1.2rem;
+        margin: 2rem 0 1.2rem;
         font-size: 2rem;
       }
       & .wrapper a {
@@ -102,6 +109,8 @@
       }
     }
     & .content {
+      width: unset;
+      margin: unset;
       & h2 {
         margin: 1.6rem 0 1.2rem;
         font-size: 2rem;

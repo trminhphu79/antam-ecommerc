@@ -27,6 +27,7 @@ export const CreateToast = (state, timeOut, message) => {
         <h3 class="toast-box__title">${stateToasts[state].title}</h3>
         <p class="toast-box__msg">${message || stateToasts[state].msg}</p>
     </span>
+    <span class="toast-box__close">&times;</span>
     <span class="toast-box__countdown"></span>
     `
 
@@ -36,7 +37,14 @@ export const CreateToast = (state, timeOut, message) => {
         toast.classList.add('hide');
     }, timeOut)
 
-    setTimeout(()=> {
+    const timeoutId = setTimeout(()=> {
         toast.remove()
     }, timeOut + 1300);
+
+    toast.onclick = e => {
+        if(e.target.closest('.toast-box__close')) {
+            toast.remove();
+            clearTimeout(timeoutId);
+        }
+    }
 }
