@@ -71,13 +71,13 @@ body {
   // Background Page
   .background-page {
     background-image: unset;
-    padding: 90px 16px 140px;
+    padding: 90px 16px 40px;
   }
 
   .background-page.contact {
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22566%22%20height%3D%22580%22%20viewBox%3D%220%200%20566%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22283%22%20cy%3D%22290%22%20rx%3D%22283%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
     background-repeat: no-repeat;
-    background-position: center bottom -137px;
+    background-position: center bottom -237px;
   }
 }
 
@@ -85,6 +85,6 @@ body {
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .background-page {
-    padding: 140px 188px 120px 48px;
+    padding: 140px 48px 120px 48px;
   }
 }

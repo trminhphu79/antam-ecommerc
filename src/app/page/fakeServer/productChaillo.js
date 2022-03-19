@@ -244,29 +244,29 @@ const forms = [{
     {
         _id: '5fb5233v35',
         img: imgChailo3,
-        name: 'Tỉnh/ Thành Phố',
-        placeholder: 'chọn tỉnh/thành phố',
+        name: 'Tỉnh / Thành Phố',
+        placeholder: 'Chọn Tỉnh / Thành phố',
         type: 'address'
     },
     {
         _id: '5fb5233v34',
         img: imgChailo4,
-        name: 'Quận/ Huyện',
-        placeholder: 'Chọn Quận/huyện',
+        name: 'Quận / Huyện',
+        placeholder: 'Chọn Quận / Huyện',
         type: 'address'
     },
     {
         _id: '5fb5233v33',
         img: imgChailo1,
-        name: 'Xã/Phường',
-        placeholder: 'chọn Xã/ phường',
+        name: 'Xã / Phường',
+        placeholder: 'Chọn Xã / Phường',
         type: 'address'
     },
     {
         _id: '5fb5233v32',
         img: imgChailo2,
-        name: 'địa chỉ cụ thể',
-        placeholder: 'VD: 2a Lương Thế Vinh,Phước Long,Nha Trang,...',
+        name: 'Địa chỉ cụ thể',
+        placeholder: 'VD: 2a Lương Thế Vinh, Phước Long, Nha Trang,...',
         type: 'text'
     },
     {

@@ -26,10 +26,6 @@ html {
     margin-bottom: 8rem;
 }
 
-.home-below .row {
-    margin-bottom: 6rem;
-}
-
 @media (max-width: 1380px) {
     .home-below .row div .wrapper-item .content {
         padding: 1.2rem 0;
@@ -52,9 +48,6 @@ html {
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
     .home-below {
         width: 100%;
-        & .row {
-            margin-bottom: 0;
-        }
     }
   }
 

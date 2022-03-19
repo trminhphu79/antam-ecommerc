@@ -39,17 +39,20 @@
 
 /* Responsive */
 
-// Mobile: width < 740px 
-@media (max-width: 46.1875em) {
+
+
+@media (max-width: 63.9375em) {
   .footer {
     position: relative;
     z-index: 90;
     right: 0;
-    bottom: calc(var(--navbar-height-mobile) + 52px);
+    bottom: 0;
     left: 0;
+    height: 20rem;
     flex-direction: column;
-    justify-content: center;
-    background: unset;
+    justify-content: start;
+    padding-top: 3rem;
+    background-color: transparent;
     box-shadow: unset;
     &__copyright {
       font-size: 1.2rem;
@@ -57,7 +60,22 @@
   }
 }
 
+
+// Mobile: width < 740px 
+@media (max-width: 46.1875em) {
+  .footer {
+    &__copyright {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-  
+  .footer {
+    bottom: 4.2rem;
+    &__copyright {
+      font-size: 1.6rem;
+    }
+  }
 }

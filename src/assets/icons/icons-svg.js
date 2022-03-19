@@ -1,8 +1,6 @@
 export const icons = {
   iconHome: (
     <svg
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +23,6 @@ export const icons = {
   ),
   iconProduct: (
     <svg
-      width="24"
-      height="24"
       viewBox="0 0 17 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +49,6 @@ export const icons = {
   ),
   iconContact: (
     <svg
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
