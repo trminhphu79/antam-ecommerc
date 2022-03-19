@@ -18,9 +18,8 @@
       margin-top: 1.6rem;
       & h4 {
         color: #202020;
-        height: 4.4rem;
         font-size: 1.8rem;
-        font-weight: 700;
+        font-weight: 500;
         text-transform: capitalize;
         display: -webkit-box;
         overflow: hidden;
@@ -50,7 +49,7 @@
         & p {
           font-size: 2rem;
           color: var(--price-text);
-          font-weight: 700;
+          font-weight: 500;
           margin: 0;
           height: 3.2rem;
           line-height: 3.2rem;
@@ -61,7 +60,7 @@
         width: 100%;
         font-size: 1.6rem;
         border-radius: 0.8rem;
-        font-weight: 700;
+        font-weight: 500;
       }
     }
   }

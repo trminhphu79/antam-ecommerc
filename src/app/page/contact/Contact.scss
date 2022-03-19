@@ -1,16 +1,19 @@
 .contact {
   width: 100%;
+  .contact__info{
+
+  }
   &__title {
     margin-top: 40px;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 2.8rem;
     color: var(--primary-color);
   }
   &__desc {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 900;
+    font-size: 3.5rem;
+    font-weight: 500;
     color: #333333;
   }
   &__content {
@@ -97,7 +100,7 @@
         margin-top: 10px;
         text-align: center;
         font-size: 1.6rem;
-        font-weight: bold;
+        font-weight: 500;
         color: #003f9e;
       }
     }
@@ -117,7 +120,7 @@
 @media (max-width: 46.1875em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
     }
     &__content {
       display: block;
@@ -163,7 +166,7 @@
       }
     }
     &__info {
-      font-size: 1.4rem;
+      font-size: 1.55rem;
       line-height: 2rem;
       margin: 18px 0 40px;
     }
@@ -174,7 +177,7 @@
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
     }
     &__content {
       display: block;
