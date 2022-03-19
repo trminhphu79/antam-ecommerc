@@ -4,6 +4,10 @@
   left: var(--width-menu);
   width: calc(100% - var(--width-menu));
   padding: 4rem 4rem 0;
+  ::-webkit-scrollbar-thumb {
+    background-color: #5bbdff;
+    border-radius: 100rem;
+  }
   .table-heading {
     text-align: center;
     margin-bottom: 8rem;

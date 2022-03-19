@@ -11,13 +11,12 @@ class ProductDetail extends Component {
   handleSubmit = (value) => {
     console.log("you have a new order!", value);
     let state = '';
-    let timeOut = 2000;
     if(value) {
       state = 'success';
-      CreateToast(state, timeOut, 'Thành công! Đã gửi thông tin đặt hàng.')
+      CreateToast(state, 'Thành công! Đã gửi thông tin đặt hàng.')
     } else {
       state = 'error'
-      CreateToast(state, timeOut, 'Lỗi! Không tin đặt hàng không được gửi đi.')
+      CreateToast(state, 'Lỗi! Không tin đặt hàng không được gửi đi.')
     }
   };
 

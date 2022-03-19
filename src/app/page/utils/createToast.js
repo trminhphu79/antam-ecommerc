@@ -1,5 +1,5 @@
 
-export const CreateToast = (state, timeOut, message) => {
+export const CreateToast = (state, message) => {
 
     const stateToasts = {
         success: {
@@ -35,11 +35,11 @@ export const CreateToast = (state, timeOut, message) => {
 
     setTimeout(() => {
         toast.classList.add('hide');
-    }, timeOut)
+    }, 3000)
 
     const timeoutId = setTimeout(()=> {
         toast.remove()
-    }, timeOut + 1300);
+    }, 3000 + 1300);
 
     toast.onclick = e => {
         if(e.target.closest('.toast-box__close')) {

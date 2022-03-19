@@ -76,6 +76,9 @@
         color: var(--white-color);
       }
       &-btn {
+        border: none;
+        outline: none;
+        cursor: unset !important;
         width: 154px;
         height: 40px;
         background: linear-gradient(

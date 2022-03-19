@@ -54,7 +54,7 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      animation: count-down 2s ease forwards;
+      animation: count-down 3s ease forwards;
     }
     &.success {
       border-left: 0.6rem solid var(--success-color);
@@ -98,11 +98,13 @@
 // Mobile: width < 740px 
 @media (max-width: 46.1875em) {
   .toasts {
+    right: 1.6rem;
     .toast-box {
       margin-bottom: 1.4rem;
       padding: 2.2rem 2.6rem;
       padding-right: 3.6rem;
       font-size: 2.2rem;
+      animation: sliderRightShow 0.3s linear forwards;
       &__content {
         margin-left: 1.6rem;
       }
@@ -112,6 +114,9 @@
       &__msg {
         font-size: 1.4rem;
         margin-top: 5.6px;
+      }
+      &.hide {
+        animation: sliderRightHide 1.5s ease forwards;
       }
     }
   }
@@ -136,6 +141,34 @@
         margin-top: 5.8px;
       }
     }
+  }
+}
+
+
+
+@keyframes sliderRightShow {
+  0% {
+    opacity: 0;
+    transform: translate(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+@keyframes sliderRightHide {
+  0% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(120%);
   }
 }
 
