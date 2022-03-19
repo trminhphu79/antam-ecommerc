@@ -24,7 +24,7 @@ function App() {
       <Switch>
         <Route path="/form" component={Form} />
         <Route path="/admin" component={Admin} />
-        <Route path="/product/:_id" exact component={ProductDetail} />
+        <Route path="/san-pham/:_id" exact component={ProductDetail} />
         <Route path="/lien-he" component={Contact} />
         <Route path="/dang-nhap" component={LoginPage} />
         <Route path="/san-pham" component={Products} />

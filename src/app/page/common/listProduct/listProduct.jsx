@@ -18,7 +18,7 @@ const ListProduct = ({ products }) => {
                 <span>Liên hệ số điện thoại:</span>
                 <p>0865.328.664</p>
               </div>
-              <Link to={`/product/${item._id}`} className="btn">
+              <Link to={`/san-pham/${item._id}`} className="btn">
                 chi tiết sản phẩm
               </Link>
             </div>
