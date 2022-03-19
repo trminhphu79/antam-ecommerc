@@ -14,7 +14,7 @@ const ListProduct = ({ products }) => {
             <img src={item.img} alt="" />
             <div className="content">
               <h4>{item.title}</h4>
-              <div class='contact-phone'>
+              <div>
                 <span>Liên hệ số điện thoại:</span>
                 <p>0865.328.664</p>
               </div>
