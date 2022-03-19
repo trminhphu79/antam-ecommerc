@@ -3,7 +3,7 @@
   width: 864px;
   span {
     font-weight: 500;
-    font-size: 3.4rem;
+    font-size: 3rem;
     line-height: 4.8rem;
     text-align: justify;
   }
@@ -13,7 +13,7 @@
     width: 16rem;
     height: 4rem;
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 500;
     border-radius: 0.8rem;
     color: #fff;
     background-color: var(--primary-color);
@@ -61,6 +61,11 @@
     width: 100%;
     margin-left: 0;
     margin-bottom: 4rem;
+    span {
+      text-align: justify;
+      font-size: 18px;
+      line-height: 2.5rem;
+    }
     &__btn {
       margin: 2rem auto 0;
     }
