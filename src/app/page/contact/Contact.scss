@@ -1,16 +1,19 @@
 .contact {
   width: 100%;
+  .contact__info{
+
+  }
   &__title {
     margin-top: 40px;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 2.8rem;
     color: var(--primary-color);
   }
   &__desc {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 900;
+    font-size: 2.2rem;
+    font-weight: 500;
     color: #333333;
   }
   &__content {
@@ -97,7 +100,7 @@
         margin-top: 10px;
         text-align: center;
         font-size: 1.6rem;
-        font-weight: bold;
+        font-weight: 500;
         color: #003f9e;
       }
     }
@@ -117,8 +120,7 @@
 @media (max-width: 46.1875em) {
   .contact {
     &__desc {
-      line-height: 1.4;
-      font-size: 2.6rem;
+      font-size: 1.8rem;
     }
     &__content {
       display: block;
@@ -133,7 +135,6 @@
     }
     &__card {
       margin-top: 24px;
-      margin-bottom: 4rem;
       padding: 16px 0;
       flex-direction: column;
       align-items: center;
@@ -165,22 +166,18 @@
       }
     }
     &__info {
-      font-size: 1.4rem;
-      line-height: 1.6;
+      font-size: 1.55rem;
+      line-height: 2rem;
       margin: 18px 0 40px;
     }
   }
-}
-
-.contact ~ .footer {
-  background: #f3f6fc;
 }
 
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      font-size: 2rem;
     }
     &__content {
       display: block;
@@ -197,7 +194,8 @@
       padding: 16px;
       width: 100%;
       height: 147px;
-      margin-bottom: 4rem;
+      &-item:last-child {
+      }
       &-item {
         &-logo {
           display: block;
@@ -215,8 +213,9 @@
     }
     &__info {
       font-size: 1.6rem;
-      line-height: 1.6;
+      line-height: 2.2rem;
       margin: 18px 0 50px;
     }
+  
   }
 }
