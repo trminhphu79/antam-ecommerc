@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.home-below h2 {
+  font-size: 3.2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #252d2e;
+  text-align: center;
+}
+
+.home-below .row div .wrapper-item .content .btn {
+  margin: 0;
+  width: 100%;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+}
+
+.home-slide {
+  margin-bottom: 8rem;
+}
+
+.home-slide #image .wrapper-item {
+  padding: 3.2rem;
+  background: #fff;
+  border-radius: 3rem;
+  box-shadow: 0px 7px 30px 0px #00000014;
+
+}
+
+.home-slide #image .wrapper-item img {
+  height: 45.4rem;
+  width: 41.2rem;
+}
+
+.home-slide #content .wrapper-item {
+  margin-top: 1.6rem;
+}
+
+.home-slide #content .wrapper-item h2 {
+  font-size: 4.8rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.home-slide #content .wrapper-item p {
+  color: #999;
+  font-size: 1.8rem;
+  text-align: justify;
+}
+
+@media (max-width: 1380px) {
+  html {
+    font-size: 60%;
+  }
+  .home-below .row div .wrapper-item .content {
+    padding: 1.2rem 0;
+  }
+  .home-below .row div .wrapper-item .content .btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .home-below {
+    margin: 0 auto;
+  }
+
+  .home-slide #image .wrapper-item {
+    width: 90%;
+    margin: 0 auto ; 
+  }
+
+  .home-slide #content .wrapper-item{
+    width: 90% ; 
+    margin : .8rem auto 0 ; 
+  }
+
+  .home-slide #content .wrapper-item h2{
+    font-size: 3.6rem ;
+    text-align: center ;  
+  }
+}
+
+@media (max-width: 450px) {
+  .home-below {
+    width: 96%;
+  }
+
+  .home-below h2 {
+    font-size: 2rem ; 
+  }
+
+  .home-slide #image .wrapper-item img {
+    height: 24rem;
+    width: 100%;
+  }
+
+  .home-slide #image .wrapper-item {
+    padding: 2rem;
+  }
+
+  .home-slide #content .wrapper-item h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home-slide #content .wrapper-item p {
+    font-size: 1.4rem;
+  }
+
+  .home-slide #content .wrapper-item .btn {
+    margin: 0;
+    padding: 0.6rem 1.6rem;
+    width: 100%;
+  }
+}
