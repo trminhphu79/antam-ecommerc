@@ -29,11 +29,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Redirect to="/not-found" />
       </Switch>
-<<<<<<< Updated upstream
-      <Footer />  
-=======
       <Footer />
->>>>>>> Stashed changes
     </React.Fragment>
   );
 }
