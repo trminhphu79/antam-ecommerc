@@ -17,8 +17,8 @@ function App() {
   return (
     <React.Fragment>
       <ScrollToTop />            
-      {/* <Header />
-      <Navbar /> */}
+      <Header />
+      <Navbar />
       <Switch>
         {/* <Route path="/admin/"/> */}
         <Route path="/admin" component={Admin}/>
@@ -29,7 +29,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Redirect to="/not-found" />
       </Switch>
-      {/* <Footer /> */}
+      <Footer />  
     </React.Fragment>
   );
 }
