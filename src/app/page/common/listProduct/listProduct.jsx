@@ -8,7 +8,7 @@ const ListProduct = ({ products }) => {
       {products.map((item) => (
         <div
           key={item._id}
-          className="product-item col-xl-3 col-lg-4 col-md-6 col-xs-12"
+          className="product-item col-xl-2 col-lg-4 col-md-6 col-xs-12"
         >
           <div className="wrapper-item">
             <img src={item.img} alt="" />
