@@ -46,9 +46,9 @@ html {
 }
 
 .home-slide #content .wrapper-item h2 {
-  font-size: 4.8rem;
+  font-size: 3.2rem;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .home-slide #content .wrapper-item p {
