@@ -8,11 +8,11 @@ export const Footer = () => {
           <h5 className="footer__title">Liên hệ</h5>
           <ul className="footer__contact-list">
             <li>
-              <i class="icon fa-solid fa-phone"></i>
+              <i className="icon fa-solid fa-phone"></i>
               <p className="text">Hotline : 0865.328.664</p>
             </li>
             <li>
-              <i class="icon fa-solid fa-location-dot"></i>
+              <i className="icon fa-solid fa-location-dot"></i>
               <p className="text">
                 Địa chỉ : B1/9 đường liên ấp 2-6 xã Vĩnh Lộc A huyện Bình Chánh
                 thành phố Hồ Chí Minh

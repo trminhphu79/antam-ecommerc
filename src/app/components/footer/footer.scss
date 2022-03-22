@@ -14,7 +14,6 @@
   align-items: flex-start;
   &__title {
     font-size: 2.2rem;
-    height: 2.2rem;
     line-height: 2.2rem;
     font-weight: 500;
     margin-bottom: 1.6rem;
@@ -26,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 5rem;
+    height: 100%;
   }
 
   & .footer__contact-list {
@@ -69,7 +69,7 @@
     & img {
       width: 132px;
       height: 50px;
-      object-fit: cover;
+      object-fit: contain;
       margin: 0 auto;
     }
   }
@@ -77,8 +77,7 @@
 
 /* Responsive */
 
-// Mobile: width < 740px
-@media (max-width: 1024px) {
+@media (max-width: 63.9375em) {
   .footer {
     height: calc(16rem + var(--navbar-height-tablet));
     right: 0;
@@ -92,6 +91,8 @@
     & .footer__contact {
       position: absolute;
       bottom: calc(1rem + var(--navbar-height-tablet));
+      flex-direction: unset;
+      justify-content: unset;
       &-list {
         display: flex;
         flex-direction: column-reverse;

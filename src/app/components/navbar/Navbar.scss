@@ -122,6 +122,7 @@
 @media (max-width: 46.1875em) {
   .navbar {
     height: var(--navbar-height-mobile);
+    overflow: hidden;
     &__item {
       &-icon {
         width: 2rem;
