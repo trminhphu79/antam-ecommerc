@@ -40,9 +40,9 @@ body {
     background: var(--primary-color) ; 
     text-align:center ; 
     padding: 1rem 0 ; 
-    box-shadow: 10px 9px 30px 0px #0C0E2008 ; 
     border-radius: 3rem ;
-    border: none ; 
+    border: none; 
+    outline: none;
     cursor: pointer ; 
     color: #fff ; 
     font-size: 1.6rem ; 
@@ -50,12 +50,14 @@ body {
   }
   
   .btn:hover{
-    opacity: 0.9;
+    opacity: 0.85;
     color: #fff;
+    box-shadow: 12px 12px 30px 0px #0C0E2008; 
   }
   
   .btn:focus{
-    opacity: 0.9;
+    opacity: 0.85;
+    box-shadow: none;
   } 
 
 
