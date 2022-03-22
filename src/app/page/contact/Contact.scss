@@ -170,10 +170,9 @@
       margin: 18px 0 40px;
     }
   }
-}
-
-.contact ~ .footer {
-  background: #f3f6fc;
+  .contact ~ .footer {
+    background: #f3f6fc;
+  }
 }
 
 // Tablet: width >= 740px and width < 1024px
@@ -218,5 +217,8 @@
       line-height: 1.6;
       margin: 18px 0 50px;
     }
+  }
+  .contact ~ .footer {
+    background: #f3f6fc;
   }
 }
