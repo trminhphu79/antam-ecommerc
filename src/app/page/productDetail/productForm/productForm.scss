@@ -15,18 +15,19 @@
         font-size: 3.4rem;
         margin-bottom: 4rem;
         text-transform: capitalize;
+        color: var(--title-big-color);
       }
       & .input-group {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 2.4rem;
+        margin-bottom: 2.9rem;
         flex-wrap: wrap;
         & label {
           font-size: 1.6rem;
-          font-weight: 700;
-          color: #252d2e;
+          font-weight: 500;
+          color: var(--title-color);
           width: 16rem;
         }
         & input {
@@ -80,8 +81,11 @@
           bottom: -2.2rem;
         }
       }
-      & form .input-group label {
-        margin-bottom: 0.6rem;
+      & form .input-group {
+        margin-bottom: 2.4rem;
+        & label {
+          margin-bottom: 0.6rem;
+        }
       }
     }
 
@@ -116,8 +120,11 @@
       line-height: 2rem;
     }
 
-    .product-form form .input-group label {
-      display: none;
+    .product-form form .input-group {
+      margin-bottom: 2.8rem;
+      & label {
+        display: none;
+      }
     }
   }
 }

@@ -9,9 +9,9 @@
   }
   &__desc {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 900;
-    color: #333333;
+    font-size: 3.4rem;
+    font-weight: 500;
+    color: var(--title-big-color);
   }
   &__content {
     display: flex;
@@ -105,6 +105,7 @@
   &__info {
     font-size: 1.8rem;
     margin-top: 40px;
+    color: var(--title-color);
     & a {
       text-decoration: none;
       color: #003f9e;
@@ -117,7 +118,7 @@
 @media (max-width: 46.1875em) {
   .contact {
     &__desc {
-      line-height: 1.4;
+      line-height: 1.6;
       font-size: 2.6rem;
     }
     &__content {
@@ -183,16 +184,16 @@
     }
     &__content {
       display: block;
-      margin-top: 26px;
+      margin: 4.6rem 0 0;
       &-image {
-        margin: 0 auto;
+        margin: 0 auto 2rem;
       }
       &-list {
         margin-top: 16px;
       }
     }
     &__card {
-      margin-top: 24px;
+      margin-top: 4.4rem;
       padding: 16px;
       width: 100%;
       height: 147px;
