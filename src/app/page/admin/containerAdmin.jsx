@@ -50,6 +50,14 @@ class ContainerAdmin extends Component {
       <main className="container container-admin">
         <ListGroup />
         <Switch>
+          <Route path="/admin" render={(props) => (
+            <AllProducts
+              products={products}
+              columns={this.columns.allProducts}
+              {...props}
+              onDelete={this.props.onDelete}
+            />
+          )} />
           <Route
             path="/admin/table-order"
             render={(props) => (
