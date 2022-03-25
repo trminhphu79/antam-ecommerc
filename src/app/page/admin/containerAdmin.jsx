@@ -1,10 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { icons } from "assets/icons/icons-svg";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
 import Delete from "../common/delete";
+import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
 
 class ContainerAdmin extends Component {
@@ -50,14 +51,14 @@ class ContainerAdmin extends Component {
       <main className="container container-admin">
         <ListGroup />
         <Switch>
-          <Route path="/admin" render={(props) => (
+          {/* <Route path="/admin" render={(props) => (
             <AllProducts
               products={products}
               columns={this.columns.allProducts}
               {...props}
               onDelete={this.props.onDelete}
             />
-          )} />
+          )} /> */}
           <Route
             path="/admin/table-order"
             render={(props) => (
@@ -80,6 +81,7 @@ class ContainerAdmin extends Component {
               />
             )}
           />
+          <Route component={NotFound} />
         </Switch>
       </main>
     );

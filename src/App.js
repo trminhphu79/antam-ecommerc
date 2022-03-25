@@ -29,8 +29,7 @@ function App() {
         <Route path="/dang-nhap" component={LoginPage} />
         <Route path="/san-pham" component={Products} />
         <Route path="/" exact component={Home} />
-        <Route path="/not-found" component={NotFound} />
-        <Redirect to="/not-found" />
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </React.Fragment>

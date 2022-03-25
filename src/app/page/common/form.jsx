@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useRef, useEffect, createRef } from "react";
 import { saveProduct } from "../fakeServer/productChaillo";
-import Joi from "joi-browser";
+import Joi, { create } from "joi-browser";
 
 class Form extends Component {
   state = {
@@ -24,7 +24,7 @@ class Form extends Component {
     title: Joi.string().required().label("Title"),
     content: Joi.string().required().label("Content"),
   };
-  
+
   validate = () => {
     const options = { abortEarly: false };
     const { error } = Joi.validate(this.state.data, this.schema, options);
@@ -88,6 +88,7 @@ class Form extends Component {
   render() {
     const { errors } = this.state;
 
+
     return (
       <div className="modal-form">
         <div className="modal-body">
@@ -96,6 +97,7 @@ class Form extends Component {
             <div className="form-group">
               <label htmlFor="title">Title :</label>
               <input
+                ref={this.inputRef}
                 id="title"
                 name="title"
                 value={this.state.data.title}
@@ -126,7 +128,10 @@ class Form extends Component {
               <input id="image" type="file" multiple />
             </div>
             <div className="modal-button">
-              <button onClick={this.cancelModal} className="modal-button-cancel">
+              <button
+                onClick={this.cancelModal}
+                className="modal-button-cancel"
+              >
                 Hủy
               </button>
               <button onClick={this.handleSubmit} className="modal-button-save">
