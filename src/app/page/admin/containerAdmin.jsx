@@ -30,7 +30,7 @@ class ContainerAdmin extends Component {
         key: "13233",
         content: (item) => (
           <Link
-            to={`/admin/all-products/${item._id}`}
+            to={`/admin/tat-ca-san-pham/${item._id}`}
             className=" btn-edit"
           >
             {icons.iconEdit}
@@ -60,7 +60,7 @@ class ContainerAdmin extends Component {
             />
           )} /> */}
           <Route
-            path="/admin/table-order"
+            path="/admin/don-hang"
             render={(props) => (
               <Table
                 heading={"Đơn Hàng"}
@@ -71,7 +71,18 @@ class ContainerAdmin extends Component {
             )}
           />
           <Route
-            path="/admin/all-products"
+            path="/admin/tat-ca-san-pham"
+            render={(props) => (
+              <AllProducts
+                products={products}
+                columns={this.columns.allProducts}
+                {...props}
+                onDelete={this.props.onDelete}
+              />
+            )}
+          />
+          <Route
+            path="/admin/tat-ca-san-pham"
             render={(props) => (
               <AllProducts
                 products={products}

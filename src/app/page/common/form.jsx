@@ -61,7 +61,7 @@ class Form extends Component {
   }
 
   cancelModal = () => {
-    this.props.history.replace("/admin/all-products");
+    this.props.history.replace("/admin/tat-ca-san-pham");
   };
 
   handleSubmit = (e) => {
@@ -71,7 +71,7 @@ class Form extends Component {
 
     saveProduct(this.state.data);
 
-    this.props.history.push("/admin/all-products");
+    this.props.history.push("/admin/tat-ca-san-pham");
   };
 
   handleChange = ({ currentTarget: input }) => {
@@ -88,14 +88,13 @@ class Form extends Component {
   render() {
     const { errors } = this.state;
 
-
     return (
       <div className="modal-form">
         <div className="modal-body">
           <h1>{this.props.heading}</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-              <label htmlFor="title">Title :</label>
+              <label htmlFor="title">Tên sản phẩm</label>
               <input
                 ref={this.inputRef}
                 id="title"
@@ -110,21 +109,22 @@ class Form extends Component {
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="content">Content :</label>
-              <input
+              <label htmlFor="content">Nội dung chi tiết</label>
+              <textarea
                 id="content"
                 name="content"
                 value={this.state.data.content}
                 onChange={this.handleChange}
                 type="text"
                 className="form-control"
+                rows="3"
               />
               {errors.content && (
                 <div className="alert alert-danger">{errors.content}</div>
               )}
             </div>
             <div className="form-group">
-              <label htmlFor="image">image :</label>
+              <label htmlFor="image">Tải ảnh lên</label>
               <input id="image" type="file" multiple />
             </div>
             <div className="modal-button">
