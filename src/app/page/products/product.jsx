@@ -5,6 +5,7 @@ import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import "./product.scss";
+
 class Product extends Component {
   state = {
     products: getProducts(),

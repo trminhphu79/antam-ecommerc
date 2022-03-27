@@ -7,21 +7,16 @@ import AllProducts from "app/page/admin/admin-page/allProducts";
 import Delete from "../common/delete";
 import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
+import TableOrder from "../common/tableOrder";
 
 class ContainerAdmin extends Component {
   columns = {
     order: [
-      { value: "_id", label: "id" },
       { value: "customer", label: "Tên khách hàng" },
       { value: "products", label: "Sản phẩm" },
+      { value: "quantity", label: "Số lượng" },
       { value: "date", label: "Ngày gửi" },
-      { value: "state", label: "state" },
-      {
-        key: "1233",
-        content: (item) => (
-          <Delete item={item} list="orders" onDelete={this.props.onDelete} />
-        ),
-      },
+      { value: "action", label: "Thao tác" },
     ],
     allProducts: [
       { value: "title", label: "Tên sản phẩm" },
@@ -42,7 +37,7 @@ class ContainerAdmin extends Component {
           <Route
             path="/admin/don-hang"
             render={(props) => (
-              <Table
+              <TableOrder
                 heading={"Đơn Hàng"}
                 columns={this.columns.order}
                 data={orders}
