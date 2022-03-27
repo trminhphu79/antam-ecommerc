@@ -11,6 +11,7 @@ class Table extends Component {
     return (
       <section className="table-section">
         <h1 className="table-heading">{`Danh Sách ${heading}`} </h1>
+
         <div className="table-container">
           <div className="table-wrapper">
             <table className="table">

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link , Route , Switch } from 'react-router-dom' ; 
 import Modal from 'app/page/common/modal';
 import Table from 'app/page/common/table' ; 

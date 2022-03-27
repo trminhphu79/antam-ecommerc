@@ -10,29 +10,32 @@ import { Contact } from "app/page/contact";
 import ScrollToTop from "app/page/utils/ScrollToTop";
 import NotFound from "app/page/notFound/NotFound";
 import LoginPage from "app/page/login/login";
-import Form from 'app/page/common/form' ; 
+import Form from "app/page/common/form";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
-import "./styles/_common.scss"
+import "./styles/_common.scss";
 import Admin from "./app/page/admin/index.jsx";
+import { PublicPage } from "HOC/publicPage";
 function App() {
   return (
     <React.Fragment>
       <ScrollToTop />
-      <Header />
-      <Navbar />
+
       <Switch>
-        <Route path="/form" component={Form} />
-        <Route path="/admin" component={Admin} />
-        <Route path="/san-pham/:_id" exact component={ProductDetail} />
-        <Route path="/lien-he" component={Contact} />
-        <Route path="/dang-nhap" component={LoginPage} />
-        <Route path="/san-pham" component={Products} />
-        <Route path="/" exact component={Home} />
-        <Route path="/not-found" component={NotFound} />
-        <Redirect to="/not-found" />
+        {/* Trang Public */}
+        <PublicPage path="/" exact Component={Home} />
+        <PublicPage path="/san-pham/:_id" exact Component={ProductDetail} />
+        <PublicPage path="/form" exact Component={Form} />
+        <PublicPage path="/lien-he" exact Component={Contact} />
+        <PublicPage path="/dang-nhap" exact Component={LoginPage} />
+        <PublicPage path="/san-pham" Component={Products} />
+
+        {/* Trang admin */}
+        <PublicPage path="/admin" component={Admin} />
+
+        {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
+        <Route path="*" component={NotFound} />
       </Switch>
-      <Footer />
     </React.Fragment>
   );
 }

@@ -5,34 +5,30 @@ import { icons } from "assets/icons/icons-svg";
 import "./Header.scss";
 
 export const Header = () => {
-
   /* Logic scroll show background header */
   const [sticky, setSticky] = useState("");
   window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
-    if(scrolled > 0) {
+    if (scrolled > 0) {
       setSticky(" sticky");
     } else {
       setSticky("");
     }
   });
 
-
   /* Logic toggle SearchBar */
-  const [open, setOpen] = useState('')
+  const [open, setOpen] = useState("");
 
   const HandleSearchBar = () => {
     const screenWidth = window.innerWidth;
-    if(screenWidth < 740) {
-      if(open === '') {
-        setOpen(" open")
-      }
-      else {
-        setOpen("")
+    if (screenWidth < 740) {
+      if (open === "") {
+        setOpen(" open");
+      } else {
+        setOpen("");
       }
     }
-    
-  }
+  };
 
   return (
     <header className={"header" + sticky}>
@@ -76,8 +72,9 @@ export const Header = () => {
         </span>
         <h3 className="header__logo-name">CHAILO AN TÂM</h3>
       </div>
+
       <div className="header-wrapper">
-        <div className={"header__search" + open}>
+        {/* <div className={"header__search" + open}>
           <input
             type="text"
             className="header__search-control"
@@ -86,11 +83,9 @@ export const Header = () => {
           <i className="header__search-icon" onClick={HandleSearchBar}>
             {icons.iconSearch}
           </i>
-        </div>
+        </div> */}
         <a href={"tel:" + phoneNumber} className="header__contact">
-          <i className="header__contact-icon">
-            {icons.iconPhone}
-          </i>
+          <i className="header__contact-icon">{icons.iconPhone}</i>
           <p className="header__contact-number">{phoneNumber}</p>
         </a>
       </div>

@@ -17,38 +17,38 @@ class ContainerAdmin extends Component {
       { value: "state", label: "state" },
       {
         key: "1233",
-        content: (item) => (<Delete item={item} list='orders' onDelete={this.props.onDelete} />
+        content: (item) => (
+          <Delete item={item} list="orders" onDelete={this.props.onDelete} />
         ),
       },
     ],
     allProducts: [
-      { value: '_id', label: "Id" },
-      { value: 'title', label: "Title" },
-      { value: 'content', label: "Content" },
+      { value: "title", label: "Title" },
+      { value: "content", label: "Content" },
       {
         key: "13233",
         content: (item) => (
-          <Link
-            to={`/admin/all-products/${item._id}`}
-            className=" btn-edit"
-          >
+          <Link to={`/admin/all-products/${item._id}`} className=" btn-edit">
             {icons.iconEdit}
           </Link>
         ),
       },
       {
         key: "6233",
-        content: (item) => (<Delete item={item} list='products' onDelete={this.props.onDelete} />),
+        content: (item) => (
+          <Delete item={item} list="products" onDelete={this.props.onDelete} />
+        ),
       },
-    ]
+    ],
   };
 
   render() {
-    const { products, orders } = this.props;
+    const { products, orders, isLoading } = this.props;
 
     return (
       <main className="container container-admin">
         <ListGroup />
+
         <Switch>
           <Route
             path="/admin/table-order"
@@ -57,6 +57,7 @@ class ContainerAdmin extends Component {
                 heading={"Đơn Hàng"}
                 columns={this.columns.order}
                 data={orders}
+                isLoading={isLoading}
                 {...props}
               />
             )}
@@ -64,12 +65,14 @@ class ContainerAdmin extends Component {
           <Route
             path="/admin/all-products"
             render={(props) => (
-              <AllProducts
-                products={products}
-                columns={this.columns.allProducts}
-                {...props}
-                onDelete={this.props.onDelete}
-              />
+              <>
+                <AllProducts
+                  products={products}
+                  columns={this.columns.allProducts}
+                  onDelete={this.props.onDelete}
+                  {...props}
+                />
+              </>
             )}
           />
         </Switch>
