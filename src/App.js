@@ -24,7 +24,7 @@ function App() {
       <Switch>
         {/* Trang Public */}
         <PublicPage path="/" exact Component={Home} />
-        <PublicPage path="/san-pham/:_id" exact Component={ProductDetail} />
+        <PublicPage path="/san-pham/:id" exact Component={ProductDetail} />
         <PublicPage path="/form" exact Component={Form} />
         <PublicPage path="/lien-he" exact Component={Contact} />
         <PublicPage path="/dang-nhap" exact Component={LoginPage} />

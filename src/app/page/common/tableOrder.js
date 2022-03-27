@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import TableBody from "./tableBody";
 import TableHead from "./tableHead";
 import "../common/styles/table.scss";
+import TableBodyOrder from "./tableBodyOrder";
 
-class Table extends Component {
+class TableOrder extends Component {
   render() {
     const { columns, data, heading } = this.props;
 
@@ -16,7 +16,7 @@ class Table extends Component {
           <div className="table-wrapper">
             <table className="table">
               <TableHead columns={columns} />
-              <TableBody data={data} />
+              <TableBodyOrder data={data} />
             </table>
           </div>
         </div>
@@ -25,4 +25,4 @@ class Table extends Component {
   }
 }
 
-export default Table;
+export default TableOrder;
