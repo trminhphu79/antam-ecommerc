@@ -9,12 +9,13 @@
   }
   &__desc {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 900;
-    color: #333333;
+    font-size: 3.4rem;
+    font-weight: 500;
+    color: var(--title-big-color);
   }
   &__content {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 80px;
     &-image {
       margin-right: 80px;
@@ -24,9 +25,9 @@
     }
     &-line {
       margin: 0 10px;
-      margin-bottom: 16px;
+      margin-bottom: 1.6rem;
       font-size: 1.8rem;
-      line-height: 2.8rem;
+      line-height: 3.8rem;
       color: var(--text-color);
     }
     &-line:last-child {
@@ -42,10 +43,10 @@
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22284%22%20height%3D%22284%22%20viewBox%3D%220%200%20284%20284%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Ccircle%20cx%3D%22142%22%20cy%3D%22142%22%20r%3D%22142%22%20fill%3D%22white%22%20fill-opacity%3D%220.3%22%2F%3E%0A%3C%2Fsvg%3E%0A");
     background-repeat: no-repeat;
     background-position: center right -34px;
-    width: 857px;
+    max-width: 857px;
     height: 119px;
     margin: 0 auto;
-    margin-top: 93px;
+    margin-top: 9.3rem;
     padding: 0 40px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
     border-radius: 30px;
@@ -105,6 +106,7 @@
   &__info {
     font-size: 1.8rem;
     margin-top: 40px;
+    color: var(--title-color);
     & a {
       text-decoration: none;
       color: #003f9e;
@@ -117,7 +119,7 @@
 @media (max-width: 46.1875em) {
   .contact {
     &__desc {
-      line-height: 1.4;
+      line-height: 1.6;
       font-size: 2.6rem;
     }
     &__content {
@@ -170,10 +172,9 @@
       margin: 18px 0 40px;
     }
   }
-}
-
-.contact ~ .footer {
-  background: #f3f6fc;
+  .contact ~ .footer {
+    background: #f3f6fc;
+  }
 }
 
 // Tablet: width >= 740px and width < 1024px
@@ -184,16 +185,16 @@
     }
     &__content {
       display: block;
-      margin-top: 26px;
+      margin: 4.6rem 0 0;
       &-image {
-        margin: 0 auto;
+        margin: 0 auto 2rem;
       }
       &-list {
         margin-top: 16px;
       }
     }
     &__card {
-      margin-top: 24px;
+      margin-top: 4.4rem;
       padding: 16px;
       width: 100%;
       height: 147px;
@@ -218,5 +219,8 @@
       line-height: 1.6;
       margin: 18px 0 50px;
     }
+  }
+  .contact ~ .footer {
+    background: #f3f6fc;
   }
 }

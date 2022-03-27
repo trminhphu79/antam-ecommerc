@@ -8,16 +8,16 @@ const AllProducts = ({ products  , columns , products : data }) => {
 
   return (
     <section className="product-section">
-      <Link to="/admin/all-products/create-product"
+      <Link to="/admin/tat-ca-san-pham/them-san-pham"
         className="product-btn-create">
         <i class="fal fa-plus"></i>
           Thêm</Link>
       <Table heading="Sản Phẩm" columns={columns} data={data}/>
       <Switch>
-        <Route path="/admin/all-products/create-product" render={(props) => <Modal
+        <Route path="/admin/tat-ca-san-pham/them-san-pham" render={(props) => <Modal
         products={products} heading={"Thêm sản phẩm"} {...props}/>} />
         {/* routing to edit a product */}
-        <Route path="/admin/all-products/:_id" render={(props) => <Modal
+        <Route path="/admin/tat-ca-san-pham/:_id" render={(props) => <Modal
         products={products} heading={"Sửa sản phẩm"} {...props}/>} />
       </Switch>
       

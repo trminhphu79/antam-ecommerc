@@ -7,12 +7,12 @@ const menuList = [
   {
     name: "Sản phẩm",
     icon: icons.iconProduct,
-    pathLink: "/admin/all-products",
+    pathLink: "/admin/tat-ca-san-pham",
   },
   {
     name: "Đơn hàng",
     icon: icons.iconOder,
-    pathLink: "/admin/table-order",
+    pathLink: "/admin/don-hang",
   },
 ];
 

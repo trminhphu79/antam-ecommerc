@@ -1,10 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import { icons } from "assets/icons/icons-svg";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
 import Delete from "../common/delete";
+import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
 
 class ContainerAdmin extends Component {
@@ -50,8 +51,16 @@ class ContainerAdmin extends Component {
         <ListGroup />
 
         <Switch>
+          {/* <Route path="/admin" render={(props) => (
+            <AllProducts
+              products={products}
+              columns={this.columns.allProducts}
+              {...props}
+              onDelete={this.props.onDelete}
+            />
+          )} /> */}
           <Route
-            path="/admin/table-order"
+            path="/admin/don-hang"
             render={(props) => (
               <Table
                 heading={"Đơn Hàng"}
@@ -63,7 +72,7 @@ class ContainerAdmin extends Component {
             )}
           />
           <Route
-            path="/admin/all-products"
+            path="/admin/tat-ca-san-pham"
             render={(props) => (
               <>
                 <AllProducts
@@ -75,6 +84,18 @@ class ContainerAdmin extends Component {
               </>
             )}
           />
+          <Route
+            path="/admin/tat-ca-san-pham"
+            render={(props) => (
+              <AllProducts
+                products={products}
+                columns={this.columns.allProducts}
+                {...props}
+                onDelete={this.props.onDelete}
+              />
+            )}
+          />
+          <Route component={NotFound} />
         </Switch>
       </main>
     );

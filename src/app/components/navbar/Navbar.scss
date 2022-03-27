@@ -102,7 +102,7 @@
 
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .navbar {
-    height: 84px;
+    height: var(--navbar-height-tablet);
     background: var(--white-color);
     &__item {
       &-icon {
@@ -121,7 +121,8 @@
 // Mobile: width < 740px
 @media (max-width: 46.1875em) {
   .navbar {
-    height: 64px;
+    height: var(--navbar-height-mobile);
+    overflow: hidden;
     &__item {
       &-icon {
         width: 2rem;

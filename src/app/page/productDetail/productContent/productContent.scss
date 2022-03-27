@@ -28,6 +28,7 @@
     }
     & h2 {
       font-size: 3.4rem;
+      font-weight: 500;
       line-height: 1.4;
       display:-webkit-box;
       -webkit-line-clamp:5;
@@ -35,8 +36,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       word-break: break-word;
-      font-weight: bold;
-      color: #252d2e;
+      color: var(--title-big-color);
       margin: 1.2rem 0;
     }
     & p {
@@ -54,6 +54,7 @@
       & span {
         margin-left: 0.6rem;
         font-size: 2.4rem;
+        line-height: 2.4rem;
         color: var(--primary-color);
       }
     }
@@ -86,7 +87,7 @@
       margin: 0 auto 8rem;
       & h2 {
         margin: 2rem 0 1.2rem;
-        font-size: 2rem;
+        font-size: 2.4rem;
       }
       & .wrapper a {
         margin: 2.4rem 0;
