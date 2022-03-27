@@ -25,6 +25,8 @@ function Form({ heading }) {
     });
   };
 
+  console.log(urls.length);
+
   const handleChangeFile = (e) => {
     setUrls([]);
     const { files } = e.target;
@@ -160,7 +162,10 @@ function Form({ heading }) {
           )}
 
           <div className="form-group">
-            <label htmlFor="image">Hình ảnh:</label>
+            <label class="choose-file" htmlFor="image">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+              Chọn File ảnh
+            </label>
 
             <input
               id="image"
@@ -170,16 +175,25 @@ function Form({ heading }) {
               accept="image/png, image/jpg, image/jpeg"
             />
           </div>
+            <span className="message-file">
+              {urls.length !== 0 ? `Đã chọn ${urls.length} ảnh` : ""}
+            </span>
 
           {errors.files && (
             <div className="alert alert-danger">{errors.files}</div>
           )}
         </form>
 
-        <div className="row">
+        <div className="row files-box">
+          {(urls.length === 0 ? true: false) && (
+            <div className="content">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              Không có File ảnh
+            </div>
+          )}
           {urls.map((url) => {
             return (
-              <div className="col-3 mt-3" key={url}>
+              <div style={{padding: "1rem"}} className="col-4" key={url}>
                 <img src={url} alt={url} />
               </div>
             );
