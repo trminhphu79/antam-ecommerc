@@ -19,10 +19,10 @@ class Delete extends Component {
   };
 
   handleDelete = () => {
-    const { onDelete, list, item } = this.props;
+    const { onDelete, item } = this.props;
     const message = { display: false };
     this.setState({ message });
-    onDelete(item, list);
+    onDelete(item);
   };
 
   render() {
@@ -37,8 +37,18 @@ class Delete extends Component {
             <div className="box-message-wrapper">
               <h2>Bạn có chắc chắn muốn xóa mục vừa chọn ?</h2>
               <div className="box-message-btn">
-                <button className="box-message-btn--cancel" onClick={this.hiddenMessageBox}>Hủy</button>
-                <button className="box-message-btn--delete" onClick={this.handleDelete}>Xóa</button>
+                <button
+                  className="box-message-btn--cancel"
+                  onClick={this.hiddenMessageBox}
+                >
+                  Hủy
+                </button>
+                <button
+                  className="box-message-btn--delete"
+                  onClick={this.handleDelete}
+                >
+                  Xóa
+                </button>
               </div>
             </div>
           </div>

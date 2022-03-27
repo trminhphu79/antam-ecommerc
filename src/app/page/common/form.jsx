@@ -26,6 +26,7 @@ function Form({ heading }) {
   };
 
   const handleChangeFile = (e) => {
+    setUrls([]);
     const { files } = e.target;
     const uploadList = [];
     const extension = /\.(gif|jpe?g|png|jpg)$/i;
@@ -113,14 +114,11 @@ function Form({ heading }) {
     }
 
     return;
-
-    // saveProduct(this.state.data)
-    // this.props.history.push("/admin/all-products");
   };
 
   const cancelModal = () => {
     setDataSubmit({});
-    history.push("/admin/all-products");
+    history.push("/admin/tat-ca-san-pham");
   };
 
   return (

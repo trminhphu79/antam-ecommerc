@@ -12,9 +12,9 @@ class ContainerAdmin extends Component {
   columns = {
     order: [
       { value: "_id", label: "id" },
-      { value: "customer", label: "customer name" },
-      { value: "products", label: "product name" },
-      { value: "date", label: "date" },
+      { value: "customer", label: "Tên khách hàng" },
+      { value: "products", label: "Sản phẩm" },
+      { value: "date", label: "Ngày gửi" },
       { value: "state", label: "state" },
       {
         key: "1233",
@@ -24,22 +24,10 @@ class ContainerAdmin extends Component {
       },
     ],
     allProducts: [
-      { value: "title", label: "Title" },
-      { value: "content", label: "Content" },
-      {
-        key: "13233",
-        content: (item) => (
-          <Link to={`/admin/all-products/${item._id}`} className=" btn-edit">
-            {icons.iconEdit}
-          </Link>
-        ),
-      },
-      {
-        key: "6233",
-        content: (item) => (
-          <Delete item={item} list="products" onDelete={this.props.onDelete} />
-        ),
-      },
+      { value: "title", label: "Tên sản phẩm" },
+      { value: "content", label: "Mô tả sản phẩm" },
+      { value: "url", label: "Hình ảnh" },
+      { value: "action", label: "Thao tác" },
     ],
   };
 
@@ -51,14 +39,6 @@ class ContainerAdmin extends Component {
         <ListGroup />
 
         <Switch>
-          {/* <Route path="/admin" render={(props) => (
-            <AllProducts
-              products={products}
-              columns={this.columns.allProducts}
-              {...props}
-              onDelete={this.props.onDelete}
-            />
-          )} /> */}
           <Route
             path="/admin/don-hang"
             render={(props) => (
@@ -71,30 +51,19 @@ class ContainerAdmin extends Component {
               />
             )}
           />
-          <Route
-            path="/admin/tat-ca-san-pham"
-            render={(props) => (
-              <>
-                <AllProducts
-                  products={products}
-                  columns={this.columns.allProducts}
-                  onDelete={this.props.onDelete}
-                  {...props}
-                />
-              </>
-            )}
-          />
+
           <Route
             path="/admin/tat-ca-san-pham"
             render={(props) => (
               <AllProducts
                 products={products}
                 columns={this.columns.allProducts}
-                {...props}
                 onDelete={this.props.onDelete}
+                {...props}
               />
             )}
           />
+
           <Route component={NotFound} />
         </Switch>
       </main>

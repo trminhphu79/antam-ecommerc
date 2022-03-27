@@ -14,16 +14,13 @@ class Home extends Component {
     const { products: allProduct, pageSize } = this.state;
 
     const productsLength = allProduct.length;
-    const hotProducts = allProduct.filter((product, index) => 
-        index >= productsLength - pageSize
-    )
+    const hotProducts = allProduct.filter(
+      (product, index) => index >= productsLength - pageSize
+    );
 
     return (
       <div className="background-page home-below">
-        <Slide 
-            products={allProduct} 
-            slideSize={3}
-        />
+        <Slide products={allProduct} slideSize={3} />
         <h2 id="hot-product">các sản phẩm nổi bật</h2>
         <ListProduct products={hotProducts} />
       </div>

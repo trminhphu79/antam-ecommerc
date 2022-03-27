@@ -1,26 +1,84 @@
-import React, { Component } from "react";
-import _ from "lodash";
+import React from "react";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { deleteProductAction } from "core/redux/actions/productActions";
+import Delete from "./delete";
+import { icons } from "assets/icons/icons-svg";
 
-class TableBody extends Component {
-  renderCell = (item, column) => {
-    if (column.content) return column.content(item);
+function TableBody({ data }) {
+  const dispatch = useDispatch();
 
-    return _.get(item, column.value);
+  const handleDelete = (item) => {
+    dispatch(deleteProductAction(item.id));
   };
 
-  render() {
-    const { data, columns } = this.props;
-
-    return (
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index} className="value-row">
-            {columns.map((column, index) => ( <td key={index} className="value-column">{this.renderCell(item, column)}</td>))}
+  return (
+    <>
+      {data.map((item) => {
+        return (
+          <tr key={item?.id} className="value-row">
+            <td
+              className="value-column"
+              style={{
+                width: "20%",
+              }}
+            >
+              <p>{item?.title}</p>
+            </td>
+            <td
+              className="value-column w-40"
+              style={{
+                width: "40%",
+              }}
+            >
+              <p>{item?.content}</p>
+            </td>
+            <td
+              className="value-column"
+              style={{
+                width: "40%",
+              }}
+            >
+              <div className="row m-auto">
+                {item?.img.map((link) => {
+                  return (
+                    <div className="col-4" key={link}>
+                      <img src={link} className="img-fluid" alt={link} />
+                    </div>
+                  );
+                })}
+              </div>
+            </td>
+            <td
+              className="value-column"
+              style={{
+                width: "20%",
+                display: "flex",
+              }}
+            >
+              <span>
+                <Link
+                  to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
+                  className="btn-edit"
+                >
+                  {icons.iconEdit}
+                </Link>
+              </span>
+              <span>
+                <Delete
+                  item={item}
+                  list="products"
+                  onDelete={() => {
+                    handleDelete(item);
+                  }}
+                />
+              </span>
+            </td>
           </tr>
-        ))}
-      </tbody>
-    );
-  }
+        );
+      })}
+    </>
+  );
 }
 
 export default TableBody;
