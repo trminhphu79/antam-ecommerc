@@ -31,15 +31,19 @@ const ListProduct = ({ products }) => {
                 <img src={item.img[0]} alt="" />
 
                 <div className="content">
-                  <h4>{item.title}</h4>
-                  <div>
-                    <span>Giá sỉ liên hệ:</span>
-                    <p>0865.328.664</p>
+                  <div className="header-product">
+                    <h4>{item.title}</h4>
                   </div>
+                  <div className="footer-product">
+                    <div>
+                      <span>Giá sỉ liên hệ:</span>
+                      <p>0865.328.664</p>
+                    </div>
 
-                  <Link to={`/san-pham/${item.id}`} className="btn">
-                    Chi tiết sản phẩm
-                  </Link>
+                    <Link to={`/san-pham/${item.id}`} className="btn">
+                      Chi tiết sản phẩm
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
