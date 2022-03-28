@@ -56,12 +56,12 @@
       color: #fff;
     }
     &.active {
-      background-color: #fff;
-      color: #222e3c;
-      & .menu__item-icon path {
+      // background-color: #fff;
+      color: #fff;
+      &.menu__item-icon path {
         stroke: #222e3c;
       }
-      & .menu__item-name {
+      &.menu__item-name {
         color: #222e3c;
       }
     }

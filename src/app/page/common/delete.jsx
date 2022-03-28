@@ -6,7 +6,6 @@ class Delete extends Component {
   state = {
     message: {},
   };
-
   displayMessageBox = () => {
     const message = { ...this.state.message };
     message.display = true;
@@ -19,6 +18,7 @@ class Delete extends Component {
   };
 
   handleDelete = () => {
+    console.log(this.props)
     const { onDelete, item } = this.props;
     const message = { display: false };
     this.setState({ message });
@@ -35,8 +35,8 @@ class Delete extends Component {
         {message.display && (
           <div className="box-message">
             <div className="box-message-wrapper">
-              <h2>Bạn có chắc chắn muốn xóa mục vừa chọn ?</h2>
-              <div className="box-message-btn">
+              <h2>Bạn có chắc chắn muốn xóa sản phẩm này không?</h2>
+              <div className="box-message-btn mt-4">
                 <button
                   className="box-message-btn--cancel"
                   onClick={this.hiddenMessageBox}
