@@ -33,7 +33,6 @@ class ContainerAdmin extends Component {
       <main className="container container-admin">
         <ListGroup />
         <Switch>
-          <Redirect to='/admin/dang-nhap'/>
           <Route
             path="/admin/don-hang"
             render={(props) => (
