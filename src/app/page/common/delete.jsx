@@ -30,7 +30,7 @@ class Delete extends Component {
     return (
       <div>
         <div onClick={this.displayMessageBox} className="btn-delete">
-          <i class="fa fa-trash"></i>
+          <i className="fa fa-trash"></i>
         </div>
         {message.display && (
           <div className="box-message">

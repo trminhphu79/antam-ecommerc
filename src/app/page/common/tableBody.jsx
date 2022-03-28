@@ -41,7 +41,7 @@ function TableBody({ data }) {
                     to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
                     className="btn-edit"
                   >
-                    <i class="fa fa-pen-to-square"></i>
+                    <i className="fa fa-pen-to-square"></i>
                   </Link>
                 </span>
                 <span>

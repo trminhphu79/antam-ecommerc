@@ -160,8 +160,8 @@ function Form({ heading }) {
           )}
 
           <div className="form-group">
-            <label class="choose-file" htmlFor="image">
-              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            <label className="choose-file" htmlFor="image">
+              <i className="fa-solid fa-arrow-up-from-bracket"></i>
               Tải hình ảnh từ máy tính
               {pecentsProgress}
             </label>
