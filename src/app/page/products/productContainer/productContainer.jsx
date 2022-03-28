@@ -1,24 +1,30 @@
-import React from 'react' ; 
+import React, { useEffect, useState } from "react";
 import ListProduct from 'app/page/common/listProduct/listProduct';
-import Pagination from '../../common/pagination/pagination';
-
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProductAction } from "core/redux/actions/productActions";
 const ProductContainer = (props) => {
-    const {
-        products: allProduct,
-        currentPage,
-        pageSize , 
-        itemsCount,
-        onPageChange } = props;
+    const dispatch = useDispatch();
+    const [products, setProducts] = useState([]);
+    const { productList } = useSelector((state) => state.product);
+    useEffect(() => {
+      dispatch(getAllProductAction());
+    }, []);
+    // const {
+    //     products: allProduct,
+    //     currentPage,
+    //     pageSize , 
+    //     itemsCount,
+    //     onPageChange } = props;
         
     return ( 
         <div className="product-container">
-            <ListProduct products={allProduct} />
-            <Pagination
+            <ListProduct products={productList} />
+            {/* <Pagination
                 currentPage={currentPage}
                 itemsCount={itemsCount}
                 onPageChange={onPageChange}
                 pageSize={pageSize}
-            />
+            /> */}
         </div>
      );
 }

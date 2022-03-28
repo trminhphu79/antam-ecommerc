@@ -161,7 +161,7 @@ function FormEdit({ heading }) {
           <div>
             <form>
               <div className="form-group">
-                <label htmlFor="title">Tên sản phẩm: </label>
+                <label htmlFor="title">Tên sản phẩm</label>
                 <input
                   id="title"
                   name="title"
@@ -177,7 +177,7 @@ function FormEdit({ heading }) {
               )}
 
               <div className="form-group">
-                <label htmlFor="content">Nội dung :</label>
+                <label htmlFor="content">Nội dung</label>
                 <textarea
                   id="content"
                   name="content"

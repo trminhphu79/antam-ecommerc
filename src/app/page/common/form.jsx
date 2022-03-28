@@ -130,7 +130,7 @@ function Form({ heading }) {
 
         <form>
           <div className="form-group">
-            <label htmlFor="title">Tên sản phẩm: </label>
+            <label htmlFor="title">Tên sản phẩm</label>
             <input
               id="title"
               name="title"
@@ -146,8 +146,8 @@ function Form({ heading }) {
           )}
 
           <div className="form-group">
-            <label htmlFor="content">Nội dung :</label>
-            <input
+            <label htmlFor="content">Nội dung</label>
+            <textarea
               id="content"
               name="content"
               value={dataSubmit.content}
