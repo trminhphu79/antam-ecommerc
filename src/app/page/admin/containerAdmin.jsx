@@ -8,6 +8,7 @@ import Delete from "../common/delete";
 import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
 import TableOrder from "../common/tableOrder";
+import { Redirect } from "react-router-dom";
 class ContainerAdmin extends Component {
   columns = {
     order: [
@@ -32,6 +33,7 @@ class ContainerAdmin extends Component {
       <main className="container container-admin">
         <ListGroup />
         <Switch>
+          <Redirect to='/admin/dang-nhap'/>
           <Route
             path="/admin/don-hang"
             render={(props) => (
