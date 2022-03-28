@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { icons } from "assets/icons/icons-svg";
 import "../common/styles/listGroup.scss";
-
+import logo from '../../../assets/images/logo-chailo.png'
 const menuList = [
   {
     name: "Sản phẩm",
@@ -22,24 +22,25 @@ const ListGroup = () => {
 
   return (
     <section className="menu">
-      <a href="/#" className="menu__logo">
-        Your Logo
-        <img src="" alt="" />
+      <a className="menu__logo d-flex justify-content-center">
+        <img src={logo} alt="" />
       </a>
-      <div className="menu__avatar">
+      {/* <div className="menu__avatar">
         <img src="https://taimienphi.vn/tmp/cf/aut/anh-gai-xinh-1.jpg" alt="" />
         <h2>Admin</h2>
-      </div>
+      </div> */}
       <ul className="menu__list">
         {menuList.map((item, index) => (
-          <Link
-            key={index}
-            to={item.pathLink}
-            className={"menu__item " + (linkBrowserName.includes(item.pathLink)? "active": "")}
-          >
-            <i className="menu__item-icon">{item.icon}</i>
-            <p className="menu__item-name">{item.name}</p>
-          </Link>
+          <li>
+            <Link
+              key={index}
+              to={item.pathLink}
+              className={"menu__item " + (linkBrowserName.includes(item.pathLink) ? "active" : "")}
+            >
+              <i className="menu__item-icon">{item.icon}</i>
+              <p className="menu__item-name">{item.name}</p>
+            </Link>
+          </li>
         ))}
       </ul>
     </section>

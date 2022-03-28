@@ -15,7 +15,7 @@ function Form({ heading }) {
   const [urls, setUrls] = useState([]);
   const history = useHistory();
   const dispatch = useDispatch();
-
+  let pecentsProgress;
   const handleChange = (e) => {
     const { value, name } = e.target;
 
@@ -50,9 +50,7 @@ function Form({ heading }) {
           .ref()
           .child(`images/${image.name}`)
           .put(image);
-
         promises.push(uploadTask);
-
         uploadTask.on(
           "state_changed",
           (snapshot) => {
@@ -61,6 +59,7 @@ function Form({ heading }) {
 
             if (snapshot.state === "running") {
               console.log(`Đang tải: ${progress}%`);
+              pecentsProgress = progress;
             }
           },
           (error) => {
@@ -68,7 +67,6 @@ function Form({ heading }) {
           },
           async () => {
             const downloadURL = await uploadTask.snapshot.ref.getDownloadURL();
-
             setUrls((prevState) => [...prevState, downloadURL]);
           }
         );
@@ -126,11 +124,11 @@ function Form({ heading }) {
   return (
     <div className="modal-form">
       <div className="modal-body">
-        <h1>{heading}</h1>
+        <h1 className='mat-title-form'>{heading}</h1>
 
         <form>
           <div className="form-group">
-            <label htmlFor="title">Tên sản phẩm</label>
+            <label htmlFor="title">Tên sản phẩm </label>
             <input
               id="title"
               name="title"
@@ -164,7 +162,8 @@ function Form({ heading }) {
           <div className="form-group">
             <label class="choose-file" htmlFor="image">
               <i class="fa-solid fa-arrow-up-from-bracket"></i>
-              Chọn File ảnh
+              Tải hình ảnh từ máy tính
+              {pecentsProgress}
             </label>
 
             <input
@@ -172,12 +171,13 @@ function Form({ heading }) {
               type="file"
               multiple
               onChange={handleChangeFile}
+              hidden
               accept="image/png, image/jpg, image/jpeg"
             />
           </div>
-            <span className="message-file">
-              {urls.length !== 0 ? `Đã chọn ${urls.length} ảnh` : ""}
-            </span>
+          <span className="message-file">
+            {urls.length !== 0 ? `Đã chọn ${urls.length} ảnh` : ""}
+          </span>
 
           {errors.files && (
             <div className="alert alert-danger">{errors.files}</div>
@@ -185,15 +185,17 @@ function Form({ heading }) {
         </form>
 
         <div className="row files-box">
-          {(urls.length === 0 ? true: false) && (
+          {(urls.length === 0 ? true : false) && (
             <div className="content">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
-              Không có File ảnh
+              {/* <i class="fa-solid fa-cloud-arrow-up"></i> */}
+              <span>
+                Chưa có file ảnh
+              </span>
             </div>
           )}
           {urls.map((url) => {
             return (
-              <div style={{padding: "1rem"}} className="col-4" key={url}>
+              <div style={{ padding: "1rem" }} className="col-4 image-uploaded" key={url}>
                 <img src={url} alt={url} />
               </div>
             );
