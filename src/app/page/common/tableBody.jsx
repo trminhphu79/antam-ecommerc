@@ -13,37 +13,20 @@ function TableBody({ data }) {
   };
 
   return (
-    <>
+    <tbody>
       {data.map((item) => {
         return (
           <tr key={item?.id} className="value-row">
-            <td
-              className="value-column"
-              style={{
-                width: "20%",
-              }}
-            >
-              <p>{item?.title}</p>
-            </td>
-            <td
-              className="value-column w-40"
-              style={{
-                width: "40%",
-              }}
-            >
-              <p>{item?.content}</p>
-            </td>
-            <td
-              className="value-column"
-              style={{
-                width: "40%",
-              }}
-            >
-              <div className="row m-auto">
+            <td className="value-column">{item?.title}</td>
+            <td className="value-column">{item?.content}</td>
+            <td className="value-column">
+              <div style={{width: "41rem"}} className="row m-auto">
                 {item?.img.map((link) => {
                   return (
                     <div className="col-4" key={link}>
-                      <img src={link} className="img-fluid" alt={link} />
+                      <div className="img-wrapper">
+                        <img src={link} className="img-fluid" alt={link} />
+                      </div>
                     </div>
                   );
                 })}
@@ -51,11 +34,8 @@ function TableBody({ data }) {
             </td>
             <td
               className="value-column"
-              style={{
-                width: "20%",
-                display: "flex",
-              }}
             >
+              <div className="options">
               <span>
                 <Link
                   to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
@@ -73,11 +53,12 @@ function TableBody({ data }) {
                   }}
                 />
               </span>
+              </div>
             </td>
           </tr>
         );
       })}
-    </>
+    </tbody>
   );
 }
 
