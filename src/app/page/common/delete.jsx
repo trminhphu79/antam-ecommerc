@@ -29,8 +29,8 @@ class Delete extends Component {
     const { message } = this.state;
     return (
       <div>
-        <div onClick={this.displayMessageBox} className=" btn-delete">
-          {icons.iconDelete}
+        <div onClick={this.displayMessageBox} className="btn-delete">
+          <i class="fa fa-trash"></i>
         </div>
         {message.display && (
           <div className="box-message">

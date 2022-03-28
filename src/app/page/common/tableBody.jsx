@@ -20,7 +20,7 @@ function TableBody({ data }) {
             <td className="value-column">{item?.title}</td>
             <td className="value-column">{item?.content}</td>
             <td className="value-column">
-              <div style={{width: "41rem"}} className="row m-auto">
+              <div style={{ width: "41rem" }} className="row m-auto">
                 {item?.img.map((link) => {
                   return (
                     <div className="col-4" key={link}>
@@ -36,23 +36,23 @@ function TableBody({ data }) {
               className="value-column"
             >
               <div className="options">
-              <span>
-                <Link
-                  to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
-                  className="btn-edit"
-                >
-                  {icons.iconEdit}
-                </Link>
-              </span>
-              <span>
-                <Delete
-                  item={item}
-                  list="products"
-                  onDelete={() => {
-                    handleDelete(item);
-                  }}
-                />
-              </span>
+                <span>
+                  <Link
+                    to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
+                    className="btn-edit"
+                  >
+                    <i class="fa fa-pen-to-square"></i>
+                  </Link>
+                </span>
+                <span>
+                  <Delete
+                    item={item}
+                    list="products"
+                    onDelete={() => {
+                      handleDelete(item);
+                    }}
+                  />
+                </span>
               </div>
             </td>
           </tr>
