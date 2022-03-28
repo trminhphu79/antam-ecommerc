@@ -10,9 +10,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  img {
+    width: 80px;
+  }
   &__logo {
     position: relative;
     width: 180px;
+   
     &-name {
       position: absolute;
       top: 36.3px;
@@ -86,8 +90,12 @@
 @media (max-width: 46.1875em) {
   .header {
     margin: 16px 16px 0;
+    img {
+      width: 50px;
+    }
     &__logo {
-      flex: 1;
+      // flex: 1;
+
       margin-right: 16px;
       &-name {
         display: none;
@@ -157,11 +165,16 @@
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .header {
-    &__logo-name {
-      display: none;
+    img {
+      width: 65px;
     }
-    .header__search {
-      width: 350px;
+    &__logo {
+      // &__logo-name {
+      //   display: none;
+      // }
+      .header__search {
+        width: 350px;
+      }
     }
   }
 }

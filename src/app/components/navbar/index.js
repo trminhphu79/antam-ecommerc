@@ -16,7 +16,7 @@ export const Navbar = () => {
             key={item.id}
             to={item.link}
             className="navbar__item"
-            activeClassName={item.link === pathname && "active"}
+            // activeClassName={item.link === pathname && "active"}
           >
             <i className="navbar__item-icon">{item.icon}</i>
             <p className="navbar__item-name">{item.itemName}</p>

@@ -10,6 +10,7 @@
       border-radius: 3rem;
       box-shadow: 0px 15px 60px 0px #0000001f;
       padding: 1.6rem;
+      height: 700px;
     }
     & img {
       height: 100%;
@@ -77,6 +78,7 @@
         width: 80%;
         margin: 0 auto;
         border-radius: 1.5rem;
+        height:650px;
       }
       & img {
         border-radius: 1.5rem;
@@ -99,15 +101,17 @@
 
 @media (max-width: 768px) {
   .row.product-content {
-    --bs-gutter-x: unset;
+    // --bs-gutter-x: unset;
   }
 
   .product-content {
     margin: unset;
-    width: 100%;
+    width: 70%;
     & .image {
       & .wrapper {
-        width: 100%;
+        width: 70%;
+    height:390px;
+
       }
     }
     & .content {

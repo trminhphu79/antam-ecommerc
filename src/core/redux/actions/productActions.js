@@ -46,7 +46,6 @@ export const addProductAction = (data) => {
           type: ADD_PRODUCT_FAILED,
           payload: error,
         });
-
         // CreateToast("error", "Tạo thông tin thất bại.");
       });
   };
@@ -124,9 +123,9 @@ export const getDetailProductAction = (id) => {
     dispatch({
       type: GET_PRODUCT_DETAIL_REQUESTING,
     });
-
     getDocById("product", id)
       .then((response) => {
+        console.log("response,", response);
         dispatch({
           type: GET_PRODUCT_DETAIL_SUCCESS,
           payload: response,
