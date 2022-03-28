@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deleteProductAction } from "core/redux/actions/productActions";
@@ -12,15 +12,38 @@ function TableBody({ data }) {
     dispatch(deleteProductAction(item.id));
   };
 
+  const [content, setContent] = useState();
+  const prevContent = useRef();
+
+  useEffect(() => {
+    prevContent.current = content;
+  }, [content]);
+
+  const HandleContentClick = (index) => {
+    if (prevContent.current === index) {
+      setContent(undefined);
+    } else setContent(index);
+  };
+
   return (
     <tbody>
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
           <tr key={item?.id} className="value-row">
-            <td className="value-column">{item?.title}</td>
-            <td className="value-column">{item?.content}</td>
             <td className="value-column">
-              <div style={{ width: "41rem" }} className="row m-auto">
+              <p>{item?.title}</p>
+            </td>
+            <td
+              className="value-column"
+              data-toggle="tooltip" data-placement="bottom" title="Click để xem nội dung"
+              onClick={() => HandleContentClick(index)}
+            >
+              <p className={index === content ? "txt-full" : "txt-truncate"}>
+                {item?.content}
+              </p>
+            </td>
+            <td className="value-column">
+              <div style={{ width: "15rem", gap: "4px 0" }} className="row">
                 {item?.img.map((link) => {
                   return (
                     <div className="col-4" key={link}>
@@ -32,11 +55,9 @@ function TableBody({ data }) {
                 })}
               </div>
             </td>
-            <td
-              className="value-column"
-            >
+            <td className="value-column">
               <div className="options">
-                <span>
+                <span data-toggle="tooltip" data-placement="bottom" title="Click để Sửa">
                   <Link
                     to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
                     className="btn-edit"
@@ -44,7 +65,7 @@ function TableBody({ data }) {
                     <i className="fa fa-pen-to-square"></i>
                   </Link>
                 </span>
-                <span>
+                <span data-toggle="tooltip" data-placement="bottom" title="Click để Xóa">
                   <Delete
                     item={item}
                     list="products"
