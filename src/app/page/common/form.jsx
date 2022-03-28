@@ -195,7 +195,7 @@ function Form({ heading }) {
           )}
           {urls.map((url) => {
             return (
-              <div style={{ padding: "1rem" }} className="col-4 image-uploaded" key={url}>
+              <div style={{ padding: "1rem" }} className="col-3 image-uploaded" key={url}>
                 <img src={url} alt={url} />
               </div>
             );

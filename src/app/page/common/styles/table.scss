@@ -17,7 +17,7 @@
     border-radius: 0.6rem;
     // padding: 2rem;
     .table-wrapper {
-      overflow: auto;
+      // overflow-y: scroll;
       max-height: calc(100vh - 20rem);
       // 1632
       .table {
