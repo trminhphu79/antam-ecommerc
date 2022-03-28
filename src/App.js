@@ -14,8 +14,9 @@ import Form from "app/page/common/form";
 import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss";
-import Admin from "./app/page/admin/index.jsx";
 import { PublicPage } from "HOC/publicPage";
+import AdminLogin from "../src/app/page/admin/admin-page/adminLogin"
+import Admin from "app/page/admin";
 function App() {
   return (
     <React.Fragment>
@@ -31,7 +32,9 @@ function App() {
         <PublicPage path="/san-pham" Component={Products} />
 
         {/* Trang admin */}
+        <PublicPage path="/admin/dang-nhap" component={AdminLogin} />
         <PublicPage path="/admin" component={Admin} />
+
 
         {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
         <Route path="*" component={NotFound} />

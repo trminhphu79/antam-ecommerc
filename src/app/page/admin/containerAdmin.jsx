@@ -8,7 +8,6 @@ import Delete from "../common/delete";
 import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
 import TableOrder from "../common/tableOrder";
-
 class ContainerAdmin extends Component {
   columns = {
     order: [
@@ -32,7 +31,6 @@ class ContainerAdmin extends Component {
     return (
       <main className="container container-admin">
         <ListGroup />
-
         <Switch>
           <Route
             path="/admin/don-hang"
