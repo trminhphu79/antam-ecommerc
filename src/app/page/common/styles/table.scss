@@ -1,13 +1,13 @@
+::-webkit-scrollbar-thumb {
+  background-color: #222e3c   ;
+  border-radius: 100rem;
+}
 .table-section {
   position: relative;
   top: 0;
   left: var(--width-menu);
   width: calc(100% - var(--width-menu));
   padding: 4rem 4rem 0;
-  ::-webkit-scrollbar-thumb {
-    background-color: #222e3c;
-    border-radius: 100rem;
-  }
   .table-heading {
     text-align: center;
     margin-bottom: 3rem;
@@ -16,8 +16,10 @@
     border-radius: 0.6rem;
     // padding: 2rem;
     .table-wrapper {
-      overflow-y: scroll;
-      max-height: calc(100vh - 20rem);
+      // overflow-y: auto;
+      // height: calc(100vh - 20rem);
+      // overflow-x: hidden;
+      // -webkit-overflow-scrolling: auto;
       // 1632
       .table {
         border-radius: 0.6rem 0.6rem 0 0;
@@ -40,20 +42,20 @@
           background: rgb(237, 251, 255);
           border-bottom: 1px solid #e0e0e0;
           border-top: none;
-          position: -webkit-sticky;
-          position: sticky;
-          top: 0;
-          z-index: 2;
+          // position: -webkit-sticky;
+          // position: sticky;
+          // top: 0;
+          // z-index: 2;
           padding: 1.2rem 2.2rem;
           color: var(--text-color);
           white-space: nowrap;
           font-weight: 500;
-          &[scope="row"] {
-            position: -webkit-sticky;
-            position: sticky;
-            left: 0;
-            z-index: 1;
-          }
+          // &[scope="row"] {
+          //   position: -webkit-sticky;
+          //   position: sticky;
+          //   left: 0;
+          //   z-index: 1;
+          // }
         }
         .value-row {
           max-height: calc(100vh - 40rem);

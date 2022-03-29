@@ -12,9 +12,7 @@ function Table(props) {
       <h1 className="table-heading">{`Danh Sách ${heading}`} </h1>
       <div className="action-table  d-flex justify-content-end">
         <button className="product-btn-create">
-          <Link
-            to="/admin/tat-ca-san-pham/them-san-pham"
-          >
+          <Link to="/admin/tat-ca-san-pham/them-san-pham">
             <span>Thêm sản phẩm</span>
           </Link>
         </button>
@@ -29,7 +27,6 @@ function Table(props) {
       </div>
     </section>
   );
-
 }
 
 export default Table;
