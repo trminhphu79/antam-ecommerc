@@ -1,58 +1,100 @@
-import React from "react";
-import { useState } from "react";
-import { phoneNumber } from "app/page/contact";
-import { icons } from "assets/icons/icons-svg";
-import imgLogo from "assets/images/logo-chailo.png";
+import React, { Fragment, useEffect, useState } from "react";
 import "./Header.scss";
+import { NavLink } from "react-router-dom";
+import { listItemNavbar } from "./data/list-item-navbar";
+import { useLocation } from "react-router-dom";
+import { CgFacebook } from "react-icons/cg";
+import { SiZalo } from "react-icons/si";
+import { BsTelephoneFill } from "react-icons/bs";
 
 export const Header = () => {
-  /* Logic scroll show background header */
-  const [sticky, setSticky] = useState("");
-  window.addEventListener("scroll", () => {
-    const scrolled = window.scrollY;
-    if (scrolled > 0) {
-      setSticky(" sticky");
-    } else {
-      setSticky("");
-    }
+  const { pathname } = useLocation();
+  const [showNav, setShowNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
-  /* Logic toggle SearchBar */
-  const [open, setOpen] = useState("");
+  //  Logic scroll show background header */
+  // const [sticky, setSticky] = useState("");
+  // window.addEventListener("scroll", () => {
+  //   const scrolled = window.scrollY;
+  //   if (scrolled > 0) {
+  //     setSticky(" sticky");
+  //   } else {
+  //     setSticky("");
+  //   }
+  // });
 
-  const HandleSearchBar = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 740) {
-      if (open === "") {
-        setOpen(" open");
-      } else {
-        setOpen("");
-      }
-    }
-  };
+  /* Logic toggle SearchBar */
+  // const [open, setOpen] = useState("");
+
+  // const HandleSearchBar = () => {
+  //   const screenWidth = window.innerWidth;
+  //   if (screenWidth < 740) {
+  //     if (open === "") {
+  //       setOpen(" open");
+  //     } else {
+  //       setOpen("");
+  //     }
+  //   }
+  // };
 
   return (
-    <header className={"header" + sticky}>
-      <div className="header__logo">
-        <img src={imgLogo} />
+    <Fragment>
+      <div className="header-top">
+        <div className="wrapper header-top__wrap">
+          <div className="header-connect">
+            <span className="header-connect__text">Theo dõi chúng tôi:</span>
+            <ul className="header-connect__list">
+              <li className="header-connect__item">
+                <a href="/#">
+                  <CgFacebook className="header-connect__icon"></CgFacebook>
+                </a>
+              </li>
+              <li className="header-connect__item">
+                <a href="/#">
+                  <SiZalo className="header-connect__icon-2"></SiZalo>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a href="tel:0865328664" className="header-contact">
+            <BsTelephoneFill></BsTelephoneFill>
+            0865328664
+          </a>
+        </div>
       </div>
-
-      <div className="header-wrapper">
-        {/* <div className={"header__search" + open}>
-          <input
-            type="text"
-            className="header__search-control"
-            placeholder="Search..."
-          />
-          <i className="header__search-icon" onClick={HandleSearchBar}>
-            {icons.iconSearch}
-          </i>
-        </div> */}
-        <a href={"tel:" + phoneNumber} className="header__contact">
-          <i className="header__contact-icon">{icons.iconPhone}</i>
-          <p className="header__contact-number">{phoneNumber}</p>
-        </a>
-      </div>
-    </header>
+      <header className="header">
+        <div className="wrapper header-wrap">
+          <a href="/" className="header-logo">
+            <img src="/logo-chailo.png" alt="" />
+            <h2>Chai Lọ An Tâm</h2>
+          </a>
+          <ul className="header-nav__list">
+            {listItemNavbar.map((item) => (
+              <NavLink
+                key={item.id}
+                to={item.link}
+                className="header-nav__item"
+                activeClassName={item.link === pathname ? "active" : ""}
+              >
+                <p>{item.itemName}</p>
+              </NavLink>
+            ))}
+          </ul>
+        </div>
+      </header>
+    </Fragment>
   );
 };

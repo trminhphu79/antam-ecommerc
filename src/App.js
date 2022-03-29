@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { Header } from "app/components/header";
-import { Navbar } from "app/components/navbar";
-import { Footer } from "app/components/footer";
+// import { Header } from "app/components/header";
+// import { Navbar } from "app/components/navbar";
+// import { Footer } from "app/components/footer";
 import Products from "app/page/products/product";
 import Home from "app/page/home";
 import ProductDetail from "./app/page/productDetail/productDetail";
@@ -15,7 +15,7 @@ import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss";
 import { PublicPage } from "HOC/publicPage";
-import AdminLogin from "../src/app/page/admin/admin-page/adminLogin"
+import AdminLogin from "../src/app/page/admin/admin-page/adminLogin";
 import Admin from "app/page/admin";
 function App() {
   return (
@@ -34,7 +34,6 @@ function App() {
         {/* Trang admin */}
         <PublicPage path="/admin/dang-nhap" component={AdminLogin} />
         <PublicPage path="/admin" component={Admin} />
-
 
         {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
         <Route path="*" component={NotFound} />
