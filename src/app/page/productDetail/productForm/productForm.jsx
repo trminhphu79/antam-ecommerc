@@ -30,11 +30,7 @@ class ProductForm extends Component {
         <div className="row product-form">
           <form className="col-lg-6 col-md-6 col-xs-12">
             <div className="wrapper">
-              <h2
-                style={{
-                  fontSize: "30px",
-                }}
-              >
+              <h2>
                 Nhập thông tin đặt hàng
               </h2>
 

@@ -77,9 +77,6 @@
     .slide__image img {
       height: 363px;
     }
-    .slide__manual-btn {
-      background-color: #fff;
-    }
   }
 }
 
@@ -94,3 +91,13 @@
     }
   }
 }
+
+// @media (max-width: 23.4375em) {
+//   .slide__images {
+//     height: 30rem;
+//     margin: 0 auto;
+//     & .slide__image img {
+//       height: 28rem;
+//     }
+//   }
+// }

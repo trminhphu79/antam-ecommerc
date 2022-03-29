@@ -25,7 +25,7 @@ const ListProduct = ({ products }) => {
           {productList?.map((item) => (
             <div
               key={item.id}
-              className="product-item col-xl-2 col-lg-4 col-md-4 col-xs-6"
+              className="product-item col-xl-2 col-lg-4 col-md-4 col-xs-12"
             >
               <div className="wrapper-item">
                 <img src={item.img[0]} alt="" />
@@ -39,7 +39,6 @@ const ListProduct = ({ products }) => {
                       <span>Giá sỉ liên hệ:</span>
                       <p>0865.328.664</p>
                     </div>
-
                     <Link to={`/san-pham/${item.id}`} className="btn">
                       Chi tiết sản phẩm
                     </Link>

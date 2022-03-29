@@ -81,11 +81,23 @@
           bottom: -2.2rem;
         }
       }
-      & form .input-group {
-        margin-bottom: 2.4rem;
-        & label {
-          margin-bottom: 0.6rem;
+      & form {
+        & h2 {
+          font-size: 2.2rem;
         }
+        & .input-group {
+          margin-bottom: 2.4rem;
+          & label {
+            margin-bottom: 0.6rem;
+            font-size: 1.4rem;
+          }
+          & input {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      & .image .wrapper .btn {
+        font-size: 1.4rem;
       }
     }
 

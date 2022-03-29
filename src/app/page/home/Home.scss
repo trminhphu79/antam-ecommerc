@@ -28,6 +28,9 @@ html {
 
 @media (max-width: 991px) {
     .home-below {
+        & h2 {
+            font-size: 2rem;
+        }
         width: 100%;
         & .row {
             margin-bottom: 3rem;
