@@ -15,22 +15,22 @@ export const Slide = (props) => {
     (item, index) => index >= productsLength - slideSize
   );
 
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      if(count === slideSize - 1) {
+      if (count === slideSize - 1) {
         setCount(0);
-      } else setCount(count + 1)
-    }, 5000)
+      } else setCount(count + 1);
+    }, 5000);
     return () => {
       clearTimeout(timeoutId);
-    }
+    };
   }, [count]);
 
   const HandleNextSlider = (index) => {
-    setCount(index)
-  }
+    setCount(index);
+  };
 
   return (
     <div className="slide">

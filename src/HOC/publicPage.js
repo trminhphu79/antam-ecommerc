@@ -12,7 +12,7 @@ export const PublicPage = ({ Component, ...restProps }) => {
         return (
           <>
             <Header />
-            <Navbar />
+            {/* <Navbar /> */}
             <Component {...propsRoute} />
 
             <Footer />
