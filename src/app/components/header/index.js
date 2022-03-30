@@ -77,7 +77,18 @@ const Header = () => {
                 <span>
                   <BsTelephoneFill className="animate-turnCircle"></BsTelephoneFill>
                 </span>
-                <span>0865328664</span>
+                <span className="text-effect-1">
+                  <span className="text-child">0</span>
+                  <span className="text-child">8</span>
+                  <span className="text-child">6</span>
+                  <span className="text-child">5</span>
+                  <span className="text-child">3</span>
+                  <span className="text-child">2</span>
+                  <span className="text-child">8</span>
+                  <span className="text-child">6</span>
+                  <span className="text-child">6</span>
+                  <span className="text-child">4</span>
+                </span>
               </a>
             </button>
           </ul>
