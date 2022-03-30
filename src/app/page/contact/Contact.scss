@@ -9,7 +9,7 @@
   }
   &__desc {
     margin: 0;
-    font-size: 3.4rem;
+    font-size: 2.3rem;
     font-weight: 500;
     color: var(--title-big-color);
   }
@@ -120,7 +120,7 @@
   .contact {
     &__desc {
       line-height: 1.6;
-      font-size: 2.6rem;
+      font-size: 2rem;
     }
     &__content {
       display: block;
@@ -181,7 +181,7 @@
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
     }
     &__content {
       display: block;

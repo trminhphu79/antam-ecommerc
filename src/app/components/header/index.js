@@ -1,13 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./Header.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink ,Link} from "react-router-dom";
 import { listItemNavbar } from "./data/list-item-navbar";
 import { useLocation } from "react-router-dom";
 import { CgFacebook } from "react-icons/cg";
 import { SiZalo } from "react-icons/si";
 import { BsTelephoneFill } from "react-icons/bs";
 
-export const Header = () => {
+const Header = () => {
   const { pathname } = useLocation();
   const [showNav, setShowNav] = useState(false);
 
@@ -77,16 +77,18 @@ export const Header = () => {
       </div>
       <header className="header">
         <div className="wrapper header-wrap">
-          <a href="/" className="header-logo">
-            <img src="/logo-chailo.png" alt="" />
-            <h2>Chai Lọ An Tâm</h2>
-          </a>
+          <Link to="/">
+            <span className="header-logo">
+              <img src="/logo-chailo.png" alt="" />
+              <h2>Chai Lọ An Tâm</h2>
+            </span>
+          </Link>
           <ul className="header-nav__list">
             {listItemNavbar.map((item) => (
               <NavLink
                 key={item.id}
                 to={item.link}
-                className="header-nav__item"
+                className="header-nav__item header-item"
                 activeClassName={item.link === pathname ? "active" : ""}
               >
                 <p>{item.itemName}</p>
@@ -98,3 +100,5 @@ export const Header = () => {
     </Fragment>
   );
 };
+
+export default Header

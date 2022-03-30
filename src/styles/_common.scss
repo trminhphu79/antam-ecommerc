@@ -8,15 +8,17 @@ body {
   // background-image: url("data:image/svg+xml,%3Csvg%0A%20%20%20%20%20%20%20%20width%3D%22491%22%0A%20%20%20%20%20%20%20%20height%3D%222045%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%20491%202045%22%0A%20%20%20%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%2359C3FF%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M460.904%200H0V2045H271.404C287.973%202045%20301.404%202031.57%20301.404%202015V1237.53C301.404%201235.97%20301.526%201234.4%20301.77%201232.86L490.538%2034.6688C493.406%2016.463%20479.334%200%20460.904%200Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22white%22%0A%20%20%20%20%20%20%20%20%20%20fill-opacity%3D%220.8%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E");
   background-position: 20px 20px;
   background-repeat: no-repeat;
-  padding: 14rem 16rem 12rem 14rem;
+  // padding: 14rem 16rem 12rem 14rem; // co gi sửa chô này lại page contact
+  width: 85%;
+  margin:auto;
 }
 
-.background-page.contact {
-  background: #f0f0f0;
-  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221408%22%20height%3D%22580%22%20viewBox%3D%220%200%201408%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22704%22%20cy%3D%22290%22%20rx%3D%22704%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-  background-repeat: no-repeat;
-  background-position: center bottom -223px;
-}
+// .background-page.contact {
+//   background: #f0f0f0;
+//   background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221408%22%20height%3D%22580%22%20viewBox%3D%220%200%201408%20580%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cellipse%20cx%3D%22704%22%20cy%3D%22290%22%20rx%3D%22704%22%20ry%3D%22290%22%20fill%3D%22%23F2F6FC%22%20fill-opacity%3D%220.95%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+//   background-repeat: no-repeat;
+//   background-position: center bottom -223px;
+// }
 
 //   Scroll Bar
 body::-webkit-scrollbar {
