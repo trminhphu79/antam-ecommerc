@@ -17,6 +17,11 @@ import "./styles/_common.scss";
 import { PublicPage } from "HOC/publicPage";
 import AdminLogin from "../src/app/page/admin/admin-page/adminLogin";
 import Admin from "app/page/admin";
+import CosmeticBottles from './app/page/category/cosmetic-bottles';
+import CosmeticBoxs from './app/page/category/cosmetic-box';
+import CosmeticPet from './app/page/category/cosmetic-pet';
+import CosmeticPrinting from './app/page/category/cosmetic-printing';
+
 function App() {
   return (
     <React.Fragment>
@@ -30,6 +35,11 @@ function App() {
         <PublicPage path="/lien-he" exact Component={Contact} />
         <PublicPage path="/dang-nhap" exact Component={LoginPage} />
         <PublicPage path="/san-pham" Component={Products} />
+        <PublicPage path="/chai-lo-my-pham" Component={CosmeticBottles} />
+        <PublicPage path="/chai-nhua-pet" Component={CosmeticPet} />
+        <PublicPage path="/vo-hop-my-pham" Component={CosmeticBoxs} />
+        <PublicPage path="/in-an-chai-lo-my-pham" Component={CosmeticPrinting} />
+
 
         {/* Trang admin */}
         <PublicPage path="/admin/dang-nhap" component={AdminLogin} />

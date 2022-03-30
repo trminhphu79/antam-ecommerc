@@ -9,12 +9,36 @@ export const listItemNavbar = [
   },
   {
     id: 2,
-    itemName: "Sản phẩm",
+    itemName: "Hủ mỹ phẩm",
     icon: icons.iconProduct,
     link: "/san-pham",
   },
   {
     id: 3,
+    itemName: "Chai lọ mỹ phẩm",
+    icon: icons.iconProduct,
+    link: "/chai-lo-my-pham",
+  },
+  {
+    id: 4,
+    itemName: "Chai nhựa pét",
+    icon: icons.iconProduct,
+    link: "/chai-nhua-pet",
+  },
+  {
+    id: 5,
+    itemName: "In ấn chai lọ mỹ phẩm",
+    icon: icons.iconProduct,
+    link: "/in-an-chai-lo-my-pham",
+  },
+  {
+    id: 6,
+    itemName: "Vỏ hộp mỹ phẩm",
+    icon: icons.iconContact,
+    link: "/vo-hop-my-pham",
+  },
+  {
+    id: 7,
     itemName: "Liên hệ",
     icon: icons.iconContact,
     link: "/lien-he",

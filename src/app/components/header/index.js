@@ -80,7 +80,7 @@ const Header = () => {
           <Link to="/">
             <span className="header-logo">
               <img src="/logo-chailo.png" alt="" />
-              <h2>Chai Lọ An Tâm</h2>
+              {/* <h2>Chai Lọ An Tâm</h2> */}
             </span>
           </Link>
           <ul className="header-nav__list">
@@ -91,7 +91,7 @@ const Header = () => {
                 className="header-nav__item header-item"
                 activeClassName={item.link === pathname ? "active" : ""}
               >
-                <p>{item.itemName}</p>
+                <p class='title-header'>{item.itemName}</p>
               </NavLink>
             ))}
           </ul>
