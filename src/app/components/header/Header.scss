@@ -249,7 +249,7 @@
 
   &-nav__contact {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
     gap: 0 4px;
@@ -261,7 +261,7 @@
 }
 
 // Effect text
-.text-effect-1,
+.text-effect,
 .text-child {
   font-size: inherit;
   display: inline-block;
@@ -269,34 +269,34 @@
 .text-child {
   margin-left: 1px;
 }
-.text-effect-1 .text-child:nth-child(1) {
+.text-effect .text-child:nth-child(1) {
   animation: textEffect infinite 2.5s;
 }
-.text-effect-1 .text-child:nth-child(2) {
+.text-effect .text-child:nth-child(2) {
   animation: textEffect infinite 2.5s 0.1s;
 }
-.text-effect-1 .text-child:nth-child(3) {
+.text-effect .text-child:nth-child(3) {
   animation: textEffect infinite 2.5s 0.2s;
 }
-.text-effect-1 .text-child:nth-child(4) {
+.text-effect .text-child:nth-child(4) {
   animation: textEffect infinite 2.5s 0.3s;
 }
-.text-effect-1 .text-child:nth-child(5) {
+.text-effect .text-child:nth-child(5) {
   animation: textEffect infinite 2.5s 0.4s;
 }
-.text-effect-1 .text-child:nth-child(6) {
+.text-effect .text-child:nth-child(6) {
   animation: textEffect infinite 2.5s 0.5s;
 }
-.text-effect-1 .text-child:nth-child(7) {
+.text-effect .text-child:nth-child(7) {
   animation: textEffect infinite 2.5s 0.6s;
 }
-.text-effect-1 .text-child:nth-child(8) {
+.text-effect .text-child:nth-child(8) {
   animation: textEffect infinite 2.5s 0.7s;
 }
-.text-effect-1 .text-child:nth-child(9) {
+.text-effect .text-child:nth-child(9) {
   animation: textEffect infinite 2.5s 0.8s;
 }
-.text-effect-1 .text-child:nth-child(10) {
+.text-effect .text-child:nth-child(10) {
   animation: textEffect infinite 2.5s 0.9s;
 }
 

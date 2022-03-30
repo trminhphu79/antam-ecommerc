@@ -77,7 +77,7 @@ const Header = () => {
                 <span>
                   <BsTelephoneFill className="animate-turnCircle"></BsTelephoneFill>
                 </span>
-                <span className="text-effect-1">
+                <span className="text-effect">
                   <span className="text-child">0</span>
                   <span className="text-child">8</span>
                   <span className="text-child">6</span>
