@@ -266,6 +266,9 @@
   font-size: inherit;
   display: inline-block;
 }
+.text-child {
+  margin-left: 1px;
+}
 .text-effect-1 .text-child:nth-child(1) {
   animation: textEffect infinite 2.5s;
 }
