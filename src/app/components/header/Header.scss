@@ -183,7 +183,6 @@
 .header {
   height: 96px;
   background: var(--white-color);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   align-items: center;
   position: sticky;
@@ -192,52 +191,11 @@
   width: 100%;
   right: 0;
   z-index: 60;
-  &-top {
-    height: 32px;
-    width: 100%;
-    background-color: var(--primary);
-    display: flex;
-    align-items: center;
-    color: var(--white-color);
-    &__wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  transition: all linear 0.1s;
+  &.is-show {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
-  &-connect {
-    display: flex;
-    gap: 0 4px;
-    align-items: center;
-    &__text {
-      font-size: 1.3rem;
-    }
-    &__list {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0;
-      gap: 4px;
-    }
-    &__icon {
-      font-size: 1.6rem;
-      color: #fff;
-    }
-    &__icon-2 {
-      font-size: 2.4rem;
-      color: #fff;
-    }
-  }
-  &-contact {
-    display: flex;
-    align-items: center;
-    font-size: 1.3rem;
-    color: var(--white-color);
-    gap: 0 4px;
-    letter-spacing: 1px;
-    &:hover {
-      color: white;
-    }
-  }
+
   &-wrap {
     display: flex;
     justify-content: space-between;
@@ -281,11 +239,23 @@
       // background-color:#d80001;
       transition: all linear 0.25s;
     }
-    &:hover::after{
+    &:hover::after {
       width: 100%;
     }
     &:hover {
       color: var(--primary);
+    }
+  }
+
+  &-nav__contact {
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0 4px;
+    font-weight: 500;
+    &:hover {
+      color: white;
     }
   }
 }

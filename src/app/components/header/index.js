@@ -9,14 +9,14 @@ import { BsTelephoneFill } from "react-icons/bs";
 
 const Header = () => {
   const { pathname } = useLocation();
-  const [showNav, setShowNav] = useState(false);
+  const [showShadow, setShowShadow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setShowNav(true);
+        setShowShadow(true);
       } else {
-        setShowNav(false);
+        setShowShadow(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -52,30 +52,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className="header-top">
-        <div className="wrapper header-top__wrap">
-          <div className="header-connect">
-            <span className="header-connect__text">Theo dõi chúng tôi:</span>
-            <ul className="header-connect__list">
-              <li className="header-connect__item">
-                <a href="/#">
-                  <CgFacebook className="header-connect__icon"></CgFacebook>
-                </a>
-              </li>
-              <li className="header-connect__item">
-                <a href="/#">
-                  <SiZalo className="header-connect__icon-2"></SiZalo>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <a href="tel:0865328664" className="header-contact">
-            <BsTelephoneFill></BsTelephoneFill>
-            0865328664
-          </a>
-        </div>
-      </div>
-      <header className="header">
+      <header className={`header ${showShadow ? "is-show" : ""}`}>
         <div className="wrapper header-wrap">
           <Link to="/">
             <span className="header-logo">
@@ -94,6 +71,17 @@ const Header = () => {
                 <p class='title-header'>{item.itemName}</p>
               </NavLink>
             ))}
+            <button className="btn">
+              <a
+                href="tel:0865328664"
+                className="header-nav__contact animate-pulse"
+              >
+                <span>
+                  <BsTelephoneFill className="animate-turnCircle"></BsTelephoneFill>
+                </span>
+                <span>0865328664</span>
+              </a>
+            </button>
           </ul>
         </div>
       </header>
