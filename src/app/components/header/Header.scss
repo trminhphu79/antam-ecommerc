@@ -181,7 +181,7 @@
 // }
 
 .header {
-  height: 96px;
+  height: 90px;
   background: var(--white-color);
   display: flex;
   align-items: center;
@@ -236,7 +236,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      // background-color:#d80001;
+      // background-color: #d80001;
       transition: all linear 0.25s;
     }
     &:hover::after {

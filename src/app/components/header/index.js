@@ -1,10 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./Header.scss";
-import { NavLink ,Link} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { listItemNavbar } from "./data/list-item-navbar";
 import { useLocation } from "react-router-dom";
-import { CgFacebook } from "react-icons/cg";
-import { SiZalo } from "react-icons/si";
 import { BsTelephoneFill } from "react-icons/bs";
 
 const Header = () => {
@@ -68,7 +66,7 @@ const Header = () => {
                 className="header-nav__item header-item"
                 activeClassName={item.link === pathname ? "active" : ""}
               >
-                <p class='title-header'>{item.itemName}</p>
+                <p class="title-header">{item.itemName}</p>
               </NavLink>
             ))}
             <button className="btn">
@@ -89,4 +87,4 @@ const Header = () => {
   );
 };
 
-export default Header
+export default Header;

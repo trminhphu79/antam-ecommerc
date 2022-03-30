@@ -1,9 +1,8 @@
 import ListProduct from "../common/listProduct/listProduct";
-import { Slide } from "./slide/silde";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductAction } from "core/redux/actions/productActions";
-
+import NewSlide from "./new-slide/NewSlide";
 import "./Home.scss";
 
 function Home() {
@@ -22,9 +21,12 @@ function Home() {
 
   return (
     <div className="background-page home-below">
-      <Slide products={productList} slideSize={3} />
-      <h2 id="hot-product">các sản phẩm nổi bật</h2>
-      <ListProduct products={productList} />
+      <div className="wrapper">
+        {/* <Slide products={productList} slideSize={3} /> */}
+        <NewSlide></NewSlide>
+        <h2 id="hot-product">các sản phẩm nổi bật</h2>
+        <ListProduct products={productList} />
+      </div>
     </div>
   );
 }

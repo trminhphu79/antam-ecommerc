@@ -9,8 +9,6 @@ body {
   background-position: 20px 20px;
   background-repeat: no-repeat;
   // padding: 14rem 16rem 12rem 14rem; // co gi sửa chô này lại page contact
-  width: 85%;
-  margin:auto;
 }
 
 // .background-page.contact {
@@ -98,7 +96,7 @@ body::-webkit-scrollbar-thumb {
 @layer keyframes {
   @keyframes pulse {
     50% {
-      opacity: 0.8;
+      opacity: 0.7;
     }
   }
   @keyframes turnCircle {
