@@ -66,7 +66,7 @@ const Header = () => {
                 className="header-nav__item header-item"
                 activeClassName={item.link === pathname ? "active" : ""}
               >
-                <p class="title-header">{item.itemName}</p>
+                <p className="title-header">{item.itemName}</p>
               </NavLink>
             ))}
             <button className="btn">

@@ -24,7 +24,7 @@ function Home() {
       <div className="wrapper">
         {/* <Slide products={productList} slideSize={3} /> */}
         <NewSlide></NewSlide>
-        <h2 id="hot-product">các sản phẩm nổi bật</h2>
+
         <ListProduct products={productList} />
       </div>
     </div>
