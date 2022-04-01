@@ -1,5 +1,5 @@
 import ListProduct from "../common/listProduct/listProduct";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductAction } from "core/redux/actions/productActions";
 import NewSlide from "./new-slide/NewSlide";
@@ -20,14 +20,14 @@ function Home() {
   // )
 
   return (
-    <div className="background-page home-below">
-      <div className="wrapper">
+    <Fragment>
+      <div className="wrapper content-wrapper">
         {/* <Slide products={productList} slideSize={3} /> */}
         <NewSlide></NewSlide>
 
         <ListProduct products={productList} />
       </div>
-    </div>
+    </Fragment>
   );
 }
 

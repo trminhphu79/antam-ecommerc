@@ -1,47 +1,31 @@
-:root {
-  --primary: #d80000c2;
-  --price-text: #d80000c2;
+
+//Responsive
+
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em){
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-.home-below .pagination {
-  margin-bottom: 8rem;
-}
-
-@media (max-width: 991px) {
-  .home-below {
-    & h2 {
-      font-size: 2rem;
-    }
-    width: 100%;
-    & .row {
-      margin-bottom: 3rem;
-    }
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .content-wrapper{
+    padding: 26px;
   }
 }
 
-.swiper-pagination-bullet-active {
-  background-color: var(--primary-color) !important;
-}
-
-// Tablet: width >= 740px and width < 1024px
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
-  .home-below {
-    width: 100%;
+/* Mobie: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  .content-wrapper{
+    padding: 12px;
   }
 }
 
-@media (max-width: 450px) {
-  .home-below {
-    width: 100%;
-  }
+/* PC Low */
+@media (min-width: 1024px) and (max-width: 1239px) { 
+
 }
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+
+}
+

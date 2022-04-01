@@ -69,3 +69,13 @@
     }
   }
 }
+
+
+// Responsive
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em){
+  .slider-list {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
