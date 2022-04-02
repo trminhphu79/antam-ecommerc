@@ -20,15 +20,13 @@
     border-radius: 8px;
     background-color: #fff;
     position: relative;
-    transition:  0.1s linear;
+    transition: 0.1s linear;
     border: 1px solid transparent;
     right: 0;
     bottom: 0;
     &:hover {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-color: var(--primary-color);
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
       right: 2px;
       bottom: 1px;
     }
@@ -36,22 +34,6 @@
       display: block;
       animation: fadeIn linear 0.2s;
     }
-  }
-  &-more {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 6px;
-    z-index: 10;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 1.4rem;
-    transition: 0.25s  linear;
-    display: none;
-    text-align: center;
-    animation: fadeIn linear 0.2s;
-
   }
   &-img {
     height: 180px;
@@ -98,14 +80,13 @@
 
 // Responsive
 /* Mobile & tablet: width <1024px */
-@media only screen and (max-width: 63.9375em){
-
+@media only screen and (max-width: 63.9375em) {
 }
 
 /* Tablet: width >= 740px and width < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
-  .product{
-    &-list{
+  .product {
+    &-list {
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -113,19 +94,17 @@
 
 /* Mobie: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-  .product{
-    &-list{
+  .product {
+    &-list {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
 /* PC Low */
-@media (min-width: 1024px) and (max-width: 1239px) { 
-
+@media (min-width: 1024px) and (max-width: 1239px) {
 }
 
 /* PC: width >= 1024px */
 @media only screen and (min-width: 64em) {
-
 }

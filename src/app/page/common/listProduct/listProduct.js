@@ -68,9 +68,6 @@ const ListProduct = ({ products }) => {
                   <p className="product-price">Giá sỉ liên hệ</p>
                   <p className="product-phone">0865328664</p>
                 </div>
-                <div className="product-more">
-                  <span>Xem chi tiết</span>
-                </div>
               </Link>
             ))}
         </div>
