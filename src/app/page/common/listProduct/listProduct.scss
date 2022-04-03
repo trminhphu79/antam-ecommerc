@@ -1,5 +1,6 @@
 .product {
   padding-bottom: 72px;
+
   &-title {
     text-transform: capitalize;
     font-size: 2.4rem;
@@ -86,6 +87,9 @@
 /* Tablet: width >= 740px and width < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
   .product {
+    &-wrap{
+      padding: 24px;
+    }
     &-list {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -95,16 +99,12 @@
 /* Mobie: width < 740px */
 @media only screen and (max-width: 46.1875em) {
   .product {
+    &-wrap{
+      padding: 12px;
+    }
     &-list {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-/* PC Low */
-@media (min-width: 1024px) and (max-width: 1239px) {
-}
-
-/* PC: width >= 1024px */
-@media only screen and (min-width: 64em) {
-}

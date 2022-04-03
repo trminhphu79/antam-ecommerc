@@ -120,17 +120,19 @@ function ProductDetail() {
 
   return (
     <React.Fragment>
-      <div className="background-page product-detail">
-        <ProductContent id={id} product={editProduct} />
+      <div className="wrapper">
+        <div className="background-page product-detail">
+          <ProductContent id={id} product={editProduct} />
 
-        <ProductForm
-          id={id}
-          forms={form}
-          onSubmit={handleSubmit}
-          history={history}
-        />
+          <ProductForm
+            id={id}
+            forms={form}
+            onSubmit={handleSubmit}
+            history={history}
+          />
+        </div>
+        <Toasts />
       </div>
-      <Toasts />
     </React.Fragment>
   );
 }

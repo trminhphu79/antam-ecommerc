@@ -2,13 +2,14 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 20px;
   & h6 {
     font-size: 2rem;
     font-weight: 400;
     margin-right: 1.8rem;
     text-transform: capitalize;
   }
-  & .wrapper {
+  & .filter-wrapper {
     box-shadow: 0px 7px 30px 0px #0000000d;
     background: #fff;
     border-radius: 3rem;
@@ -49,6 +50,7 @@
 // Mobile: width < 740px 
 @media (max-width: 46.1875em) {
   .filter {
+    padding: 12px;
     & h6 {
       font-size: 1.4rem;
       margin-bottom: 0.8rem;
@@ -58,5 +60,7 @@
 
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-  
+  .filter{
+    padding: 24px;
+  }
 }

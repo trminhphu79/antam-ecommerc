@@ -1,37 +1,152 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
+import "swiper/swiper.min.css";
+import "swiper/modules/free-mode/free-mode.min.css";
+import "swiper/modules/navigation/navigation.scss";
+import "swiper/modules/thumbs/thumbs.min.css";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 import "./productContent.scss";
 
-class ProductContent extends Component {
-  render() {
-    const { product } = this.props;
-    console.log("product", product.img);
+// class ProductContent extends Component {
+//   render() {
+//     const { product } = this.props;
+//     console.log("product", product.img);
 
-    return (
-      <>
-        {product && (
-          <div className="row product-content" image="true">
-            <div className="image col-lg-6 col-md-6 col-xs-12">
-              <div className="wrapper">
-                <img src={product?.img} alt="" />
-              </div>
-            </div>
-            <div className="content col-lg-6 col-md-6 col-xs-12">
-              <div className="wrapper">
-                <h2>{product?.title}</h2>
-                <p>{product?.content}</p>
-                <h4>
-                  <p>Liên hệ số điện thoại:</p> <span>0865.328.664</span>
-                </h4>
-                <a href="#form-section" className="btn">
-                  Nhập thông tin đặt hàng{" "}
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </>
-    );
-  }
-}
+//     return (
+//       <>
+//         {product && (
+//           <div className="row product-content" image="true">
+//             <div className="image col-lg-6 col-md-6 col-xs-12">
+//               <div className="wrapper">
+//                 <img src={product?.img} alt="" />
+//               </div>
+//             </div>
+//             <div className="content col-lg-6 col-md-6 col-xs-12">
+//               <div className="wrapper">
+//                 <h2>{product?.title}</h2>
+//                 <p>{product?.content}</p>
+//                 <h4>
+//                   <p>Liên hệ số điện thoại:</p> <span>0865.328.664</span>
+//                 </h4>
+//                 <a href="#form-section" className="btn">
+//                   Nhập thông tin đặt hàng
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+//       </>
+//     );
+//   }
+// }
 
-export default ProductContent;
+// export default ProductContent;
+
+const productContent = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  return (
+    <section className="product-wrapper">
+      <div className="wrapper">
+        <div className="product-content">
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#Fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            // loop={true}
+            spaceBetween={10}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2 product-image__show"
+          >
+            <SwiperSlide>
+              <img
+                src="https://images.unsplash.com/photo-1610128810500-8c4a612afa91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                alt=""
+                className="product-img__show"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://images.unsplash.com/photo-1526930135720-bb578fcf5752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=374&q=80"
+                alt=""
+                className="product-img__show"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://images.unsplash.com/photo-1580902777696-56e74256f83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt=""
+                className="product-img__show"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://images.unsplash.com/photo-1502579347381-2a885e40f6b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=432&q=80"
+                alt=""
+                className="product-img__show"
+              />
+            </SwiperSlide>
+          </Swiper>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            spaceBetween={10}
+            slidesPerView={5}
+            // loop={true}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper product-img__wrap"
+          >
+            <SwiperSlide className="product-sub__img-slide">
+              <img
+                src="https://images.unsplash.com/photo-1610128810500-8c4a612afa91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                alt=""
+                className="product-sub__img"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="product-sub__img-slide">
+              <img
+                src="https://images.unsplash.com/photo-1526930135720-bb578fcf5752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=374&q=80"
+                alt=""
+                className="product-sub__img"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="product-sub__img-slide">
+              <img
+                src="https://images.unsplash.com/photo-1580902777696-56e74256f83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                alt=""
+                className="product-sub__img"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="product-sub__img-slide">
+              <img
+                src="https://images.unsplash.com/photo-1502579347381-2a885e40f6b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=432&q=80"
+                alt=""
+                className="product-sub__img"
+              />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+        <div className="product-intro">
+          <h2 className="product-intro__title">
+            Chai lọ 100ML Xuất Xứ Trung Quốc để giá sỉ
+          </h2>
+          <p className="product-intro__desc">
+            Chai lọ 100ML Xuất Xứ Trung Quốc để giá sỉ
+          </p>
+          <p className="product-intro__contact">
+            Liên hệ: <span>0865.328.664</span>
+          </p>
+          <a href="#from-order" className="btn-order">
+            Đặt hàng
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default productContent;

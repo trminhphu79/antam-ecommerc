@@ -62,7 +62,6 @@ body::-webkit-scrollbar-thumb {
   // Background Page
   .background-page {
     background-image: unset;
-    padding: 9rem 1rem 4rem;
   }
 
   .background-page.contact {
@@ -74,9 +73,7 @@ body::-webkit-scrollbar-thumb {
 
 // Tablet: width >= 740px and width < 1024px
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-  .background-page {
-    padding: 14rem 3rem 12rem;
-  }
+
 }
 
 @layer compenents {

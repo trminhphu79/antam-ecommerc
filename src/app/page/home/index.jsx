@@ -25,7 +25,7 @@ function Home() {
         {/* <Slide products={productList} slideSize={3} /> */}
         <NewSlide></NewSlide>
 
-        <ListProduct products={productList} />
+        <ListProduct products={productList} title="Sản phẩm nổi bật" />
       </div>
     </Fragment>
   );

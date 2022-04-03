@@ -5,6 +5,7 @@ import { listItemNavbar } from "./data/list-item-navbar";
 import { useLocation } from "react-router-dom";
 import { BsTelephoneFill } from "react-icons/bs";
 import { GrMenu, GrFormClose } from "react-icons/gr";
+import { BiChevronDown } from "react-icons/bi";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -66,14 +67,32 @@ const Header = () => {
               className="header-menu__close"
             ></GrFormClose>
             {listItemNavbar.map((item) => (
-              <NavLink
-                key={item.id}
-                to={item.link}
-                className="header-nav__item "
-                activeClassName={item.link === pathname ? "active" : ""}
-              >
-                <p className="title-header">{item.itemName}</p>
-              </NavLink>
+              <li className="header-nav__item" key={item.id}>
+                <NavLink
+                  to={item.link}
+                  className="header-title"
+                  activeClassName={item.link === pathname ? "active" : ""}
+                >
+                  {item.itemName}{" "}
+                  {item.subItemName ? <BiChevronDown></BiChevronDown> : ""}
+                </NavLink>
+                {item.subItemName ? (
+                  <ul className="header-sub__list">
+                    <li className="header-sub__item">
+                      <Link to={item.sublink} className="header-sub__link">
+                        {item.subItemName}
+                      </Link>
+                    </li>
+                    <li className="header-sub__item">
+                      <Link to={item.sublink} className="header-sub__link">
+                        {item.subItemName}
+                      </Link>
+                    </li>
+                  </ul>
+                ) : (
+                  ""
+                )}
+              </li>
             ))}
             <button className="btn header-phone">
               <a
