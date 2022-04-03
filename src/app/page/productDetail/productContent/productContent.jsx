@@ -42,7 +42,8 @@ import "./productContent.scss";
 
 // export default ProductContent;
 
-const productContent = () => {
+const productContent = (props) => {
+  console.log(props)
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
@@ -61,34 +62,17 @@ const productContent = () => {
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper2 product-image__show"
           >
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1610128810500-8c4a612afa91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-                alt=""
-                className="product-img__show"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1526930135720-bb578fcf5752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=374&q=80"
-                alt=""
-                className="product-img__show"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1580902777696-56e74256f83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                alt=""
-                className="product-img__show"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://images.unsplash.com/photo-1502579347381-2a885e40f6b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=432&q=80"
-                alt=""
-                className="product-img__show"
-              />
-            </SwiperSlide>
+            {props.product?.img?.map((item,idx) => {
+              return (
+                <SwiperSlide key={idx}>
+                  <img
+                    src={props.product.img[0]}
+                    alt=""
+                    className="product-img__show"
+                  />
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
           <Swiper
             onSwiper={setThumbsSwiper}
@@ -100,42 +84,25 @@ const productContent = () => {
             modules={[FreeMode, Navigation, Thumbs]}
             className="mySwiper product-img__wrap"
           >
-            <SwiperSlide className="product-sub__img-slide">
-              <img
-                src="https://images.unsplash.com/photo-1610128810500-8c4a612afa91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-                alt=""
-                className="product-sub__img"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="product-sub__img-slide">
-              <img
-                src="https://images.unsplash.com/photo-1526930135720-bb578fcf5752?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=374&q=80"
-                alt=""
-                className="product-sub__img"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="product-sub__img-slide">
-              <img
-                src="https://images.unsplash.com/photo-1580902777696-56e74256f83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                alt=""
-                className="product-sub__img"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="product-sub__img-slide">
-              <img
-                src="https://images.unsplash.com/photo-1502579347381-2a885e40f6b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=432&q=80"
-                alt=""
-                className="product-sub__img"
-              />
-            </SwiperSlide>
+            {props.product?.img?.map((item, idx) => {
+              return (
+                <SwiperSlide key={idx} className="product-sub__img-slide">
+                  <img
+                    src={item}
+                    alt=""
+                    className="product-sub__img"
+                  />
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
         <div className="product-intro">
           <h2 className="product-intro__title">
-            Chai lọ 100ML Xuất Xứ Trung Quốc để giá sỉ
+            {props.product?.title}
           </h2>
           <p className="product-intro__desc">
-            Chai lọ 100ML Xuất Xứ Trung Quốc để giá sỉ
+            {props.product?.content}
           </p>
           <p className="product-intro__contact">
             Liên hệ: <span>0865.328.664</span>

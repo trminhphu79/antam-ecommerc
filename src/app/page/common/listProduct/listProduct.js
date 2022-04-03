@@ -18,7 +18,6 @@ const ListProduct = ({ title }) => {
     <section className="product-wrap">
       <section className="product">
         {title ? <h2 className="product-title">{title}</h2> : ""}
-
         <div className="product-list">
           {productList.length > 0 &&
             productList.map((item) => (

@@ -72,7 +72,7 @@ import * as yup from "yup";
 // export default ProductForm;
 
 const schemeValidation = yup.object({
-  fullName: yup
+  name: yup
     .string()
     .required("Vui lòng nhập họ và tên....")
     .max(10, "Vui lòng nhập tối đa 10 kí tự")
@@ -82,13 +82,13 @@ const schemeValidation = yup.object({
     .required("Vui lòng nhập số điện thoại....")
     .min(5, "Vui lòng nhập tối thiểu 10 kí tự"),
   address: yup.string().required("Vui lòng nhập địa chỉ của bạn...."),
-  number: yup
+  quantity: yup
     .string()
     .required("Vui lòng nhập địa chỉ của bạn....")
     .min(2, "Mua số lượng tối thiểu là 10"),
 });
 
-const ProductForm = () => {
+const ProductForm = (props) => {
   const {
     register,
     handleSubmit,
@@ -101,15 +101,14 @@ const ProductForm = () => {
 
   const submit = (values) => {
     if (isValid) {
-      console.log("send data to backend");
+      props.onSubmit(values)
       reset({
-        fullName: "",
+        name: "",
         phone: "",
         address: "",
-        number: 10,
+        quantity: 10,
       });
     }
-    console.log(values);
   };
   return (
     <section id="from-order" className="form-order__wrap">
@@ -119,9 +118,9 @@ const ProductForm = () => {
         className="form-order"
       >
         <div className="form-order__item">
-          <label htmlFor="fullName">Họ và tên:</label>
-          <input {...register("fullName")} id="fullName" />
-          <p>{errors.fullName?.message}</p>
+          <label htmlFor="name">Họ và tên:</label>
+          <input {...register("name")} id="name" />
+          <p>{errors.name?.message}</p>
         </div>
         <div className="form-order__item">
           <label htmlFor="phone">Số điện thoại:</label>
@@ -134,13 +133,13 @@ const ProductForm = () => {
           <p>{errors.address?.message}</p>
         </div>
         <div className="form-order__item">
-          <label htmlFor="number">Số lượng:</label>
+          <label htmlFor="quantity">Số lượng:</label>
           <input
-            type="number"
+            type="quantity"
             min="0"
             defaultValue="10"
-            {...register("number")}
-            id="number"
+            {...register("quantity")}
+            id="quantity"
           />
           <p>{errors.number?.message}</p>
         </div>

@@ -77,7 +77,8 @@ function ProductDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
-  function handleSubmit(value) {
+  function handleOrder(value) {
+    console.log("value:",value)
     const DEFAULT_PRODUCT = {
       id: "",
       title: "",
@@ -100,21 +101,6 @@ function ProductDetail() {
       product: editProduct,
     };
 
-    // if (payload?.quantity === 0) {
-    //   return CreateToast(
-    //     state,
-    //     "Số lượng đặt hàng không hợp lệ hoặc chưa nhập."
-    //   );
-    // }
-
-    // if (payload?.phone) {
-    //   CreateToast(state, "Không bỏ trống số điện thoại.");
-    // }
-
-    // if (payload?.address) {
-    //   CreateToast(state, "Không bỏ trống số địa chỉ.");
-    // }
-
     dispatch(addOrderAction(payload));
   }
 
@@ -127,7 +113,7 @@ function ProductDetail() {
           <ProductForm
             id={id}
             forms={form}
-            onSubmit={handleSubmit}
+            onSubmit={handleOrder}
             history={history}
           />
         </div>

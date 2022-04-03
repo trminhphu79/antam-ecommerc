@@ -15,6 +15,7 @@ import "./styles/_reset.scss";
 import "./styles/_variable.scss";
 import "./styles/_common.scss";
 import { PublicPage } from "HOC/publicPage";
+import { PrivatePage  } from "HOC/privatePage";
 import AdminLogin from "../src/app/page/admin/admin-page/adminLogin";
 import Admin from "app/page/admin";
 import CosmeticBottles from './app/page/category/cosmetic-bottles';
@@ -42,8 +43,8 @@ function App() {
 
 
         {/* Trang admin */}
-        <PublicPage path="/admin/dang-nhap" component={AdminLogin} />
-        <PublicPage path="/admin" component={Admin} />
+        <PrivatePage path="/admin/dang-nhap" component={AdminLogin} />
+        <PrivatePage path="/admin" component={Admin} />
 
         {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
         <Route path="*" component={NotFound} />
