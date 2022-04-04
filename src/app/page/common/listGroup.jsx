@@ -14,6 +14,11 @@ const menuList = [
     icon: icons.iconOder,
     pathLink: "/admin/don-hang",
   },
+  {
+    name: "Phân loại",
+    icon: icons.iconOder,
+    pathLink: "/admin/phan-loai-san-pham",
+  },
 ];
 
 const ListGroup = () => {

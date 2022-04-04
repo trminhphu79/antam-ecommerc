@@ -8,6 +8,7 @@ import Delete from "../common/delete";
 import NotFound from "../notFound/NotFound";
 import "./styles/containerAdmin.scss";
 import TableOrder from "../common/tableOrder";
+import Category from './admin-page/category/Category'
 import { Redirect } from "react-router-dom";
 class ContainerAdmin extends Component {
   columns = {
@@ -45,7 +46,9 @@ class ContainerAdmin extends Component {
               />
             )}
           />
-
+          <Route path="/admin/phan-loai-san-pham" render={(props) => (
+            <Category />
+          )} />
           <Route
             path="/admin/tat-ca-san-pham"
             render={(props) => (

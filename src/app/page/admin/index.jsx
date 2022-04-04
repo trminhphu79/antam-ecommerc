@@ -10,7 +10,7 @@ import { getAllOrderAction } from "core/redux/actions/userActions";
 
 function Admin() {
   const dispatch = useDispatch();
-
+  const loggedIn = true;
   const [customers, setCustomers] = useState([]);
   const { productList } = useSelector((state) => state.product);
   const { orderList } = useSelector((state) => state.user);
@@ -28,6 +28,7 @@ function Admin() {
         orders={orderList}
         customers={customers}
       />
+
     </>
 
 
