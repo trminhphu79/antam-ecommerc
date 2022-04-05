@@ -1,57 +1,67 @@
-import React, { Component } from "react";
-import HeaderAdmin from "./headerAdmin";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Redirect, Route } from "react-router";
 import ContainerAdmin from "./containerAdmin";
 import {
-  getOrders,
-  getCustomers,
-  getProducts,
-} from "../fakeServer/productChaillo";
+  deleteProductAction,
+  getAllProductAction,
+} from "core/redux/actions/productActions";
+import { getAllOrderAction } from "core/redux/actions/userActions";
 
-class Admin extends Component {
-  state = {
-    products: getProducts(),
-    orders: getOrders(),
-    customers: getCustomers(),
-  };
+function Admin() {
+  const dispatch = useDispatch();
+  const loggedIn = true;
+  const [customers, setCustomers] = useState([]);
+  const { productList } = useSelector((state) => state.product);
+  const { orderList } = useSelector((state) => state.user);
 
-  handleDelete = (item, label) => {
-    const items = [...this.state[label]];
-    const newItems = items.filter((i) => i._id !== item._id);
-    switch (label) {
-      case "products":
-        this.setState({ products: newItems });
-        break ; 
-      case "orders":
-        this.setState({ orders: newItems });
-        break ; 
-      case "customers":
-        this.setState({ customers: newItems });
-        break ; 
-    }
-  };
+  // Loading api lần đầu tiên vào trang admin
+  useEffect(() => {
+    dispatch(getAllProductAction());
+    dispatch(getAllOrderAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <>
+      <ContainerAdmin
+        products={productList}
+        orders={orderList}
+        customers={customers}
+      />
 
-  handleCreate = (item) =>{
-    const items = [...this.state.products] ;
-    items.push(item) ; 
-    this.setState({ products : items }) ; 
-  }
+    </>
 
-  render() {
-    const { products, orders, customers } = this.state;
 
-    return (
-      <React.Fragment>
-        <HeaderAdmin />
-        <ContainerAdmin
-          products={products}
-          orders={orders}
-          customers={customers}
-          onDelete={this.handleDelete}
-          onCreate={this.handleCreate}
-        />
-      </React.Fragment>
-    );
-  }
+
+  );
 }
 
 export default Admin;
+
+
+/**
+ * <div className="main-login" >
+          <div className="form-login">
+            <div className="main-logo d-flex justify-content-center" >
+              <div>
+                <img src={logoMain} alt="" />
+              </div>
+            </div>
+            <form className="">
+              <div className="form-group">
+                <label className="label">Tài khoản</label>
+                <input name='username' onChange={handleChange} className='form-control' type="text" />
+              </div>
+              <div className="form-group">
+                <label className="label">Mật khẩu</label>
+                <input name='password' onChange={handleChange} className='form-control' type="password" />
+
+
+              </div>
+              <div className="btn-action d-flex justify-content-center">
+                <button type='button' className="btn-login" onClick={handleLoginAdmin}>Đăng nhập</button>
+              </div>
+            </form>
+          </div>
+        </div>
+ */

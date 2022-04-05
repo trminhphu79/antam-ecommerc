@@ -1,0 +1,21 @@
+.form-order{
+  width: 35%;
+  &__wrap{
+    padding: 12px 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content:center;
+    gap: 0 40px;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+.form-img{
+  flex: 1;
+}

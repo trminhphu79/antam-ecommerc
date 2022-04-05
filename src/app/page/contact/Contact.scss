@@ -1,35 +1,30 @@
 .contact {
   width: 100%;
   &__title {
-    margin-top: 40px;
-    font-size: 1.8rem;
-    font-weight: bold;
+    margin-top: 20px;
+    font-size: 2.2rem;
+    font-weight:500;
+    margin-bottom: 12px;
     line-height: 2.8rem;
     color: var(--primary-color);
   }
   &__desc {
     margin: 0;
-    font-size: 3.4rem;
-    font-weight: 900;
-    color: #333333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--title-big-color);
   }
   &__content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 80px;
     &-image {
-      margin-right: 80px;
-      width: 466px;
-      height: 345px;
-      border-radius: 16px;
-    }
-    &-list {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin: 20px auto;
     }
     &-line {
-      margin: 0 10px;
-      margin-bottom: 16px;
-      font-size: 1.8rem;
-      line-height: 2.8rem;
+      font-size: 1.6rem;
+      line-height: 3.8rem;
       color: var(--text-color);
     }
     &-line:last-child {
@@ -45,10 +40,9 @@
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%22284%22%20height%3D%22284%22%20viewBox%3D%220%200%20284%20284%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Ccircle%20cx%3D%22142%22%20cy%3D%22142%22%20r%3D%22142%22%20fill%3D%22white%22%20fill-opacity%3D%220.3%22%2F%3E%0A%3C%2Fsvg%3E%0A");
     background-repeat: no-repeat;
     background-position: center right -34px;
-    width: 857px;
+    max-width: 857px;
     height: 119px;
-    margin: 0 auto;
-    margin-top: 93px;
+    margin: 20px auto;
     padding: 0 40px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
     border-radius: 30px;
@@ -79,6 +73,9 @@
         color: var(--white-color);
       }
       &-btn {
+        border: none;
+        outline: none;
+        cursor: unset !important;
         width: 154px;
         height: 40px;
         background: linear-gradient(
@@ -97,14 +94,16 @@
         margin-top: 10px;
         text-align: center;
         font-size: 1.6rem;
-        font-weight: bold;
+        font-weight: 500;
         color: #003f9e;
       }
     }
   }
   &__info {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 40px;
+    color: var(--title-color);
+    padding-bottom: 40px;
     & a {
       text-decoration: none;
       color: #003f9e;
@@ -117,7 +116,8 @@
 @media (max-width: 46.1875em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      line-height: 1.6;
+      font-size: 2rem;
     }
     &__content {
       display: block;
@@ -132,6 +132,7 @@
     }
     &__card {
       margin-top: 24px;
+      margin-bottom: 4rem;
       padding: 16px 0;
       flex-direction: column;
       align-items: center;
@@ -164,9 +165,12 @@
     }
     &__info {
       font-size: 1.4rem;
-      line-height: 2rem;
+      line-height: 1.6;
       margin: 18px 0 40px;
     }
+  }
+  .contact ~ .footer {
+    background: #f3f6fc;
   }
 }
 
@@ -174,25 +178,24 @@
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
   .contact {
     &__desc {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
     }
     &__content {
       display: block;
-      margin-top: 26px;
+      margin: 4.6rem 0 0;
       &-image {
-        margin: 0 auto;
+        margin: 0 auto 2rem;
       }
       &-list {
         margin-top: 16px;
       }
     }
     &__card {
-      margin-top: 24px;
+      margin-top: 4.4rem;
       padding: 16px;
       width: 100%;
       height: 147px;
-      &-item:last-child {
-      }
+      margin-bottom: 4rem;
       &-item {
         &-logo {
           display: block;
@@ -210,26 +213,11 @@
     }
     &__info {
       font-size: 1.6rem;
-      line-height: 2.2rem;
+      line-height: 1.6;
       margin: 18px 0 50px;
     }
   }
-}
-
-@media (max-width : 450px){
-  .contact{
-    &__card{
-      padding: 1.2rem .8rem ; 
-      &-item:last-child{
-        display: flex ;
-        align-items: flex-end ; 
-      }
-      &-item{
-        &-text{
-          width:70% ;
-          font-size:1.2rem ;
-        }
-      }
-    }
+  .contact ~ .footer {
+    background: #f3f6fc;
   }
 }

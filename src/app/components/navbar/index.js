@@ -1,35 +1,26 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { listItemNavbar } from "./data/list-item-navbar";
+
 import "./Navbar.scss";
 
 export const Navbar = () => {
-  const localPathName = window.location.pathname;
-
-  /* Logic active navbar item */
-  const [active, setActive] = useState(localPathName);
-
-  const CurrentActive = (pathLink) => {
-    if (active === pathLink) {
-      return " active";
-    } else {
-      return "";
-    }
-  };
+  const { pathname } = useLocation();
 
   return (
-    <nav className="navbar1">
-      <ul className="navbar1__list">
+    <nav className="navbar">
+      <ul className="navbar__list">
         {listItemNavbar.map((item) => (
-          <Link
+          <NavLink
             key={item.id}
             to={item.link}
-            className={"navbar1__item " + CurrentActive(item.link)}
-            onClick={() => setActive(item.link)}
+            className="navbar__item"
+            activeClassName={item.link === pathname ? "active" : ""}
           >
-            <i className="navbar1__item-icon">{item.icon}</i>
-            <p className="navbar1__item-name">{item.itemName}</p>
-          </Link>
+            <i className="navbar__item-icon">{item.icon}</i>
+            <p className="navbar__item-name">{item.itemName}</p>
+          </NavLink>
         ))}
       </ul>
     </nav>

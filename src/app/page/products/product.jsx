@@ -1,33 +1,20 @@
 import React, { Component } from "react";
-import Filter from "./filter";
-import ProductContainer from "./productContainer";
+import Filter from "./filter/filter";
+import ProductContainer from "./productContainer/productContainer";
 import { getProducts } from "../fakeServer/productChaillo";
 import { paginate } from "../utils/paginate";
 import _ from "lodash";
-import "./style/product.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./product.scss";
 
 class Product extends Component {
   state = {
     products: getProducts(),
     pageSize: 8,
     currentPage: 1,
-    sortProduct: { id: "asc322ssaf1", order: "asc", path: "priceLow" },
+    sortProduct: { id: "asc322ssa21", order: "asc", path: "title" },
   };
 
   buttons = [
-    {
-      id: "asc322ssaf1",
-      title: "giảm - tăng",
-      path: "priceLow",
-      order: "asc",
-    },
-    {
-      id: "asc322ssa31",
-      title: "tăng - giảm",
-      path: "priceLow",
-      order: "desc",
-    },
     {
       id: "asc322ssa21",
       title: "A - Z",

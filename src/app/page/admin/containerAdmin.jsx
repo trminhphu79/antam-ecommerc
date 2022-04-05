@@ -1,109 +1,68 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import { icons } from "assets/icons/icons-svg";
 import Table from "app/page/common/table";
 import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
-import "./styles/containerAdmin.css";
-
+import Delete from "../common/delete";
+import NotFound from "../notFound/NotFound";
+import "./styles/containerAdmin.scss";
+import TableOrder from "../common/tableOrder";
+import Category from './admin-page/category/Category'
+import { Redirect } from "react-router-dom";
 class ContainerAdmin extends Component {
   columns = {
-    customer: [
-      { value: "_id", label: "id" },
-      { value: "name", label: "name" },
-      { value: "number_phone", label: "phone" },
-      { value: "address", label: "address" },
-      {
-        key: "123",
-        content: (item) => (
-          <button
-            onClick={() => this.props.onDelete(item, "customers")}
-            className=" btn-danger"
-          >
-            delete
-          </button>
-        ),
-      },
-      {
-        key: "1232",
-        content: (item) => <button className=" btn-info">edit</button>,
-      },
-    ],
     order: [
-      { value: "_id", label: "id" },
-      { value: "customer", label: "customer name" },
-      { value: "products", label: "product name" },
-      { value: "date", label: "date" },
-      { value: "state" , label : 'state'} , 
-      {
-        key: "1233",
-        content: (item) => (
-          <button
-            onClick={() => this.props.onDelete(item, "orders")}
-            className=" btn-danger"
-          >
-            delete
-          </button>
-        ),
-      },
-      {
-        key: "12232",
-        content: (item) => <button className=" btn-info">edit</button>,
-      },
+      { value: "customer", label: "Tên khách hàng" },
+      { value: "products", label: "Sản phẩm" },
+      { value: "quantity", label: "Số lượng" },
+      { value: "date", label: "Ngày gửi" },
+      { value: "action", label: "Thao tác" },
+    ],
+    allProducts: [
+      { value: "title", label: "Tên sản phẩm" },
+      { value: "content", label: "Mô tả sản phẩm" },
+      { value: "url", label: "Hình ảnh" },
+      { value: "action", label: "Thao tác" },
     ],
   };
 
-  inputField = [
-    { name: "title", type: "text" },
-    { name: "content", type: "text" },
-    { name: "price", type: "number" },
-  ];
-
   render() {
-    const { customers, products, orders } = this.props;
+    const { products, orders, isLoading } = this.props;
 
     return (
-      <main className="container">
-        <div className="row">
-          <div className="col-2">
-            <ListGroup />
-          </div>
-          <div className="col">
-            <Switch>
-              <Route
-                path="/admin/table-customer"
-                render={(props) => (
-                  <Table
-                    columns={this.columns.customer}
-                    data={customers}
-                    {...props}
-                  />
-                )}
+      <main className="container container-admin">
+        <ListGroup />
+        <Switch>
+          <Route
+            path="/admin/don-hang"
+            render={(props) => (
+              <TableOrder
+                heading={"Đơn Hàng"}
+                columns={this.columns.order}
+                data={orders}
+                isLoading={isLoading}
+                {...props}
               />
-              <Route
-                path="/admin/table-order"
-                render={(props) => (
-                  <Table
-                    columns={this.columns.order}
-                    data={orders}
-                    {...props}
-                  />
-                )}
+            )}
+          />
+          <Route path="/admin/phan-loai-san-pham" render={(props) => (
+            <Category />
+          )} />
+          <Route
+            path="/admin/tat-ca-san-pham"
+            render={(props) => (
+              <AllProducts
+                products={products}
+                columns={this.columns.allProducts}
+                onDelete={this.props.onDelete}
+                {...props}
               />
-              <Route
-                path="/admin/all-products"
-                render={(props) => (
-                  <AllProducts
-                    products={products}
-                    inputField={this.inputField}
-                    {...props}
-                    onDelete={this.props.onDelete}
-                    onCreate={this.props.onCreate}
-                  />
-                )}
-              />
-            </Switch>
-          </div>
-        </div>
+            )}
+          />
+
+          <Route component={NotFound} />
+        </Switch>
       </main>
     );
   }

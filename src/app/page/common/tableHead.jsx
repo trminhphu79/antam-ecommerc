@@ -1,11 +1,13 @@
 import React from "react";
 
-const TableHead = ({columns}) => {
+const TableHead = ({ columns }) => {
   return (
     <thead>
-      <tr>
+      <tr className="field-row">
         {columns.map((column) => (
-          <th key={column.label || column.key}>{column.label}</th>
+          <th className="field-column" key={column.label || column.key}>
+            {column.label}
+          </th>
         ))}
       </tr>
     </thead>

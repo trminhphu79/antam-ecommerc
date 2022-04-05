@@ -1,44 +1,42 @@
-import React, { Component } from "react";
-import { Link , Route , Switch } from 'react-router-dom' ; 
-import Modal from 'app/page/common/modal';
+import React from "react";
+import { Link, Route, Switch } from "react-router-dom";
+import { ADD_PRODUCT, EDIT_PRODUCT } from "./constants";
+import Modal from "app/page/common/modal";
+import Table from "app/page/common/table";
 
-const AllProducts = ({ products, onDelete, inputField, onCreate }) => {
+import "../styles/allProducts.scss";
 
+const AllProducts = ({ products, columns, products: data }) => {
   return (
-    <div>
-      <Link to="/admin/all-products/create-product"
-        className="modal-control btn-success"
-      >
-        create
-      </Link>
-      <div className="row">
-        {products.map((item) => (
-          <div key={item._id} className="col-xl-3 col-lg-3 col-md-4 col-xs-6">
-            <div className="wrapper-item">
-              <img src={item.image} alt="" />
-              <div className="content">
-                <h4>{item.title}</h4>
-                <div>
-                  <Link to={`/admin/all-products/${item._id}`} className="btn-info">edit</Link>
-                  <button onClick={() => onDelete(item, 'products')} className="btn-danger">remove</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <section className="product-section">
+      <Table heading="Sản Phẩm" columns={columns} data={data} />
       <Switch>
-        <Route path="/admin/all-products/create-product" render={(props) => <Modal
-        onCreate={onCreate}
-        inputField={inputField}
-        products={products} {...props}/>} />
-        <Route path="/admin/all-products/:_id" render={(props) => <Modal
-        onCreate={onCreate}
-        inputField={inputField}
-        products={products} {...props}/>} />
+        <Route
+          path="/admin/tat-ca-san-pham/them-san-pham"
+          render={(props) => (
+            <Modal
+              products={products}
+              heading={"Thêm sản phẩm"}
+              type={ADD_PRODUCT}
+              {...props}
+            />
+          )}
+        />
+
+        {/* routing to edit a product */}
+        <Route
+          path="/admin/tat-ca-san-pham/sua-san-pham/:id"
+          render={(props) => (
+            <Modal
+              products={products}
+              heading={"Sửa sản phẩm"}
+              type={EDIT_PRODUCT}
+              {...props}
+            />
+          )}
+        />
       </Switch>
-      
-    </div>
+    </section>
   );
 };
 
