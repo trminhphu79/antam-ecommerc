@@ -19,14 +19,11 @@
       padding: 8px;
       border-radius: 8px;
       background-color: #fff;
-      position: relative;
       transition: 0.1s linear;
       border: 1px solid transparent;
-
       &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-color: var(--primary-color);
-
       }
       &:hover .product-more {
         display: block;

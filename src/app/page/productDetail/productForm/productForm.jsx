@@ -116,29 +116,30 @@ const ProductForm = (props) => {
         onSubmit={handleSubmit(submit)}
         className="form-order"
       >
+        <h3 className="form-order__title">Nhập Thông Tin Đặt Hàng</h3>
         <div className="form-order__item">
           <label htmlFor="name">Họ và tên:</label>
           <input
-            placeholder="Nhập tên của bạn"
             {...register("name")}
             id="name"
+            placeholder="Vui lòng nhập họ tên của bạn..."
           />
           <span>{errors.name?.message}</span>
         </div>
         <div className="form-order__item">
           <label htmlFor="phone">Số điện thoại:</label>
           <input
-            placeholder="Nhập số điện thoại của bạn"
             {...register("phone")}
             id="phone"
+            placeholder="Vui lòng nhập số điện thoại của bạn..."
           />
           <span>{errors.phone?.message}</span>
         </div>
         <div className="form-order__item">
           <label htmlFor="address">Địa chỉ:</label>
           <input
-            placeholder="Nhập địa chỉ cụ thể của bạn"
             {...register("address")}
+            placeholder="Vui lòng nhập địa chỉ của bạn..."
             id="address"
           />
           <span>{errors.address?.message}</span>
@@ -154,7 +155,9 @@ const ProductForm = (props) => {
           />
           <span>{errors.number?.message}</span>
         </div>
-        <button type="submit">Đặt hàng</button>
+        <button type="submit" className="btn form-btn">
+          Đặt hàng
+        </button>
       </form>
       <div className="form-img"></div>
     </section>
