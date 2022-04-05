@@ -1,3 +1,4 @@
+@import '../../../../styles/variable';
 .main-login {
     display: flex;
     align-items: center;
@@ -60,11 +61,11 @@
                 margin-top: 16px;
                 .btn-login {
                     outline: none;
-                    background: #3f51b5;
+                    background: $btn-primary-color;
                     color: #fff;
                     min-width: 90px;
                     border-radius: 4px;
-                    border: 1px solid #3f51b5;
+                    border: 1px solid $btn-primary-color;
                     min-height: 32px;
                     font-size: 14px;
                     box-shadow: 0px 18px 30px rgba(0, 0, 0, 0.048);

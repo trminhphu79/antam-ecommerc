@@ -1,4 +1,5 @@
 import React from "react";
+import "./Category.scss"
 const Category = () => {
     const categories = [
         {
@@ -25,12 +26,12 @@ const Category = () => {
 
     return (
 
-        <section className="table-section">
+        <section className="table-section mt-4">
             <div className="category-list">
-                <div className='d-flex align-items-center header-category'>
-                    <h1> Category</h1>
+                <h1> Phân loại sản phẩm</h1>
+                <div className='header-category mt-5'>
                     <button className="product-btn-create" onClick={handleAddCategory}>
-                        Thêm loại sản phẩm
+                        Thêm loại
                     </button>
                 </div>
             </div>
@@ -39,7 +40,9 @@ const Category = () => {
                     <tr>
                         <th>STT</th>
                         <th>Tên</th>
-                        <th></th>
+                        <th style={{
+                            width: "15%"
+                        }}></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,8 +50,18 @@ const Category = () => {
                         <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{item.name}</td>
-                            <td>
-                                <button>Delete</button>
+                            <td style={{
+                                width: "15%",
+                                cursor: 'pointer'
+                            }}>
+                                <span className="btn-edit" style={{
+                                    margin: "0 15px 0 0"
+                                }}>
+                                    <i class="fa fa-pen-to-square"></i>
+                                </span>
+                                <span className="btn-delete">
+                                    <i class="fa fa-trash"></i>
+                                </span>
                             </td>
                         </tr>
                     ))}

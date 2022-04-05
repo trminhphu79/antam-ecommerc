@@ -1,3 +1,4 @@
+@import '../../../../styles/variable';
 .box-message {
     position : fixed ; 
     top: 0; 
@@ -42,7 +43,7 @@
         background-color: #919191;
     }
     &-btn--delete {
-        background-color: #3f51b5;
+        background-color: $btn-primary-color;
         width: 12rem;
     }
 }
