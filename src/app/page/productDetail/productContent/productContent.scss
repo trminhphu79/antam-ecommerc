@@ -74,3 +74,39 @@
     color: #ffff;
   }
 }
+
+
+// Responsive
+
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 63.9375em){
+
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .product-content {
+    width: 45%;
+  }
+}
+
+/* Mobie: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+  .product-wrapper .wrapper{
+    flex-direction: column;
+    gap: 40px;
+  }
+  .product-content {
+    width: 100%;
+  }
+}
+
+/* PC Low */
+@media (min-width: 1024px) and (max-width: 1239px) { 
+
+}
+
+/* PC: width >= 1024px */
+@media only screen and (min-width: 64em) {
+
+}

@@ -75,7 +75,6 @@ const schemeValidation = yup.object({
   name: yup
     .string()
     .required("Vui lòng nhập họ và tên....")
-    .max(10, "Vui lòng nhập tối đa 10 kí tự")
     .min(5, "Vui lòng nhập tối thiểu 5 kí tự"),
   phone: yup
     .string()
@@ -101,7 +100,7 @@ const ProductForm = (props) => {
 
   const submit = (values) => {
     if (isValid) {
-      props.onSubmit(values)
+      props.onSubmit(values);
       reset({
         name: "",
         phone: "",
@@ -119,18 +118,30 @@ const ProductForm = (props) => {
       >
         <div className="form-order__item">
           <label htmlFor="name">Họ và tên:</label>
-          <input {...register("name")} id="name" />
-          <p>{errors.name?.message}</p>
+          <input
+            placeholder="Nhập tên của bạn"
+            {...register("name")}
+            id="name"
+          />
+          <span>{errors.name?.message}</span>
         </div>
         <div className="form-order__item">
           <label htmlFor="phone">Số điện thoại:</label>
-          <input {...register("phone")} id="phone" />
-          <p>{errors.phone?.message}</p>
+          <input
+            placeholder="Nhập số điện thoại của bạn"
+            {...register("phone")}
+            id="phone"
+          />
+          <span>{errors.phone?.message}</span>
         </div>
         <div className="form-order__item">
           <label htmlFor="address">Địa chỉ:</label>
-          <input {...register("address")} id="address" />
-          <p>{errors.address?.message}</p>
+          <input
+            placeholder="Nhập địa chỉ cụ thể của bạn"
+            {...register("address")}
+            id="address"
+          />
+          <span>{errors.address?.message}</span>
         </div>
         <div className="form-order__item">
           <label htmlFor="quantity">Số lượng:</label>
@@ -141,7 +152,7 @@ const ProductForm = (props) => {
             {...register("quantity")}
             id="quantity"
           />
-          <p>{errors.number?.message}</p>
+          <span>{errors.number?.message}</span>
         </div>
         <button type="submit">Đặt hàng</button>
       </form>
