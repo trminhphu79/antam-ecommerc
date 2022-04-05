@@ -16,13 +16,35 @@ const SwiperProduct = (props) => {
     }, []);
     return (
         <Fragment>
+            <h2 className="product-title">{title}</h2>
             <Swiper
-                spaceBetween={50}
-                slidesPerView={3}
+                spaceBetween={6}
+                slidesPerView={6}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
-                <SwiperSlide>{title}</SwiperSlide>
+                {productList.map((item) => {
+                    return (
+                        <SwiperSlide className="product">
+                            <div className="">
+                                <div
+                                    className="product-item"
+                                    key={item.id}
+                                >
+                                    <img src={item.img} alt="" className="product-img" />
+                                    <div className="product-body">
+                                        <h4 className="product-name">{item.title}</h4>
+                                        <Link
+                                            to={`/san-pham/${item.id}`}>
+                                            <p className="product-price">Giá sỉ liên hệ</p>
+                                        </Link>
+                                        <p className="product-phone">0865328664</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })}
                 {/* <section className="product">
                     <h2 className="product-title">{title}</h2>
                     <div className="product-list">
