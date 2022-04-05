@@ -1,6 +1,6 @@
 import ErrorPage from "./error";
 import HomePage from "./home";
-import LoginPage from "./login";
+import LoginPage from "./login/login";
 import AddProduct from "./addProduct";
 
 const pages = {
@@ -8,6 +8,7 @@ const pages = {
   HomePage,
   LoginPage,
   AddProduct,
+  
 };
 
 export default pages;

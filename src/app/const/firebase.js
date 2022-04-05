@@ -101,9 +101,7 @@ export const getDocById = (collection, id) =>
       .then((snapshot) => {
         const uid = snapshot.id;
         const data = snapshot.data();
-
         data["id"] = uid;
-
         resolve(data);
       })
       .catch((err) => reject(err));

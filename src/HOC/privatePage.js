@@ -1,21 +1,21 @@
 import React from "react";
-import { Redirect, Route } from "react-router-dom";
-import { KEY_TOKEN } from "app/const/App";
+import { Footer } from "app/components/footer";
+import Header from "app/components/header";
+// import { Navbar } from "app/components/navbar";
+import { Route } from "react-router-dom";
 
 export const PrivatePage = ({ Component, ...restProps }) => {
-  const isLogined = localStorage.getItem(KEY_TOKEN);
-
   return (
     <Route
       {...restProps}
       render={(propsRoute) => {
         return (
           <>
-            {isLogined ? (
-              <Component {...propsRoute} />
-            ) : (
-              <Redirect to="/login" />
-            )}
+            <Header />
+            {/* <Navbar /> */}
+            <Component {...propsRoute} />
+
+            <Footer />
           </>
         );
       }}
