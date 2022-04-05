@@ -11,6 +11,10 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       grid-gap: 12px 12px;
+      &__loading{
+        grid-template-columns: repeat(5, 1fr);
+
+      }
     }
     &-item {
       width: 100%;

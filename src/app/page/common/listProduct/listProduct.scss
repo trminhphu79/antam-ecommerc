@@ -34,6 +34,13 @@
       display: block;
       animation: fadeIn linear 0.2s;
     }
+    &--hover {
+      box-shadow: none !important;
+      &:hover {
+        box-shadow: none !important;
+        border-color: transparent !important;
+      }
+    }
   }
 
   &-img {
@@ -84,7 +91,8 @@
 
 // Responsive
 /* Mobile & tablet: width <1024px */
-@media only screen and (max-width: 63.9375em) {}
+@media only screen and (max-width: 63.9375em) {
+}
 
 /* Tablet: width >= 740px and width < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
