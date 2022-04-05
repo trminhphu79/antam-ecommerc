@@ -18,7 +18,7 @@ const SwiperProduct = (props) => {
         <Fragment>
             <h2 className="product-title">{title}</h2>
             <Swiper
-                spaceBetween={6}
+                spaceBetween={12}
                 slidesPerView={6}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
