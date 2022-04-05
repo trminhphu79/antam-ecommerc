@@ -77,6 +77,13 @@
 
 .form-img {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__svg{
+    width: 413px;
+    height: 339px;
+  }
 }
 
 .form-btn {
