@@ -11,24 +11,26 @@ function Home() {
   const title = "Hũ Mỹ Phẩm";
   let objCategories = [
     {
-      title: 'Hủ mỹ phẩm',
-      type: 'cosmetic-jars'
+      title: "Hủ mỹ phẩm",
+      type: "cosmetic-jars",
     },
     {
-      title: 'Chai lọ mỹ phẩm',
-      type: 'cosmetic-bottles'
+      title: "Chai lọ mỹ phẩm",
+      type: "cosmetic-bottles",
     },
     {
-      title: 'Chai nhựa pet',
-      type: 'cosmetic-pets'
-    }, {
-      title: 'In ấn chai lọ mỹ phẩm',
-      type: 'cosmetic-printings'
-    }, {
-      title: 'Vỏ hộp mỹ phẩm',
-      type: 'cosmetic-boxs'
+      title: "Chai nhựa pet",
+      type: "cosmetic-pets",
     },
-  ]
+    {
+      title: "In ấn chai lọ mỹ phẩm",
+      type: "cosmetic-printings",
+    },
+    {
+      title: "Vỏ hộp mỹ phẩm",
+      type: "cosmetic-boxs",
+    },
+  ];
   const [products, setProducts] = useState([]);
   const { productList } = useSelector((state) => state.product);
   useEffect(() => {
@@ -46,11 +48,9 @@ function Home() {
       <div className="wrapper content-wrapper">
         {/* <Slide products={productList} slideSize={3} /> */}
         <NewSlide></NewSlide>
-        {objCategories.map((item) =>
-        (
-          <SwiperProduct title={item.title} type={item.type} />
-        )
-        )}
+        {objCategories.map((item, index) => (
+          <SwiperProduct title={item.title} type={item.type} key={index} />
+        ))}
       </div>
     </Fragment>
   );

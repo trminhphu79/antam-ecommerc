@@ -7,7 +7,8 @@ import {
   getAllProductAction,
 } from "core/redux/actions/productActions";
 import { getAllOrderAction } from "core/redux/actions/userActions";
-
+import AdminLogin from "./admin-page/adminLogin";
+import { Switch } from "react-router-dom";
 function Admin() {
   const dispatch = useDispatch();
   const loggedIn = true;
@@ -23,11 +24,16 @@ function Admin() {
   }, []);
   return (
     <>
-      <ContainerAdmin
-        products={productList}
-        orders={orderList}
-        customers={customers}
-      />
+      <Redirect to="/admin/dang-nhap" component={AdminLogin} />
+      <Switch>
+        <Route path='/admin/dang-nhap' component={AdminLogin} />
+        <ContainerAdmin
+          products={productList}
+          orders={orderList}
+          customers={customers}
+        />
+      </Switch>
+
 
     </>
 
