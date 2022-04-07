@@ -68,7 +68,7 @@
     &:hover {
       color: var(--primary);
     }
-    &.active{
+    &.active {
       color: var(--primary-color);
       font-weight: 500;
     }
@@ -82,7 +82,7 @@
     min-width: 200px;
     text-transform: capitalize;
     display: none;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
     padding: 4px;
     border-radius: 8px;
     animation: sideUp linear 0.2s;
@@ -92,11 +92,10 @@
   &-sub__item {
     color: var(--text-primary);
     padding: 12px 12px 6px;
-
   }
-  &-sub__link{
+  &-sub__link {
     color: var(--text-primary);
-    &:hover{
+    &:hover {
       color: var(--primary);
     }
   }
@@ -115,6 +114,8 @@
   &-menu__btn {
     font-size: 2.8rem;
     display: none;
+    position: fixed;
+    right: 24px;
   }
   &-menu__close {
     position: absolute;
@@ -210,6 +211,7 @@
       &.is-show {
         transform: translateX(0);
         opacity: 1;
+        z-index: 10;
       }
     }
     &-nav__item {
@@ -221,6 +223,7 @@
     &-menu__btn {
       font-size: 2.8rem;
       display: block;
+      right: 12px;
     }
     &-menu__close {
       display: block;
@@ -228,13 +231,13 @@
   }
 }
 
-@keyframes sideUp{
-  from{
+@keyframes sideUp {
+  from {
     opacity: 0;
     transform: translateY(30px);
     pointer-events: none;
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -247,9 +250,11 @@
 
 /* Mobie: width < 740px */
 @media only screen and (max-width: 46.1875em) {
-  .header{
+  .header {
     height: 65px;
-    &-logo img{
+    padding: 0 12px;
+
+    &-logo img {
       height: 50px;
     }
   }
