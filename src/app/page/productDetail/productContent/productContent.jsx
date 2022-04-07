@@ -95,9 +95,6 @@ const productContent = (props) => {
           <p className="product-intro__contact">
             Liên hệ: <span>0865.328.664</span>
           </p>
-          <a href="#from-order" className="btn-order">
-            Đặt hàng
-          </a>
         </div>
       </div>
     </section>
