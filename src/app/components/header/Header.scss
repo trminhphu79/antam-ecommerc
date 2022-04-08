@@ -114,7 +114,6 @@
   &-menu__btn {
     font-size: 2.8rem;
     display: none;
-    position: fixed;
     right: 24px;
   }
   &-menu__close {
@@ -246,6 +245,11 @@
 
 /* Tablet: width >= 740px and width < 1024px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .header-wrap {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
 }
 
 /* Mobie: width < 740px */
@@ -257,6 +261,11 @@
     &-logo img {
       height: 50px;
     }
+  }
+  .header-wrap {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
   }
 }
 
