@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import CategoryForm from "./action/CategoryForm";
 import "./Category.scss"
 const Category = () => {
+    const [showModal, setShowModal] = useState(false)
     const categories = [
         {
             name: "Hủ mỹ phẩm"
@@ -19,13 +21,11 @@ const Category = () => {
             name: "vỏ họp mỹ phẩm"
         },
     ]
-
     const handleAddCategory = () => {
+        setShowModal(true);
         console.log("hello category")
     }
-
     return (
-
         <section className="table-section mt-4">
             <div className="category-list">
                 <h1> Phân loại sản phẩm</h1>
@@ -35,7 +35,7 @@ const Category = () => {
                     </button>
                 </div>
             </div>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th>STT</th>
@@ -57,16 +57,17 @@ const Category = () => {
                                 <span className="btn-edit" style={{
                                     margin: "0 15px 0 0"
                                 }}>
-                                    <i class="fa fa-pen-to-square"></i>
+                                    <i className="fa fa-pen-to-square"></i>
                                 </span>
                                 <span className="btn-delete">
-                                    <i class="fa fa-trash"></i>
+                                    <i className="fa fa-trash"></i>
                                 </span>
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <CategoryForm show={showModal} onHide={() => setShowModal(false)} />
         </section>
     )
 }

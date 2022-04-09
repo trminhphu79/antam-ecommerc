@@ -19,6 +19,7 @@ import CosmeticBottles from './app/page/category/cosmetic-bottles';
 import CosmeticBoxs from './app/page/category/cosmetic-box';
 import CosmeticPet from './app/page/category/cosmetic-pet';
 import CosmeticPrinting from './app/page/category/cosmetic-printing';
+import CategoryForm from "app/page/admin/admin-page/category/action/CategoryForm";
 
 function App() {
   return (

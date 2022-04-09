@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Route } from "react-router";
-import ContainerAdmin from "./containerAdmin";
 import {
   deleteProductAction,
   getAllProductAction,
@@ -9,13 +8,35 @@ import {
 import { getAllOrderAction } from "core/redux/actions/userActions";
 import AdminLogin from "./admin-page/adminLogin";
 import { Switch } from "react-router-dom";
+import ListGroup from "app/page/common/listGroup";
+import AllProducts from "app/page/admin/admin-page/allProducts";
+import NotFound from "../notFound/NotFound";
+import TableOrder from "../common/tableOrder";
+import Category from './admin-page/category/Category'
+import CategoryForm from "./admin-page/category/action/CategoryForm";
+import "./styles/containerAdmin.scss";
+
 function Admin() {
   const dispatch = useDispatch();
   const loggedIn = true;
   const [customers, setCustomers] = useState([]);
   const { productList } = useSelector((state) => state.product);
   const { orderList } = useSelector((state) => state.user);
-
+  const columns = {
+    order: [
+      { value: "customer", label: "Tên khách hàng" },
+      { value: "products", label: "Sản phẩm" },
+      { value: "quantity", label: "Số lượng" },
+      { value: "date", label: "Ngày gửi" },
+      { value: "action", label: "Thao tác" },
+    ],
+    allProducts: [
+      { value: "title", label: "Tên sản phẩm" },
+      { value: "content", label: "Mô tả sản phẩm" },
+      { value: "url", label: "Hình ảnh" },
+      { value: "action", label: "Thao tác" },
+    ],
+  };
   // Loading api lần đầu tiên vào trang admin
   useEffect(() => {
     dispatch(getAllProductAction());
@@ -24,21 +45,44 @@ function Admin() {
   }, []);
   return (
     <>
-      <Redirect to="/admin/dang-nhap" component={AdminLogin} />
-      <Switch>
-        <Route path='/admin/dang-nhap' component={AdminLogin} />
-        <ContainerAdmin
+      {/* <Redirect to="/admin/dang-nhap" component={AdminLogin} /> */}
+      <main className="container container-admin">
+        <ListGroup />
+        <Switch>
+          {/* <Route path='/admin/dang-nhap' component={AdminLogin} /> */}
+          {/* <ContainerAdmin
           products={productList}
           orders={orderList}
           customers={customers}
-        />
-      </Switch>
+        /> */}
 
-
+          <Route
+            path="/admin/don-hang"
+            render={(props) => (
+              <TableOrder
+                heading={"Đơn Hàng"}
+                columns={columns.order}
+                data={orderList}
+                isLoading={customers}
+                {...props}
+              />
+            )}
+          />
+          <Route path="/admin/phan-loai-san-pham" component={Category} />
+          <Route
+            path="/admin/tat-ca-san-pham"
+            render={(props) => (
+              <AllProducts
+                products={productList}
+                columns={columns.allProducts}
+                {...props}
+              />
+            )}
+          />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
     </>
-
-
-
   );
 }
 
