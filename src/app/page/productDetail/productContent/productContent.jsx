@@ -46,6 +46,8 @@ const productContent = (props) => {
   console.log(props);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [loading, setLoading] = useState(false);
   return (
     <section className="product-wrapper">
       <div className="wrapper">
