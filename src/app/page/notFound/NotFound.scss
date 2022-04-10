@@ -4,7 +4,9 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
-
+  img {
+    height: 600px;
+  }
   &-btn {
     position: fixed;
     top: 20px;
