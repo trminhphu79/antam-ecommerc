@@ -78,7 +78,7 @@ function ProductDetail() {
   }, [id]);
 
   function handleOrder(value) {
-    console.log("value:",value)
+    console.log("value:", value);
     const DEFAULT_PRODUCT = {
       id: "",
       title: "",
