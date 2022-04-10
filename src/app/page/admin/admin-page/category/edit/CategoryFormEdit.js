@@ -1,34 +1,43 @@
-import React, { useState } from "react";
-import "./CategoryForm.scss";
+import React, { useMemo, useState } from "react";
+import "./styles.scss";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Modal";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useDispatch } from "react-redux";
-import { addCategoryAction } from "core/redux/actions/categoryActions";
 
 const schemeValidation = yup.object({
-  categoryName: yup.string().required("Vui lòng nhập đúng thông tin..."),
+  name: yup.string().required("Vui lòng nhập đúng thông tin..."),
 });
 
-const CategoryForm = (props) => {
+const CategoryEdit = (props) => {
+  const { onHandleUpdateCategory, defaultValue } = props;
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isValid, isDirty },
     reset,
+    control,
+    setValue,
   } = useForm({
     resolver: yupResolver(schemeValidation),
     mode: "onChange",
+    defaultValues: useMemo(() => {
+      return props.defaultValue;
+    }, [props]),
   });
-  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    reset(props.defaultValue);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.defaultValue]);
 
   const submit = (values) => {
-    dispatch(addCategoryAction({ name: values.categoryName }));
+    onHandleUpdateCategory && onHandleUpdateCategory(values);
 
     reset({
-      categoryName: "",
+      name: "",
     });
   };
 
@@ -42,7 +51,7 @@ const CategoryForm = (props) => {
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-vcenter">
-            Thêm loại sản phẩm
+            Sửa loại sản phẩm
           </Modal.Title>
         </Modal.Header>
         <form
@@ -52,18 +61,20 @@ const CategoryForm = (props) => {
         >
           <Modal.Body>
             <div className="form-order__item">
-              <label htmlFor="categoryName">Tên loại:</label>
-              <input
-                type="categoryName"
-                {...register("categoryName")}
-                id="categoryName"
+              <label htmlFor="name">Tên loại:</label>
+
+              <Controller
+                name="name"
+                control={control}
+                render={({ field }) => <input {...field} />}
               />
-              <span>{errors.categoryName?.message}</span>
+
+              <span>{errors.name?.message}</span>
             </div>
           </Modal.Body>
 
           <button type="submit" variant="primary">
-            Thêm
+            Sửa
           </button>
         </form>
       </Modal>
@@ -71,4 +82,4 @@ const CategoryForm = (props) => {
   );
 };
 
-export default CategoryForm;
+export default CategoryEdit;

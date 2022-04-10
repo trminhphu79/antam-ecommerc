@@ -7,20 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./listProduct.scss";
 
-const ListProduct = ({ title }) => {
-  const { productList, loading } = useSelector((state) => state.product);
-  const dispatch = useDispatch();
-  const itemLoading = productList.length;
-  useEffect(() => {
-    dispatch(getAllProductAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+const ListProduct = ({ title, products, isLoading }) => {
   return (
     <section className="product-wrap">
       <section className="product">
         {title ? <h2 className="product-title">{title}</h2> : ""}
-        {loading ? (
+        {isLoading ? (
           <div className="product-list">
             {Array(12)
               .fill()
@@ -30,8 +22,8 @@ const ListProduct = ({ title }) => {
           </div>
         ) : (
           <div className="product-list">
-            {productList.length > 0 &&
-              productList.map((item) => (
+            {products?.length > 0 &&
+              products?.map((item) => (
                 <Link
                   to={`/san-pham/${item.id}`}
                   className="product-item"

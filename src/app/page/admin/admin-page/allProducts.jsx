@@ -10,6 +10,7 @@ const AllProducts = ({ products, columns, products: data }) => {
   return (
     <section className="product-section">
       <Table heading="Sản Phẩm" columns={columns} data={data} />
+
       <Switch>
         <Route
           path="/admin/tat-ca-san-pham/them-san-pham"

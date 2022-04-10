@@ -5,6 +5,7 @@ import {
   deleteProductAction,
   getAllProductAction,
 } from "core/redux/actions/productActions";
+import { getCategoryAction } from "core/redux/actions/categoryActions";
 import { getAllOrderAction } from "core/redux/actions/userActions";
 import AdminLogin from "./admin-page/adminLogin";
 import { Switch } from "react-router-dom";
@@ -12,7 +13,7 @@ import ListGroup from "app/page/common/listGroup";
 import AllProducts from "app/page/admin/admin-page/allProducts";
 import NotFound from "../notFound/NotFound";
 import TableOrder from "../common/tableOrder";
-import Category from './admin-page/category/Category'
+import Category from "./admin-page/category/Category";
 import CategoryForm from "./admin-page/category/action/CategoryForm";
 import "./styles/containerAdmin.scss";
 
@@ -41,6 +42,7 @@ function Admin() {
   useEffect(() => {
     dispatch(getAllProductAction());
     dispatch(getAllOrderAction());
+    dispatch(getCategoryAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
@@ -48,6 +50,7 @@ function Admin() {
       {/* <Redirect to="/admin/dang-nhap" component={AdminLogin} /> */}
       <main className="container container-admin">
         <ListGroup />
+
         <Switch>
           {/* <Route path='/admin/dang-nhap' component={AdminLogin} /> */}
           {/* <ContainerAdmin
@@ -87,7 +90,6 @@ function Admin() {
 }
 
 export default Admin;
-
 
 /**
  * <div className="main-login" >

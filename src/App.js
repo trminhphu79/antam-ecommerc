@@ -12,13 +12,13 @@ import NotFound from "app/page/notFound/NotFound";
 import LoginPage from "app/page/login/login";
 import Form from "app/page/common/form";
 import { PublicPage } from "HOC/publicPage";
-import { PrivatePage  } from "HOC/privatePage";
+import { PrivatePage } from "HOC/privatePage";
 import AdminLogin from "../src/app/page/admin/admin-page/adminLogin";
 import Admin from "app/page/admin";
-import CosmeticBottles from './app/page/category/cosmetic-bottles';
-import CosmeticBoxs from './app/page/category/cosmetic-box';
-import CosmeticPet from './app/page/category/cosmetic-pet';
-import CosmeticPrinting from './app/page/category/cosmetic-printing';
+import CosmeticBottles from "./app/page/category/cosmetic-bottles";
+import CosmeticBoxs from "./app/page/category/cosmetic-box";
+import CosmeticPet from "./app/page/category/cosmetic-pet";
+import CosmeticPrinting from "./app/page/category/cosmetic-printing";
 import CategoryForm from "app/page/admin/admin-page/category/action/CategoryForm";
 
 function App() {
@@ -33,12 +33,7 @@ function App() {
         <PublicPage path="/form" exact Component={Form} />
         <PublicPage path="/lien-he" exact Component={Contact} />
         <PublicPage path="/dang-nhap" exact Component={LoginPage} />
-        <PublicPage path="/san-pham" Component={Products} />
-        <PublicPage path="/chai-lo-my-pham" Component={CosmeticBottles} />
-        <PublicPage path="/chai-nhua-pet" Component={CosmeticPet} />
-        <PublicPage path="/vo-hop-my-pham" Component={CosmeticBoxs} />
-        <PublicPage path="/in-an-chai-lo-my-pham" Component={CosmeticPrinting} />
-
+        <PublicPage path="/loai-san-pham/:categoryId" Component={Products} />
 
         {/* Trang admin */}
         <PrivatePage path="/admin" component={Admin} />

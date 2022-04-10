@@ -10,6 +10,7 @@ import {
 import { Toasts } from "./toasts/toasts";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Loading from "app/components/loading";
+import { Form } from "react-bootstrap";
 
 function FormEdit({ heading }) {
   const { id } = useParams();
@@ -19,12 +20,14 @@ function FormEdit({ heading }) {
   const [dataSubmit, setDataSubmit] = useState({
     title: "",
     content: "",
+    categoryId: "",
   });
 
   const [errors, setErrors] = useState({});
   const [urls, setUrls] = useState([]);
   const history = useHistory();
   const dispatch = useDispatch();
+  const { categoryList } = useSelector((state) => state.category);
 
   useEffect(() => {
     dispatch(getDetailProductAction(id));
@@ -126,6 +129,7 @@ function FormEdit({ heading }) {
         payload = {
           ...dataSubmit,
           img: [...urls],
+          categoryId: dataSubmit.categoryId || categoryList[0].id,
         };
       }
 
@@ -143,10 +147,6 @@ function FormEdit({ heading }) {
     setDataSubmit({});
     history.push("/admin/tat-ca-san-pham");
   };
-
-  useEffect(() => {
-    console.log("editProduct", editProduct);
-  }, [editProduct]);
 
   return (
     <div className="modal-form">
@@ -191,6 +191,22 @@ function FormEdit({ heading }) {
               {errors.content && (
                 <div className="alert alert-danger">{errors.content}</div>
               )}
+
+              <div className="form-group">
+                <label htmlFor="content">Loại sản phẩm</label>
+
+                <Form.Select
+                  size="lg"
+                  className="form-control"
+                  name="categoryId"
+                  onChange={handleChange}
+                  defaultValue={editProduct.categoryId}
+                >
+                  {categoryList.map((item) => {
+                    return <option value={item.id}>{item.name}</option>;
+                  })}
+                </Form.Select>
+              </div>
 
               <div className="form-group">
                 <label htmlFor="image">Hình ảnh:</label>
