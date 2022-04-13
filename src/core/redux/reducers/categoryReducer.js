@@ -7,11 +7,21 @@ import {
   UPDATE_CATEGORY_FAILED,
   UPDATE_CATEGORY_REQUESTING,
   UPDATE_CATEGORY_SUCCESS,
+  GET_COSMETICS_LIST_BY_CATEGORYID,
+  GET_PET_LIST_BY_CATEGORYID,
+  GET_BOX_LIST_BY_CATEGORYID,
+  GET_PRINT_LIST_BY_CATEGORYID,
+  GET_BOTTLE_LIST_BY_CATEGORYID
 } from "../constants/categoryConstants";
 
 const initialState = {
   isLoading: false,
   categoryList: [],
+  productPets: [],
+  productPrints: [],
+  productBottles: [],
+  productCosmetics: [],
+  productBoxs: []
 };
 
 export const CategoryReducer = (state = initialState, action) => {
@@ -75,6 +85,29 @@ export const CategoryReducer = (state = initialState, action) => {
     case UPDATE_CATEGORY_FAILED: {
       state.loading = false;
       return { ...state };
+    }
+
+    case GET_COSMETICS_LIST_BY_CATEGORYID: {
+      state.productCosmetics = action.payload;
+      return { ...state };
+    }
+
+    case GET_PET_LIST_BY_CATEGORYID: {
+      state.productPets = action.payload
+      return { ...state }
+    }
+
+    case GET_BOX_LIST_BY_CATEGORYID: {
+      state.productBoxs = action.payload
+      return { ...state }
+    }
+    case GET_PRINT_LIST_BY_CATEGORYID: {
+      state.productPrints = action.payload
+      return { ...state }
+    }
+    case GET_BOTTLE_LIST_BY_CATEGORYID: {
+      state.productBottles = action.payload
+      return { ...state }
     }
 
     default: {

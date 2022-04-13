@@ -1,25 +1,17 @@
-import Loading from "app/components/loading";
-import { getAllProductAction } from "core/redux/actions/productActions";
-import React, { Fragment, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { Fragment} from "react";
 import { Link } from "react-router-dom";
 import "./swiperProduct.scss";
 import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
 import LoadingSkeletonItem from "app/components/loading-skeleton/LoadingSkeletonItem";
 
 const SwiperProduct = (props) => {
-  const { title, type } = props;
-  const { productList, loading } = useSelector((state) => state.product);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAllProductAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  console.log(props)
+  const { products, name } = props.data;
   return (
     <Fragment>
-      <h2 className="product-title">{title}</h2>
+      <h2 className="product-title">{name}</h2>
       <div className="product-home__list">
-        {loading ? (
+        {!products ? (
           <div className="product-list product-list__loading">
             {Array(5)
               .fill()
@@ -32,11 +24,9 @@ const SwiperProduct = (props) => {
             spaceBetween={12}
             grabCursor={"true"}
             slidesPerView={"auto"}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
             className="product-home__wrap"
           >
-            {productList.map((item) => {
+            {products?.map((item) => {
               return (
                 <SwiperSlide className="product product-home" key={item.id}>
                   <Link to={`/san-pham/${item.id}`}>

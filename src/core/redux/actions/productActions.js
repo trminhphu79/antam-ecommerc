@@ -73,11 +73,10 @@ export const deleteProductAction = (id) => {
 };
 
 export const getAllProductAction = () => {
-  return async (dispatch) => {
+  return async function (dispatch) {
     dispatch({
       type: GET_PRODUCTS_REQUESTING,
     });
-
     getList("product")
       .then((response) => {
         if (response.length) {

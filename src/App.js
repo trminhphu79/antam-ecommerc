@@ -37,7 +37,7 @@ function App() {
 
         {/* Trang admin */}
         <PrivatePage path="/admin" component={Admin} />
-
+        
         {/* Nếu tất cả các path trên không đủng nhảy vào not found page */}
         <Route path="*" component={NotFound} />
       </Switch>

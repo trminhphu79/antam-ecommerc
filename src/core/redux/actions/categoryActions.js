@@ -12,7 +12,7 @@ import {
   UPDATE_CATEGORY_SUCCESS,
 } from "../constants/categoryConstants";
 import { create, getList, removeById, updateById } from "app/const/firebase";
-
+import { getListWithCustomField } from 'app/const/firebase'
 export const getCategoryAction = () => {
   return async (dispatch) => {
     dispatch({
@@ -98,3 +98,26 @@ export const updateCategoryAction = (id, payload) => {
       });
   };
 };
+
+export const getProductListByCategoryId = (categoryId, typeAction = 'GET_COSMETICS_LIST_BY_CATEGORYID') => {
+  return async (dispatch) => {
+    getListWithCustomField(
+      "product",
+      "categoryId",
+      categoryId
+    )
+      .then((response) => {
+        console.log(response)
+        dispatch({
+          type: typeAction,
+          payload: response,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          // type: GET_CATEGORY_FAILED,
+          // payload: error,
+        });
+      });
+  }
+}

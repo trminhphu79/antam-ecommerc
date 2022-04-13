@@ -1,56 +1,44 @@
-import ListProduct from "../common/listProduct/listProduct";
 import React, { Fragment, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getAllProductAction } from "core/redux/actions/productActions";
+import { useSelector } from "react-redux";
 import SwiperProduct from "../common/listProduct/swiper-product/swiperProduct";
 import NewSlide from "./new-slide/NewSlide";
+import { getListWithCustomField } from "app/const/firebase"
 import "./Home.scss";
+import { useDispatch } from "react-redux";
+import { getCategoryAction } from "core/redux/actions/categoryActions";
 
 function Home() {
   const dispatch = useDispatch();
-  const title = "Hũ Mỹ Phẩm";
-  let objCategories = [
-    {
-      title: "Hủ mỹ phẩm",
-      type: "cosmetic-jars",
-    },
-    {
-      title: "Chai lọ mỹ phẩm",
-      type: "cosmetic-bottles",
-    },
-    {
-      title: "Chai nhựa pet",
-      type: "cosmetic-pets",
-    },
-    {
-      title: "In ấn chai lọ mỹ phẩm",
-      type: "cosmetic-printings",
-    },
-    {
-      title: "Vỏ hộp mỹ phẩm",
-      type: "cosmetic-boxs",
-    },
-  ];
-  const [products, setProducts] = useState([]);
-  const { productList } = useSelector((state) => state.product);
+  const [isLoading, setIsLoading] = useState(false)
+  const { categoryList } = useSelector((state) => state.category);
   useEffect(() => {
-    dispatch(getAllProductAction());
+    dispatch(getCategoryAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // const hotProducts = [1];
-  // const productsLength = allProduct.length;
-  // const hotProducts = allProduct.filter((product, index) =>
-  //   index >= productsLength - pageSize
-  // )
+  useEffect(() => {
+    categoryList.forEach((item) => {
+      getListWithCustomField(
+        "product",
+        "categoryId",
+        item.id
+      )
+        .then((res) => {
+          item.products = res
+        })
+        .catch((err) => console.log(err))
+    });
+  }, [])
+
 
   return (
     <Fragment>
       <div className="wrapper content-wrapper">
-        {/* <Slide products={productList} slideSize={3} /> */}
         <NewSlide></NewSlide>
-        {objCategories.map((item, index) => (
-          <SwiperProduct title={item.title} type={item.type} key={index} />
-        ))}
+
+        {categoryList ? (categoryList.map((item, index) => (
+          <SwiperProduct data={item} key={index} />
+        ))) : ""}
       </div>
     </Fragment>
   );
