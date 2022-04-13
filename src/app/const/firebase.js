@@ -95,7 +95,6 @@ export const getListWithCustomField = (collection, field, value = "") =>
 
 export const getListWithCondition = (collection, condition) =>
   new Promise((resolve, reject) => {
-    console.log("condition", condition);
     db.collection(collection)
       .where(condition.compare.field, "==", condition.compare.value)
       .orderBy(condition.sort.field, condition.sort.type)
@@ -159,8 +158,6 @@ export const uploadSingle = (file, cb) => {
         .child(file.name)
         .getDownloadURL()
         .then((url) => {
-          console.log(url);
-
           cb(url);
         })
         .catch((error) => cb(error));

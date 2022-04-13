@@ -6,8 +6,13 @@
   <link rel="icon" href="%PUBLIC_URL%/logo-chailo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Cung cấp chai lọ dược, mỹ phẩm xuất nhập khẩu" />
+  <meta name="description"
+    content="Công ty chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn, tuýp, mẫu vỏ son cao cấp. Nhận in ấn trực tiếp chai lọ không bong tróc, đẹp, chất lượng nước ngoài." />
   <meta name="keywords" content="Chai lọ dược mỹ phẩm xuất nhập khẩu - Chailoduocmypham.com" />
+  <meta name="robots" content="all" />
+  <meta http-equiv="content-language" content="vi" />
+  <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+
 
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo-chailo.png" />
   <!--
@@ -25,7 +30,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>Chai Lo Giá Xưởng</title>
+  <title>Công ty chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn, tuýp, mẫu vỏ son cao cấp. Nhận in ấn trực
+    tiếp chai lọ không bong tróc, đẹp, chất lượng nước ngoài.</title>
 
   <!-- Import Font-Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -42,7 +48,7 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>Chai lọ dược mỹ phẩm giá gốc</noscript>
   <div id="root"></div>
   <!--
       This HTML file is a template.
@@ -54,9 +60,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <div itemscope itemtype="http://schema.org/WebSite">
+    <meta itemprop="url" content="http://www.example.com/" />
+    <form itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction">
+      <meta itemprop="target" content="http://www.example.com/search?q={query}" />
+      <input itemprop="query-input" type="text" name="query">
+      <input type="submit">
+    </form>
+  </div>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://chailoduocmyphamgiagoc.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+    "target": "https://chailoduocmyphamgiagoc.com/?s={search_term}",
+    "query-input": "required"
+  }
+}
+</script>
   <script>
     //change navigator depent device
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) { document.getElementById("linkzalo").href = "https://zalo.me/0865328664"; }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      document.getElementById("linkzalo").href = "https://zalo.me/0865328664";
+    }
   </script>
 </body>
 

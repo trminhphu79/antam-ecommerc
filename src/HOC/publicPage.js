@@ -8,12 +8,10 @@ import { getCategoryAction } from "core/redux/actions/categoryActions";
 import IconContact from '../app/components/animation/IconContact'
 export const PublicPage = ({ Component, ...restProps }) => {
   const dispatch = useDispatch();
-  console.log('Public Page1')
 
   useEffect(() => {
     dispatch(getCategoryAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    console.log('Public Page')
   }, []);
 
   return (

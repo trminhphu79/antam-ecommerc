@@ -138,12 +138,12 @@ div.fcta-zalo-mess {
     color: #0068ff;
     border-radius: 50px 0 0 50px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 @media screen and (max-width:480px){
     div.fcta-zalo-mess {
-        bottom: 29px
+        bottom: 29px;
     }
     .fcta-zalo-vi-tri-nut{
         bottom: 24px;
@@ -152,7 +152,8 @@ div.fcta-zalo-mess {
 
 @media screen and (max-width:768px){
     div.fcta-zalo-mess {
-        bottom: 40px
+        bottom: 40px;
+      
     }
     .fcta-zalo-vi-tri-nut{
         bottom: 36px;

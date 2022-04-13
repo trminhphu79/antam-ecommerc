@@ -80,7 +80,7 @@ function FormEdit({ heading }) {
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
             if (snapshot.state === "running") {
-              console.log(`Đang tải: ${progress}%`);
+              // console.log(`Đang tải: ${progress}%`);
             }
           },
           (error) => {

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment} from "react";
 import { Link } from "react-router-dom";
 import "./swiperProduct.scss";
 import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
@@ -9,7 +9,7 @@ const SwiperProduct = (props) => {
   const isLoading = props.isLoading
   return (
     <Fragment>
-      <h2 className="product-title">{name}</h2>
+      <h2 className="product-title">{name }</h2>
       <div className="product-home__list">
         {isLoading ? (
           <div className="product-list product-list__loading">

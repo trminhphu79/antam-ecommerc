@@ -124,7 +124,6 @@ export const getDetailProductAction = (id) => {
     });
     getDocById("product", id)
       .then((response) => {
-        console.log("response,", response);
         dispatch({
           type: GET_PRODUCT_DETAIL_SUCCESS,
           payload: response,

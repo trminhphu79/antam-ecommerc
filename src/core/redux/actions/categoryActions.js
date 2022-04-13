@@ -25,7 +25,6 @@ export const getCategoryAction = () => {
           type: GET_CATEGORY_SUCCESS,
           payload: response,
         });
-        console.log("response:",response)
       })
       .catch((error) => {
         dispatch({
@@ -108,7 +107,6 @@ export const getProductListByCategoryId = (categoryId, typeAction = 'GET_COSMETI
       categoryId
     )
       .then((response) => {
-        console.log(response)
         dispatch({
           type: typeAction,
           payload: response,
