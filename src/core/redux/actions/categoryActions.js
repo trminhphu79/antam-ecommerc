@@ -25,6 +25,7 @@ export const getCategoryAction = () => {
           type: GET_CATEGORY_SUCCESS,
           payload: response,
         });
+        console.log("response:",response)
       })
       .catch((error) => {
         dispatch({

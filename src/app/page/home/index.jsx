@@ -4,19 +4,12 @@ import SwiperProduct from "../common/listProduct/swiper-product/swiperProduct";
 import NewSlide from "./new-slide/NewSlide";
 import { getListWithCustomField } from "app/const/firebase"
 import "./Home.scss";
-import { useDispatch } from "react-redux";
-import { getCategoryAction } from "core/redux/actions/categoryActions";
 
 function Home() {
-  const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(false)
   const { categoryList } = useSelector((state) => state.category);
-  useEffect(() => {
-    dispatch(getCategoryAction());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
+  const [loading, setLoading] = useState(false)
+  let count = 0;
+  if (categoryList.length > 0) {
     categoryList.forEach((item) => {
       getListWithCustomField(
         "product",
@@ -24,21 +17,32 @@ function Home() {
         item.id
       )
         .then((res) => {
-          item.products = res
+          item.products = res;
+          count++;
+          if (count === 5) {
+            setTimeout(() => setLoading(true), 500)
+          }
         })
-        .catch((err) => console.log(err))
+        .catch((err) => {
+          console.log(err);
+          setLoading(false);
+          count = 0;
+        })
     });
-  }, [])
+  }
 
 
   return (
     <Fragment>
       <div className="wrapper content-wrapper">
         <NewSlide></NewSlide>
-
-        {categoryList ? (categoryList.map((item, index) => (
+        {loading ? categoryList.map((item, index) => (
           <SwiperProduct data={item} key={index} />
-        ))) : ""}
+        )) : (
+          categoryList.map((item, index) =>
+            <SwiperProduct data={item} key={index} />
+          )
+        )}
       </div>
     </Fragment>
   );

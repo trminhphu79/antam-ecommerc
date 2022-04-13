@@ -5,7 +5,6 @@ import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
 import LoadingSkeletonItem from "app/components/loading-skeleton/LoadingSkeletonItem";
 
 const SwiperProduct = (props) => {
-  console.log(props)
   const { products, name } = props.data;
   return (
     <Fragment>

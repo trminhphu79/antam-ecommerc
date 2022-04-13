@@ -1,8 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-// import { Header } from "app/components/header";
-// import { Navbar } from "app/components/navbar";
-// import { Footer } from "app/components/footer";
+import { Switch, Route } from "react-router-dom";
 import Products from "app/page/products/product";
 import Home from "app/page/home";
 import ProductDetail from "./app/page/productDetail/productDetail";
@@ -13,13 +10,7 @@ import LoginPage from "app/page/login/login";
 import Form from "app/page/common/form";
 import { PublicPage } from "HOC/publicPage";
 import { PrivatePage } from "HOC/privatePage";
-import AdminLogin from "../src/app/page/admin/admin-page/adminLogin";
 import Admin from "app/page/admin";
-import CosmeticBottles from "./app/page/category/cosmetic-bottles";
-import CosmeticBoxs from "./app/page/category/cosmetic-box";
-import CosmeticPet from "./app/page/category/cosmetic-pet";
-import CosmeticPrinting from "./app/page/category/cosmetic-printing";
-import CategoryForm from "app/page/admin/admin-page/category/action/CategoryForm";
 
 function App() {
   return (
