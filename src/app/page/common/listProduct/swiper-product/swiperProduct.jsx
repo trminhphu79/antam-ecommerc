@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import "./swiperProduct.scss";
 import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
@@ -6,11 +6,12 @@ import LoadingSkeletonItem from "app/components/loading-skeleton/LoadingSkeleton
 
 const SwiperProduct = (props) => {
   const { products, name } = props.data;
+  const isLoading = props.isLoading
   return (
     <Fragment>
       <h2 className="product-title">{name}</h2>
       <div className="product-home__list">
-        {!products ? (
+        {isLoading ? (
           <div className="product-list product-list__loading">
             {Array(5)
               .fill()

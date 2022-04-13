@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-import Filter from "./filter/filter";
 import ProductContainer from "./productContainer/productContainer";
-import { getProducts } from "../fakeServer/productChaillo";
-import { paginate } from "../utils/paginate";
 import _ from "lodash";
 import "./product.scss";
 import {
   getListWithCondition,
   getListWithCustomField,
-  getListWithOrderBy,
 } from "app/const/firebase";
 
+import EmptyProduct from "./empty-product/EmptyProduct";
 class Product extends Component {
   state = {
     products: [],
@@ -124,20 +121,26 @@ class Product extends Component {
 
     return (
       <div className="background-page product">
-        <Filter
+        {/* <Filter
           sortProduct={sortProduct}
           buttons={this.buttons}
           onSort={this.handleSortProduct}
-        />
+        /> */}
 
-        <ProductContainer
-          products={this.state.products}
-          itemsCount={itemsCount}
-          currentPage={currentPage}
-          pageSize={pageSize}
-          onPageChange={this.handlePageChange}
-          isLoading={this.state.isLoading}
-        />
+
+        {
+          (this.state.products.length <= 0) ? <EmptyProduct /> : (
+            <ProductContainer
+              products={this.state.products}
+              itemsCount={itemsCount}
+              currentPage={currentPage}
+              pageSize={pageSize}
+              onPageChange={this.handlePageChange}
+              isLoading={this.state.isLoading}
+            />
+          )
+        }
+
       </div>
     );
   }

@@ -5,7 +5,7 @@ import Header from "app/components/header";
 import { Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getCategoryAction } from "core/redux/actions/categoryActions";
-
+import IconContact from '../app/components/animation/IconContact'
 export const PublicPage = ({ Component, ...restProps }) => {
   const dispatch = useDispatch();
   console.log('Public Page1')
@@ -25,7 +25,7 @@ export const PublicPage = ({ Component, ...restProps }) => {
             <Header />
             {/* <Navbar /> */}
             <Component {...propsRoute} />
-
+            <IconContact />
             <Footer />
           </>
         );

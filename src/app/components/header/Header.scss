@@ -195,6 +195,9 @@
 
 /* Mobile & tablet: width <1024px */
 @media only screen and (max-width: 63.9375em) {
+  .btn.header-phone{
+    display: none;
+  }
   .header {
     padding: 0 24px;
     &-phone {

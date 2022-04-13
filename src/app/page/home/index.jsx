@@ -20,7 +20,7 @@ function Home() {
           item.products = res;
           count++;
           if (count === 5) {
-            setTimeout(() => setLoading(true), 500)
+            setTimeout(() => setLoading(true), 0)
           }
         })
         .catch((err) => {
@@ -31,16 +31,15 @@ function Home() {
     });
   }
 
-
   return (
     <Fragment>
       <div className="wrapper content-wrapper">
         <NewSlide></NewSlide>
-        {loading ? categoryList.map((item, index) => (
-          <SwiperProduct data={item} key={index} />
+        {loading ? categoryList?.map((item, index) => (
+          <SwiperProduct isLoading={false} data={item} key={index} />
         )) : (
-          categoryList.map((item, index) =>
-            <SwiperProduct data={item} key={index} />
+          categoryList?.map((item, index) =>
+            <SwiperProduct isLoading={true} data={item} key={index} />
           )
         )}
       </div>
