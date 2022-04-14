@@ -72,7 +72,7 @@ const Header = () => {
               className="header-menu__close"
             ></GrFormClose>
             <li className="header-nav__item" >
-              <NavLink className="header-title" to='/'
+              <NavLink className="header-title" to='/' onClick={() => setShowMenu(false)}
                 activeClassName={
                   `/` === pathname ? "active" : ""
                 }>
@@ -82,6 +82,7 @@ const Header = () => {
             {categoryList?.map((item) => (
               <li className="header-nav__item" key={item.id}>
                 <NavLink
+                  onClick={() => setShowMenu(false)}
                   to={`/loai-san-pham/${item.id}`}
                   className="header-title"
                   activeClassName={
@@ -91,7 +92,7 @@ const Header = () => {
                   {item.name}
                   {/* {item.subItemName ? <BiChevronDown></BiChevronDown> : ""} */}
                 </NavLink>
-         
+
                 {/* {item.subItemName ? (
                   <ul className="header-sub__list">
                     <li className="header-sub__item">
@@ -110,14 +111,15 @@ const Header = () => {
                 )} */}
               </li>
             ))}
-                   <li className="header-nav__item" >
-                  <NavLink className="header-title" to='/lien-he'
-                    activeClassName={
-                      `/lien-he` === pathname ? "active" : ""
-                    }>
-                    Liên hệ
-                  </NavLink>
-                </li>
+            <li className="header-nav__item" >
+              <NavLink className="header-title" to='/lien-he'
+               onClick={() => setShowMenu(false)}
+                activeClassName={
+                  `/lien-he` === pathname ? "active" : ""
+                }>
+                Liên hệ
+              </NavLink>
+            </li>
             <button className="btn header-phone">
               <a
                 href="tel:0865328664"

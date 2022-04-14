@@ -54,7 +54,10 @@ div.fcta-zalo-mess {
     color: #fff;
     background: #0068ff;
     border-radius: 50%;
-    position: relative
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .fcta-zalo-nen-nut::after,
@@ -82,12 +85,8 @@ div.fcta-zalo-mess {
 }
 
 .fcta-zalo-ben-trong-nut {
-    position: absolute;
     text-align: center;
     width: 60%;
-    height: 60%;
-    left: 10px;
-    bottom: 25px;
     line-height: 70px;
     font-size: 25px;
     opacity: 1
@@ -134,7 +133,7 @@ div.fcta-zalo-mess {
     right: 58px;
     z-index: 99;
     background: #fff;
-    padding: 7px 25px 7px 15px;
+    // padding: 7px 25px 7px 15px;
     color: #0068ff;
     border-radius: 50px 0 0 50px;
     font-weight: 500;
