@@ -35,6 +35,7 @@ function Admin() {
       { value: "title", label: "Tên sản phẩm" },
       { value: "content", label: "Mô tả sản phẩm" },
       { value: "url", label: "Hình ảnh" },
+      // { value: 'category', label: "Phan loai" },
       { value: "action", label: "Thao tác" },
     ],
   };

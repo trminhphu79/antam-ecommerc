@@ -189,7 +189,7 @@ function FormComponent({ heading }) {
               multiple
               onChange={handleChangeFile}
               hidden
-              accept="image/png, image/jpg, image/jpeg"
+              accept="image/png, image/jpg, image/jpeg,image/*"
             />
           </div>
           <span className="message-file">

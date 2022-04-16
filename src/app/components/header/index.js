@@ -59,7 +59,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className={`header ${showShadow ? "is-show" : ""}`}>
-        <div className="wrapper header-wrap">
+        <div className="wrapper header-wr header-wrap">
           <Link to="/">
             <span className="header-logo">
               <img src="/logo-chailo.png" alt="" />
