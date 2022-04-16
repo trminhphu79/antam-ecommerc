@@ -180,7 +180,6 @@ function FormComponent({ heading }) {
             <label className="choose-file" htmlFor="image">
               <i className="fa-solid fa-arrow-up-from-bracket"></i>
               Tải hình ảnh từ máy tính
-              {pecentsProgress}
             </label>
 
             <input

@@ -1,16 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteProductAction } from "core/redux/actions/productActions";
 import Delete from "./delete";
 import { icons } from "assets/icons/icons-svg";
-
+import { getCategoryAction } from "core/redux/actions/categoryActions";
 function TableBody({ data }) {
   const dispatch = useDispatch();
+  const { categoryList, isLoading } = useSelector((state) => state.category);
 
   const handleDelete = (item) => {
     dispatch(deleteProductAction(item.id));
   };
+
+  useEffect(() => {
+    dispatch(getCategoryAction());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [content, setContent] = useState();
   const prevContent = useRef();
@@ -19,6 +25,17 @@ function TableBody({ data }) {
     prevContent.current = content;
   }, [content]);
 
+
+  if (categoryList) {
+    data.forEach((item) => {
+      categoryList.forEach((cate) => {
+        if (item.categoryId == cate.id) {
+          item.categoryName = cate.name;
+        }
+      })
+    })
+  }
+  
   const HandleContentClick = (index) => {
     if (prevContent.current === index) {
       setContent(undefined);
@@ -33,6 +50,8 @@ function TableBody({ data }) {
             <td className="value-column">
               <p>{item?.title}</p>
             </td>
+            <td className="value-column">{item.categoryName}</td>
+
             <td
               className="value-column"
               data-toggle="tooltip" data-placement="bottom" title="Click để xem nội dung"

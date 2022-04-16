@@ -33,6 +33,9 @@ function Admin() {
     ],
     allProducts: [
       { value: "title", label: "Tên sản phẩm" },
+      {
+        value: "category", label: "Phân loại"
+      },
       { value: "content", label: "Mô tả sản phẩm" },
       { value: "url", label: "Hình ảnh" },
       // { value: 'category', label: "Phan loai" },
@@ -49,7 +52,7 @@ function Admin() {
   return (
     <>
       {/* <Redirect to="/admin/dang-nhap" component={AdminLogin} /> */}
-      <main className="container container-admin">
+      <main className=" container-admin">
         <ListGroup />
 
         <Switch>
