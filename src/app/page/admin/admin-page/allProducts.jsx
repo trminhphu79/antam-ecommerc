@@ -14,7 +14,7 @@ const AllProducts = ({ products, columns, products: data }) => {
 
       <Switch>
         <Route
-          path="/admin/tat-ca-san-pham/them-san-pham"
+          path="/trang-quan-tri/tat-ca-san-pham/them-san-pham"
           render={(props) => (
             <Modal
               products={products}
@@ -27,7 +27,7 @@ const AllProducts = ({ products, columns, products: data }) => {
 
         {/* routing to edit a product */}
         <Route
-          path="/admin/tat-ca-san-pham/sua-san-pham/:id"
+          path="/trang-quan-tri/tat-ca-san-pham/sua-san-pham/:id"
           render={(props) => (
             <Modal
               products={products}

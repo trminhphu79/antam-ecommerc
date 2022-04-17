@@ -17,7 +17,7 @@ function AdminLogin() {
     };
     const handleLoginAdmin = () => {
         if (userAcount.username === 'trangxinhgai' && userAcount.password === 'trangxinhgai') {
-            history.push("/admin/tat-ca-san-pham");
+            history.push("/trang-quan-tri/tat-ca-san-pham");
         }
     }
 

@@ -54,7 +54,7 @@ function Admin() {
   }, []);
   return (
     <>
-      <Redirect to="/admin/tat-ca-san-pham" component={AllProducts} />
+      <Redirect to="/trang-quan-tri/tat-ca-san-pham" component={AllProducts} />
       <main className=" container-admin">
         <ListGroup />
         <Switch>
@@ -66,7 +66,7 @@ function Admin() {
         /> */}
 
           <Route
-            path="/admin/don-hang"
+            path="/trang-quan-tri/don-hang"
             render={(props) => (
               <TableOrder
                 heading={"Đơn Hàng"}
@@ -77,9 +77,9 @@ function Admin() {
               />
             )}
           />
-          <Route path="/admin/phan-loai-san-pham" component={Category} />
+          <Route path="/trang-quan-tri/phan-loai-san-pham" component={Category} />
           <Route
-            path="/admin/tat-ca-san-pham"
+            path="/trang-quan-tri/tat-ca-san-pham"
             render={(props) => (
               <AllProducts
                 products={productList}

@@ -5,7 +5,7 @@ const EmptyProduct = () => {
         <>
             <div className="container-empty-product">
                 <div>
-                <h2>Không có sản phẩm nào được hiển thị</h2>
+                    <h2></h2>
                 </div>
             </div>
         </>

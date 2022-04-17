@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./CategoryForm.scss";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";

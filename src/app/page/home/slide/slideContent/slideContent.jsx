@@ -9,7 +9,7 @@ export const SlideContent = ({ product }) => {
       Công ty chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn, tuýp,
       mẫu vỏ son cao cấp. Nhận in ấn trực tiếp chai lọ không bong tróc, đẹp,
       chất lượng nươc ngoài .
-      <Link to={"/san-pham"} className="btn slide-content__btn">
+      <Link to={"/"} className="btn slide-content__btn">
           Xem chi tiết
           <i className="slide-content__btn-icon">{icons.iconArrowNext}</i>
       </Link>

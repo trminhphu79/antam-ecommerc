@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import "./styles.scss";
 import Modal from "react-bootstrap/Modal";
 import { Controller, useForm } from "react-hook-form";
@@ -13,12 +13,10 @@ const CategoryEdit = (props) => {
   const { onHandleUpdateCategory, defaultValue } = props;
 
   const {
-    register,
     handleSubmit,
     formState: { errors, isSubmitting, isValid, isDirty },
     reset,
     control,
-    setValue,
   } = useForm({
     resolver: yupResolver(schemeValidation),
     mode: "onChange",

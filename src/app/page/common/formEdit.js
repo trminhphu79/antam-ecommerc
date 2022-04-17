@@ -145,7 +145,7 @@ function FormEdit({ heading }) {
 
   const cancelModal = () => {
     setDataSubmit({});
-    history.push("/admin/tat-ca-san-pham");
+    history.push("/trang-quan-tri/tat-ca-san-pham");
   };
 
   console.log(urls)

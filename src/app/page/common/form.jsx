@@ -119,7 +119,7 @@ function FormComponent({ heading }) {
 
   const cancelModal = () => {
     setDataSubmit({});
-    history.push("/admin/tat-ca-san-pham");
+    history.push("/trang-quan-tri/tat-ca-san-pham");
   };
 
   return (

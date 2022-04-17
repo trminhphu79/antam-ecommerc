@@ -12,7 +12,7 @@ const NewSlideItem = ({ image, content, key }) => {
       </div>
 
       <h2 className="slider-content">
-        <Link to={"/san-pham"} className="slider-btn">
+        <Link to={"/"} className="slider-btn">
           Xem chi tiết
           <BiChevronRight></BiChevronRight>
         </Link>

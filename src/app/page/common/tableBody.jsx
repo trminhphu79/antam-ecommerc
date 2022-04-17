@@ -81,7 +81,7 @@ function TableBody({ data }) {
               <div className="options">
                 <span data-toggle="tooltip" data-placement="bottom" title="Click để Sửa">
                   <Link
-                    to={`/admin/tat-ca-san-pham/sua-san-pham/${item.id}`}
+                    to={`/trang-quan-tri/tat-ca-san-pham/sua-san-pham/${item.id}`}
                     className="btn-edit"
                   >
                     <i className="fa fa-pen-to-square"></i>

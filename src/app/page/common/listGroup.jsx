@@ -7,17 +7,17 @@ const menuList = [
   {
     name: "Sản phẩm",
     icon: icons.iconProduct,
-    pathLink: "/admin/tat-ca-san-pham",
+    pathLink: "/trang-quan-tri/tat-ca-san-pham",
   },
   {
     name: "Đơn hàng",
     icon: icons.iconOder,
-    pathLink: "/admin/don-hang",
+    pathLink: "/trang-quan-tri/don-hang",
   },
   {
     name: "Phân loại",
     icon: icons.iconOder,
-    pathLink: "/admin/phan-loai-san-pham",
+    pathLink: "/trang-quan-tri/phan-loai-san-pham",
   },
 ];
 
