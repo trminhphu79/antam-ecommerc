@@ -35,7 +35,7 @@ function TableBody({ data }) {
       })
     })
   }
-  
+
   const HandleContentClick = (index) => {
     if (prevContent.current === index) {
       setContent(undefined);
@@ -47,6 +47,9 @@ function TableBody({ data }) {
       {data.map((item, index) => {
         return (
           <tr key={item?.id} className="value-row">
+            <td className="value-column">
+              {index + 1}
+            </td>
             <td className="value-column">
               <p>{item?.title}</p>
             </td>

@@ -32,6 +32,9 @@ function Admin() {
       { value: "action", label: "Thao tác" },
     ],
     allProducts: [
+      {
+        value:"Stt",label:"STT"
+      },
       { value: "title", label: "Tên sản phẩm" },
       {
         value: "category", label: "Phân loại"
@@ -51,10 +54,9 @@ function Admin() {
   }, []);
   return (
     <>
-      {/* <Redirect to="/admin/dang-nhap" component={AdminLogin} /> */}
+      <Redirect to="/admin/tat-ca-san-pham" component={AllProducts} />
       <main className=" container-admin">
         <ListGroup />
-
         <Switch>
           {/* <Route path='/admin/dang-nhap' component={AdminLogin} /> */}
           {/* <ContainerAdmin
