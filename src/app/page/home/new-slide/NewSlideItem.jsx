@@ -8,14 +8,14 @@ const NewSlideItem = ({ image, content, key }) => {
     <div className="slider-item">
       <div className="slider-overlay"></div>
       <div className="slider-img">
-        <img src={image} alt="" />
+        <img src="/slideImg.jpg" alt="" />
       </div>
 
       <h2 className="slider-content">
-        <Link to={"/"} className="slider-btn">
+        {/* <Link to={"/"} className="slider-btn">
           Xem chi tiết
           <BiChevronRight></BiChevronRight>
-        </Link>
+        </Link> */}
         <span className="slider-text">" {content}"</span>
       </h2>
     </div>

@@ -82,8 +82,8 @@ body::-webkit-scrollbar-thumb {
     margin: 0 auto !important;
 
     &.header-wr {
-      max-width: 1376px;
-
+      max-width: 100%;
+      width: 1600px;
     }
   }
 
@@ -121,3 +121,4 @@ body::-webkit-scrollbar-thumb {
     }
   }
 }
+

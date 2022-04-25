@@ -323,16 +323,17 @@
 }
 
 /* PC Low */
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width:1120px) {
   .header-nav__item {
-    font-size: 1.3rem !important;
+    font-size: 1rem !important;
+  }
+  .text-child{
+  }
+  .header-nav__list{
+    gap:8px
   }
 }
-@media screen and (max-width: 1200px) {
-  .header-nav__item {
-    font-size: 1.25rem !important;
-  }
-}
+
 
 /* PC: width >= 1024px */
 @media only screen and (min-width: 64em) {}
