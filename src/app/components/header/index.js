@@ -149,11 +149,6 @@ const Header = () => {
           ></GrMenu>
         </div>
       </header>
-      <div className="itemUl">
-                <a>
-                  
-                </a>
-      </div>
     </Fragment>
   );
 };
