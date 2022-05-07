@@ -8,7 +8,7 @@ const NewSlideItem = ({ image, content, key }) => {
     <div className="slider-item">
       <div className="slider-overlay"></div>
       <div className="slider-img">
-        <img src="/slideImg.jpg" alt="" />
+        <img src={image} alt="" />
       </div>
 
       <h2 className="slider-content">
