@@ -33,7 +33,6 @@ const Header = () => {
 
 
   useEffect(() => {
-    console.log('categoryList', categoryList)
   }, categoryList)
   //  Logic scroll show background header */
   // const [sticky, setSticky] = useState("");

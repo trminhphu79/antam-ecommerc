@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./NewSlide.scss";
 import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
 import "swiper/swiper-bundle.min.css";
@@ -10,6 +10,12 @@ import { dataSlide } from "./data-slide/data-slide";
 import "swiper/modules/navigation/navigation.scss";
 
 const NewSlide = () => {
+  let [state, setState] = useState([])
+  useEffect(() => {
+    setState(dataSlide);
+    console.log(state)
+  }, [])
+
   return (
     <section className="slider-list">
       <Swiper
@@ -27,7 +33,7 @@ const NewSlide = () => {
         slidesPerView={"auto"}
         className="mySwiper"
       >
-        {dataSlide.map((item) => (
+        {state.map((item) => (
           <SwiperSlide key={item.id}>
             <NewSlideItem
               image={item.image}
