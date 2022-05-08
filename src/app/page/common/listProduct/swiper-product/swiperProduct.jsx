@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import "./swiperProduct.scss";
 import { SwiperSlide, Swiper } from "swiper/react/swiper-react";
@@ -9,7 +9,7 @@ const SwiperProduct = (props) => {
   const isLoading = props.isLoading
   return (
     <Fragment>
-      <h2 className="product-title">{name }</h2>
+      <h2 className="product-title">{name}</h2>
       <div className="product-home__list">
         {isLoading ? (
           <div className="product-list product-list__loading">
@@ -29,7 +29,9 @@ const SwiperProduct = (props) => {
             {products?.map((item) => {
               return (
                 <SwiperSlide className="product product-home" key={item.id}>
-                  <Link to={`/san-pham/${item.id}`}>
+                  <Link to={{
+                    pathname: `/chi-tiet-san-pham`, state: { params: { id: item.id } }
+                  }}>
                     <div className="">
                       <div
                         className="product-item product-home__item"

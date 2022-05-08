@@ -4,7 +4,10 @@ import "./footer.scss";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsTelephoneFill } from "react-icons/bs";
 import Copyright from "./Copyright";
+import { useSelector } from "react-redux";
 export const Footer = () => {
+  const { categoryList, isLoading } = useSelector((state) => state.category);
+  console.log(categoryList)
   return (
     <footer className="footer">
       <div className="wrapper">

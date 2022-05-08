@@ -64,9 +64,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { getDetailProductAction } from "core/redux/actions/productActions";
 import { addOrderAction } from "core/redux/actions/userActions";
 
-function ProductDetail() {
+function ProductDetail(props) {
   const [form, setForm] = useState(getForms());
-  const { id } = useParams();
+  const id = props.location.state.params.id;
+  const params = useParams();
   const history = useHistory();
   const dispatch = useDispatch();
   const { editProduct } = useSelector((state) => state.product);
@@ -75,7 +76,7 @@ function ProductDetail() {
   useEffect(() => {
     dispatch(getDetailProductAction(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  }, []);
 
   function handleOrder(value) {
     const DEFAULT_PRODUCT = {

@@ -86,10 +86,10 @@ const Header = () => {
               <li className="header-nav__item" key={item.id}>
                 <NavLink
                   onClick={() => setShowMenu(false)}
-                  to={`/loai-san-pham/${item.id}`}
+                  to={`/${item.id}`}
                   className="header-title"
                   activeClassName={
-                    `/loai-san-pham/${item.id}` === pathname ? "active" : ""
+                    `/${item.id}` === pathname ? "active" : ""
                   }
                 >
                   {item.name}
