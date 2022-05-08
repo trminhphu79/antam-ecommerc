@@ -5,19 +5,6 @@ import nonAccentVietnamese from "app/page/utils/convertVn";
 
 const ProductContainer = (props) => {
   const { products: allProduct, isLoading } = props;
-  let newListProduct = [];
-
-  useEffect(() => {
-    allProduct.forEach((item)=>{
-      let urlTitle = nonAccentVietnamese(item.title)
-      item.urlTitle = urlTitle
-      newListProduct.push(item);
-    })
-
-    console.log(newListProduct)
-    // console.log("newListProduct:",newListProduct);
-  }, []);
-
   return (
     <div className="wrapper">
       <div className="product-container">

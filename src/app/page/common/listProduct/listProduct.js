@@ -25,7 +25,6 @@ const ListProduct = ({ title, products, isLoading }) => {
             {products?.length > 0 &&
               products?.map((item) => (
                 <Link
-                  // to={`/${item.id}`}
                   to={{
                     pathname: `/chi-tiet-san-pham`, state: { params: { id: item.id } }
                   }}
