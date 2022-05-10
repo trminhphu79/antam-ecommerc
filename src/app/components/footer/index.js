@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import imageBCT from "../../../assets/images/cobongthuong_chailo.png";
+import { Link } from "react-router-dom";
 import "./footer.scss";
 import { HiLocationMarker } from "react-icons/hi";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -7,7 +9,7 @@ import Copyright from "./Copyright";
 import { useSelector } from "react-redux";
 export const Footer = () => {
   const { categoryList, isLoading } = useSelector((state) => state.category);
-  console.log(categoryList)
+  console.log(categoryList);
   return (
     <footer className="footer">
       <div className="wrapper">
@@ -23,6 +25,46 @@ export const Footer = () => {
               <BsTelephoneFill></BsTelephoneFill>
               Hotline : <a href="tel:0865328664">0865.328.664</a>
             </p>
+          </div>
+          <div className="footer-item">
+            <h3 className="footer-title">Sản phẩm</h3>
+            <ul>
+              <li>
+                <Link to="/chai-lo-hu-nhua">
+                  <span> Chai lọ hủ nhựa</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/chai-lo-my-pham">
+                  <span> Chai lọ mỹ phẩm</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/dat-hang-ve-nhanh-gia-tot">
+                  <span> Đặt hàng về nhanh giá tốt </span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/duoc-thuc-pham">
+                  <span> Dược thực phẩm</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/in-an-thiet-ke-theo-yeu-cau">
+                  <span> In ấn thiết kế theo yêu cầu</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/thiet-ke-hop-giay-theo-yeu-cau">
+                  <span> Thiết kế hộp giấy theo yêu cầu</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/lien-he">
+                  <span> Liên hệ</span>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className="footer-item">
             <h3 className="footer-title">Theo dõi chúng tôi trên</h3>
@@ -70,10 +112,12 @@ export const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="footer-item">
-            <h3 className="footer-title">Chứng nhận bởi</h3>
-            <img src={imageBCT} alt="Chứng nhận bộ công thương" className="footer-img" />
+            <h3 className="footer-title footer-title-2">Chứng nhận bởi</h3>
+            <img
+              src={imageBCT}
+              alt="Chứng nhận bộ công thương"
+              className="footer-img"
+            />
           </div>
         </div>
         <Copyright></Copyright>
