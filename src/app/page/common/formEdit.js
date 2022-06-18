@@ -148,7 +148,6 @@ function FormEdit({ heading }) {
     history.push("/trang-quan-tri/tat-ca-san-pham");
   };
 
-  console.log(urls)
   return (
     <div className="modal-form">
       <div className="modal-body">

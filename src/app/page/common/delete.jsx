@@ -18,7 +18,6 @@ class Delete extends Component {
   };
 
   handleDelete = () => {
-    console.log(this.props)
     const { onDelete, item } = this.props;
     const message = { display: false };
     this.setState({ message });

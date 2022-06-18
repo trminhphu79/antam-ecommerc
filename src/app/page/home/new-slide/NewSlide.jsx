@@ -13,7 +13,6 @@ const NewSlide = () => {
   let [state, setState] = useState([])
   useEffect(() => {
     setState(dataSlide);
-    console.log(state)
   }, [])
 
   return (

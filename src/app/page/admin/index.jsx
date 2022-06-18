@@ -47,14 +47,14 @@ function Admin() {
   };
   // Loading api lần đầu tiên vào trang admin
   useEffect(() => {
-    dispatch(getAllProductAction());
-    dispatch(getAllOrderAction());
-    dispatch(getCategoryAction());
+    // dispatch(getAllProductAction());
+    // dispatch(getAllOrderAction());
+    // dispatch(getCategoryAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
-      <Redirect to="/trang-quan-tri/tat-ca-san-pham" component={AllProducts} />
+      {/* <Redirect to="/trang-quan-tri/tat-ca-san-pham" component={AllProducts} /> */}
       <main className=" container-admin">
         <ListGroup />
         <Switch>

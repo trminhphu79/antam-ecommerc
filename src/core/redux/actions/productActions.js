@@ -79,7 +79,6 @@ export const getAllProductAction = () => {
     });
     getList("product")
       .then((response) => {
-        console.log("response:",response)
         if (response.length) {
           dispatch({
             type: GET_PRODUCTS_SUCCESS,
@@ -125,7 +124,6 @@ export const getDetailProductAction = (id) => {
     });
     getDocById("product", id)
       .then((response) => {
-        console.log(response)
         dispatch({
           type: GET_PRODUCT_DETAIL_SUCCESS,
           payload: response,

@@ -9,7 +9,6 @@ import Copyright from "./Copyright";
 import { useSelector } from "react-redux";
 export const Footer = () => {
   const { categoryList, isLoading } = useSelector((state) => state.category);
-  console.log(categoryList);
   return (
     <footer className="footer">
       <div className="wrapper">

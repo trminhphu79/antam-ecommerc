@@ -10,7 +10,6 @@ export const PublicPage = ({ Component, ...restProps }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(restProps)
     dispatch(getCategoryAction());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
