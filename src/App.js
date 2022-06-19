@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Products from "app/page/products/product";
 import Home from "app/page/home";
@@ -9,14 +9,14 @@ import NotFound from "app/page/notFound/NotFound";
 import LoginPage from "app/page/login/login";
 import Form from "app/page/common/form";
 import { PublicPage } from "HOC/publicPage";
-import { PrivatePage } from "HOC/privatePage";
 import Admin from "app/page/admin";
+import { Toasts } from "app/page/common/toasts/toasts";
 
 function App() {
   return (
     <React.Fragment>
       <ScrollToTop />
-
+    <Toasts />
       <Switch>
         {/* Trang Public */}
         <PublicPage path="/" exact Component={Home} />

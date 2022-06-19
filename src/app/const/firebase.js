@@ -192,3 +192,41 @@ export const updateById = (collection, id, dataUpdate) =>
         reject(`Error delete document: ${error}`);
       });
   });
+
+
+export const getListUser = (collection) =>{
+    return new Promise((resolve,reject)=>{
+      db.collection(collection)
+      .get()
+      .then((snapshot) => {
+        const result = [];
+
+        if (snapshot) {
+          snapshot.forEach((doc) => {
+            const uid = doc.id;
+            const data = doc.data();
+
+            data["id"] = uid;
+            result.push(data);
+          });
+
+          console.log(result)
+          resolve(result);
+        }
+      })
+      .catch((err) => reject(err));
+    })
+}
+
+export const addCustomer = (collection,dataSubmit) =>{
+  return new Promise((resolve,reject)=>{
+    db.collection(collection)
+    .add(dataSubmit)
+    .then((docRef) => {
+      resolve(docRef.id);
+    })
+    .catch((error) => {
+      reject(`Error adding document: ${error}`);
+    });
+  })
+}

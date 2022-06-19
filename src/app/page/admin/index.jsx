@@ -17,6 +17,7 @@ import Category from "./admin-page/category/Category";
 import CategoryForm from "./admin-page/category/action/CategoryForm";
 import "./styles/containerAdmin.scss";
 import { CustomerInfor } from "./admin-page/customer-infor/customerInfor";
+import { getAllUser } from "core/redux/actions/userAction";
 
 function Admin() {
   const dispatch = useDispatch();
