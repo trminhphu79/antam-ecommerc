@@ -24,7 +24,7 @@ function App() {
         <PublicPage path="/form" exact Component={Form} />
         <PublicPage path="/lien-he" exact Component={Contact} />
         <PublicPage path="/dang-nhap" exact Component={LoginPage} />
-        <PublicPage path="/:categoryId" Component={Products} />
+        <PublicPage path="/phan-loai/:categoryId" Component={Products} />
 
         {/* Trang admin */}
         <PublicPage path="/trang-quan-tri" component={Admin} />

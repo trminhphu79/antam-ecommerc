@@ -29,32 +29,32 @@ export const Footer = () => {
             <h3 className="footer-title">Sản phẩm</h3>
             <ul>
               <li>
-                <Link to="/chai-lo-hu-nhua">
+                <Link to="/phan-loai/chai-lo-hu-nhua">
                   <span> Chai lọ hủ nhựa</span>
                 </Link>
               </li>
               <li>
-                <Link to="/chai-lo-my-pham">
+                <Link to="/phan-loai/chai-lo-my-pham">
                   <span> Chai lọ mỹ phẩm</span>
                 </Link>
               </li>
               <li>
-                <Link to="/dat-hang-ve-nhanh-gia-tot">
+                <Link to="/phan-loai/dat-hang-ve-nhanh-gia-tot">
                   <span> Đặt hàng về nhanh giá tốt </span>
                 </Link>
               </li>
               <li>
-                <Link to="/duoc-thuc-pham">
+                <Link to="/phan-loai/duoc-thuc-pham">
                   <span> Dược thực phẩm</span>
                 </Link>
               </li>
               <li>
-                <Link to="/in-an-thiet-ke-theo-yeu-cau">
+                <Link to="/phan-loai/in-an-thiet-ke-theo-yeu-cau">
                   <span> In ấn thiết kế theo yêu cầu</span>
                 </Link>
               </li>
               <li>
-                <Link to="/thiet-ke-hop-giay-theo-yeu-cau">
+                <Link to="/phan-loai/thiet-ke-hop-giay-theo-yeu-cau">
                   <span> Thiết kế hộp giấy theo yêu cầu</span>
                 </Link>
               </li>
