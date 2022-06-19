@@ -4,6 +4,7 @@ import SwiperProduct from "../common/listProduct/swiper-product/swiperProduct";
 import NewSlide from "./new-slide/NewSlide";
 import { getListWithCustomField } from "app/const/firebase"
 import "./Home.scss";
+import { CustomerPopup } from "../common/popup/customerPopup";
 
 function Home() {
   const { categoryList } = useSelector((state) => state.category);
@@ -34,6 +35,7 @@ function Home() {
   return (
     <Fragment>
       <div className="wrapper content-wrapper">
+        <CustomerPopup />
         <NewSlide></NewSlide>
         {loading ? categoryList?.map((item, index) => (
           <SwiperProduct isLoading={false} data={item} key={index} />

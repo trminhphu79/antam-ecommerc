@@ -35,7 +35,7 @@ const Category = () => {
   };
 
   return (
-    <section className="table-section mt-4">
+    <section className="table-section">
       <div className="category-list">
         <h1> Phân loại sản phẩm</h1>
         <div className="header-category mt-5">

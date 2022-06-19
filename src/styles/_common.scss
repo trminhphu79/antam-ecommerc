@@ -121,3 +121,17 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.customer-usermodal{
+  max-width: 600px;
+  .modal-header{
+    border-bottom:none;
+    .btn-close{
+      width: 2em;
+      height: 2em;
+    }
+  }
+  .modal-content{
+    border-radius: 16px;
+    height: 400px;
+  }
+}

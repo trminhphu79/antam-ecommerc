@@ -16,6 +16,7 @@ import TableOrder from "../common/tableOrder";
 import Category from "./admin-page/category/Category";
 import CategoryForm from "./admin-page/category/action/CategoryForm";
 import "./styles/containerAdmin.scss";
+import { CustomerInfor } from "./admin-page/customer-infor/customerInfor";
 
 function Admin() {
   const dispatch = useDispatch();
@@ -33,11 +34,13 @@ function Admin() {
     ],
     allProducts: [
       {
-        value:"Stt",label:"STT"
+        value: "Stt",
+        label: "STT",
       },
       { value: "title", label: "Tên sản phẩm" },
       {
-        value: "category", label: "Phân loại"
+        value: "category",
+        label: "Phân loại",
       },
       { value: "content", label: "Mô tả sản phẩm" },
       { value: "url", label: "Hình ảnh" },
@@ -77,7 +80,10 @@ function Admin() {
               />
             )}
           />
-          <Route path="/trang-quan-tri/phan-loai-san-pham" component={Category} />
+          <Route
+            path="/trang-quan-tri/phan-loai-san-pham"
+            component={Category}
+          />
           <Route
             path="/trang-quan-tri/tat-ca-san-pham"
             render={(props) => (
@@ -88,7 +94,12 @@ function Admin() {
               />
             )}
           />
+          <Route
+            path="/trang-quan-tri/thong-tin-khach-hang"
+            component={CustomerInfor}
+          />
           <Route component={NotFound} />
+
         </Switch>
       </main>
     </>

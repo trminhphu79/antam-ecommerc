@@ -16,8 +16,13 @@ const menuList = [
   },
   {
     name: "Phân loại",
-    icon: icons.iconOder,
+    icon: icons.iconProduct,
     pathLink: "/trang-quan-tri/phan-loai-san-pham",
+  },
+  {
+    name: "Thông tin khách hàng",
+    icon: icons.iconProduct,
+    pathLink: "/trang-quan-tri/thong-tin-khach-hang",
   },
 ];
 
