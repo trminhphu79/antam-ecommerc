@@ -8,6 +8,7 @@ import {
 } from "app/const/firebase";
 
 import EmptyProduct from "./empty-product/EmptyProduct";
+import { CustomerPopup } from "../common/popup/customerPopup";
 class Product extends Component {
   state = {
     products: [],
@@ -120,14 +121,14 @@ class Product extends Component {
     // const allProduct = paginate(sorted, currentPage, pageSize);
 
     return (
+     <>
+       <CustomerPopup />
       <div className="background-page product">
         {/* <Filter
           sortProduct={sortProduct}
           buttons={this.buttons}
           onSort={this.handleSortProduct}
         /> */}
-
-
         {
           (this.state.products.length <= 0) ? <EmptyProduct /> : (
             <ProductContainer
@@ -142,6 +143,7 @@ class Product extends Component {
         }
 
       </div>
+     </>
     );
   }
 }

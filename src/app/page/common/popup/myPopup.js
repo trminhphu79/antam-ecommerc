@@ -1,3 +1,4 @@
+import { CreateToast } from "app/page/utils/createToast";
 import React from "react";
 import { Button, CloseButton, Form, Modal } from "react-bootstrap";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -21,9 +22,11 @@ export function MyVerticallyCenteredModal(props) {
   }
 
   const handleSubmit = () => {
+    if(!formData.address || !formData.area || !formData.name || !formData.phone){
+      return
+    }
     let date = new Date();
     let newDate = date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear()
-    console.log(newDate)
     props.handleSubmit({...formData,dayCreate:newDate})
   }
   const close = () => {

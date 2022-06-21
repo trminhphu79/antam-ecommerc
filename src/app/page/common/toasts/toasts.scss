@@ -2,19 +2,19 @@
 
   --success-color: #68e354;
   --warn-color: #e0e417;
-  --error-color: linear-gradient(
-      0deg,
+  --error-color: linear-gradient(0deg,
       rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.4)
-    ),
+      rgba(255, 255, 255, 0.4)),
     #ef233c;
 }
+
 
 .toasts {
   position: fixed;
   z-index: 120;
   top: 10rem;
   right: 1rem;
+  z-index: 999;
   .toast-box {
     margin-bottom: 1.6rem;
     padding: 2.6rem 3rem;
@@ -28,14 +28,17 @@
     align-items: center;
     overflow: hidden;
     animation: slide-show 1.5s ease forwards;
+
     &__content {
       margin-left: 2rem;
     }
+
     &__title {
       font-size: 16px;
       font-weight: 500;
       color: #333;
     }
+
     &__msg {
       margin: 0;
       font-size: 14px;
@@ -43,12 +46,14 @@
       margin-top: 6px;
       line-height: 1.5rem;
     }
+
     &__close {
-      font-size: 14px;
+      font-size: 18px;
       margin-left: 1.4rem;
       color: #888;
       cursor: pointer;
     }
+
     &__countdown {
       position: absolute;
       left: 0;
@@ -56,11 +61,14 @@
       width: 100%;
       animation: count-down 3s ease forwards;
     }
+
     &.success {
       border-left: 0.6rem solid var(--success-color);
+
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--success-color);
       }
+
       & i {
         color: var(--success-color);
       }
@@ -68,9 +76,11 @@
 
     &.warning {
       border-left: 0.6rem solid var(--warn-color);
+
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--warn-color);
       }
+
       & i {
         color: var(--warn-color);
       }
@@ -78,13 +88,16 @@
 
     &.error {
       border-left: 0.6rem solid var(--error-color);
+
       & .toast-box__countdown {
         border-bottom: 0.4rem solid var(--error-color);
       }
+
       & i {
         color: var(--error-color);
       }
     }
+
     &.hide {
       animation: slide-hide 1.5s ease forwards;
     }
@@ -99,22 +112,31 @@
 @media (max-width: 46.1875em) {
   .toasts {
     right: 1.6rem;
+
+    .toast-box__close{
+      margin-left: 12px;
+      font-size: 22px;
+    }
     .toast-box {
       margin-bottom: 1.4rem;
-      padding: 2.2rem 2.6rem;
+      padding: 1.4rem 1.8rem;
       padding-right: 3.6rem;
-      font-size: 2.2rem;
+      font-size: 1rem;
       animation: sliderRightShow 0.3s linear forwards;
+
       &__content {
-        margin-left: 1.6rem;
+        margin-left: 1.4rem;
       }
+
       &__title {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
       }
+
       &__msg {
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin-top: 5.6px;
       }
+
       &.hide {
         animation: sliderRightHide 1.5s ease forwards;
       }
@@ -130,12 +152,15 @@
       padding: 2.4rem 2.8rem;
       padding-right: 3.8rem;
       font-size: 2.4rem;
+
       &__content {
         margin-left: 1.8rem;
       }
+
       &__title {
         font-size: 2rem;
       }
+
       &__msg {
         font-size: 1.6rem;
         margin-top: 5.8px;
@@ -151,6 +176,7 @@
     opacity: 0;
     transform: translate(100%);
   }
+
   100% {
     opacity: 1;
     transform: translate(0);
@@ -163,9 +189,11 @@
     opacity: 1;
     transform: translate(0);
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: translate(120%);

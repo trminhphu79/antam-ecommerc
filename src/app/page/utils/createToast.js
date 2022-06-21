@@ -33,11 +33,11 @@ export const CreateToast = (state, message) => {
 
   setTimeout(() => {
     toast.classList.add("hide");
-  }, 3000);
+  }, 2500);
 
   const timeoutId = setTimeout(() => {
     toast.remove();
-  }, 3000 + 1300);
+  }, 2500 + 1300);
 
   toast.onclick = (e) => {
     if (e.target.closest(".toast-box__close")) {

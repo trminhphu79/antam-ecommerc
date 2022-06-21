@@ -7,7 +7,8 @@ import { MyVerticallyCenteredModal } from "./myPopup"
 
 export const CustomerPopup = () => {
   const [modalShow, setModalShow] = React.useState(false);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   useEffect(() => {
     setTimeout(() => {
       setModalShow(true)
@@ -17,7 +18,8 @@ export const CustomerPopup = () => {
   const handleSubmit = (data) => {
     if (data.phone && data.name && data.address) {
       dispatch(newCustomer(data))
-      setModalShow(false)
+      setModalShow(false);
+      CreateToast('success',"Gửi thông tin liên hệ thành công!")
     }
   }
   const close = (value) => {
