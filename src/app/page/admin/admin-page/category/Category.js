@@ -67,7 +67,7 @@ const Category = () => {
                   cursor: "pointer",
                 }}
               >
-                <span
+                {/* <span
                   className="btn-edit"
                   style={{
                     margin: "0 15px 0 0",
@@ -77,16 +77,16 @@ const Category = () => {
                   }}
                 >
                   <i className="fa fa-pen-to-square"></i>
-                </span>
+                </span> */}
 
-                <span
+                {/* <span
                   className="btn-delete"
                   onClick={() => {
                     handleRemoveCategory(item.id);
                   }}
                 >
                   <i className="fa fa-trash"></i>
-                </span>
+                </span> */}
               </td>
             </tr>
           ))}
