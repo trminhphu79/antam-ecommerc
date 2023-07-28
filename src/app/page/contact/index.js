@@ -3,8 +3,8 @@ import "./Contact.scss";
 import imageContact from "../../../assets/images/contact.jpg";
 import { CustomerPopup } from "../common/popup/customerPopup";
 
-export const phoneNumber = "0865328664";
-
+export const phoneNumber = "0388886901";
+export const companyName = "Công ty TNHH An Tâm"
 export const Contact = () => {
   return (
     <>
@@ -14,7 +14,7 @@ export const Contact = () => {
   <div className="background-page contact">
     <h1 className="contact__title">Giới thiệu công ty</h1>
     <h3 className="contact__desc">
-      Công ty chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn,
+      Công ty TNHH An Tâm chuyên cung cấp chai, hũ, lọ mỹ phẩm, lọ serum, hộp phấn,
       tuýp, mẫu vỏ son cao cấp. Nhận in ấn trực tiếp chai lọ không bong
       tróc, đẹp, chất lượng nước ngoài.
     </h3>
@@ -57,6 +57,7 @@ export const Contact = () => {
       </div>
       <div className="contact__card-item">
         <button className="contact__card-item-btn">Liên Hệ Zalo</button>
+        <p className="contact__card-item-phone">{companyName}</p>
         <p className="contact__card-item-phone">SĐT: {phoneNumber}</p>
       </div>
     </div>

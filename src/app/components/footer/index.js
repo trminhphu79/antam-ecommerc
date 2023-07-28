@@ -22,7 +22,7 @@ export const Footer = () => {
             </p>
             <p className="footer-text">
               <BsTelephoneFill></BsTelephoneFill>
-              Hotline : <a href="tel:0865328664">0865.328.664</a>
+              Hotline : <a href="tel:0388886901">038.8886.901</a>
             </p>
           </div>
           <div className="footer-item">
@@ -87,7 +87,7 @@ export const Footer = () => {
                   ></path>
                 </svg>
               </a>
-              <a href="https://chat.zalo.me/?phone=0865328664" target="_blank">
+              <a href="https://chat.zalo.me/?phone=0388886901" target="_blank">
                 <svg
                   width="35"
                   height="35"

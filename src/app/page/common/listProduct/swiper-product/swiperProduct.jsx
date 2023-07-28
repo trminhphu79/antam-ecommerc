@@ -41,7 +41,7 @@ const SwiperProduct = (props) => {
                         <div className="product-body">
                           <h4 className="product-name">{item.title}</h4>
                           <p className="product-price">Giá sỉ liên hệ</p>
-                          <p className="product-phone">0865328664</p>
+                          <p className="product-phone">0388886901</p>
                         </div>
                       </div>
                     </div>

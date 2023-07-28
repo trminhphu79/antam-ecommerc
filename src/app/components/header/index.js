@@ -125,7 +125,7 @@ const Header = () => {
             </li>
             <button className="btn header-phone">
               <a
-                href="tel:0865328664"
+                href="tel:0388886901"
                 className="header-nav__contact animate-pulse"
               >
                 <span>
