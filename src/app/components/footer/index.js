@@ -7,6 +7,8 @@ import { HiLocationMarker } from "react-icons/hi";
 import { BsTelephoneFill } from "react-icons/bs";
 import Copyright from "./Copyright";
 import { useSelector } from "react-redux";
+export const companyName = "Công ty TNHH An Tâm"
+
 export const Footer = () => {
   const { categoryList, isLoading } = useSelector((state) => state.category);
   return (
@@ -15,6 +17,7 @@ export const Footer = () => {
         <div className="footer-content">
           <div className="footer-item">
             <h3 className="footer-title">Liên hệ</h3>
+            <p className="footer-text">{companyName}</p>
             <p className="footer-text">
               <HiLocationMarker></HiLocationMarker>
               B1/9 đường liên ấp 2-6 xã Vĩnh Lộc A huyện Bình Chánh thành phố Hồ

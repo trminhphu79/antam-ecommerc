@@ -1,5 +1,6 @@
 .contact {
   width: 100%;
+
   &__title {
     margin-top: 20px;
     font-size: 2.2rem;
@@ -8,12 +9,14 @@
     line-height: 2.8rem;
     color: var(--primary-color);
   }
+
   &__desc {
     margin: 0;
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--title-big-color);
   }
+
   &__content {
     &-image {
       width: 100%;
@@ -22,15 +25,18 @@
       object-fit: cover;
       margin: 20px auto;
     }
+
     &-line {
       font-size: 1.6rem;
       line-height: 3.8rem;
       color: var(--text-color);
     }
+
     &-line:last-child {
       margin-bottom: 0;
     }
   }
+
   &__card {
     position: relative;
     display: flex;
@@ -46,13 +52,16 @@
     padding: 0 40px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.12);
     border-radius: 30px;
+
     &-item:first-child {
       display: flex;
       align-items: center;
+
       &.contact__card-item-text {
         font-size: 1.8rem;
       }
     }
+
     &-item {
       &-logo {
         margin-right: 16px;
@@ -65,6 +74,7 @@
         width: 67px;
         height: 67px;
       }
+
       &-text {
         width: 360px;
         margin: 0;
@@ -72,23 +82,23 @@
         line-height: 2.8rem;
         color: var(--white-color);
       }
+
       &-btn {
         border: none;
         outline: none;
         cursor: unset !important;
         width: 154px;
         height: 40px;
-        background: linear-gradient(
-            0deg,
+        background: linear-gradient(0deg,
             rgba(0, 0, 0, 0.35),
-            rgba(0, 0, 0, 0.35)
-          ),
+            rgba(0, 0, 0, 0.35)),
           #0050c9;
         color: var(--white-color);
         box-shadow: 0px 12.3421px 30px rgba(0, 0, 0, 0.15);
         border-radius: 8px;
         font-size: 1.6rem;
       }
+
       &-phone {
         margin: 0;
         margin-top: 10px;
@@ -99,11 +109,13 @@
       }
     }
   }
+
   &__info {
     font-size: 1.6rem;
     margin-top: 40px;
     color: var(--title-color);
     padding-bottom: 40px;
+
     & a {
       text-decoration: none;
       color: #003f9e;
@@ -111,6 +123,7 @@
     }
   }
 }
+
 .wrapper-contact {
   padding-top: 90px;
 }
@@ -122,25 +135,32 @@
       line-height: 1.6;
       font-size: 1.8rem;
     }
+
     &__content {
       display: block;
       margin-top: 26px;
+
       &-image {
         width: 100%;
         height: 283px;
       }
+
       &-list {
         margin-top: 16px;
       }
+
       &-line {
         font-size: 1.4rem;
       }
     }
+
     &__card {
       display: none;
+
       &-item:last-child {
         display: flex;
       }
+
       &-item {
         &-logo {
           display: block;
@@ -149,31 +169,38 @@
           height: 51px;
           border-width: 6px;
         }
+
         &-text {
           width: 287px;
           font-size: 1.4rem;
           line-height: 2rem;
         }
+
         &-btn {
           margin-right: 16px;
         }
       }
     }
+
     &__info {
       font-size: 1.4rem;
       line-height: 1.6;
       margin: 18px 0 0;
     }
   }
+
   .background-page.contact {
     padding: 12px;
   }
-  .contact ~ .footer {
+
+  .contact~.footer {
     background: #f3f6fc;
   }
+
   .footer {
     margin-top: 0 !important;
   }
+
   .wrapper-contact {
     padding-top: 65px;
   }
@@ -185,22 +212,27 @@
     &__desc {
       font-size: 2.2rem;
     }
+
     &__content {
       display: block;
       margin: 4.6rem 0 0;
+
       &-image {
         margin: 0 auto 2rem;
       }
+
       &-list {
         margin-top: 16px;
       }
     }
+
     &__card {
       margin-top: 4.4rem;
       padding: 16px;
       width: 100%;
       height: 147px;
       margin-bottom: 4rem;
+
       &-item {
         &-logo {
           display: block;
@@ -209,6 +241,7 @@
           height: 51px;
           border-width: 6px;
         }
+
         &-text {
           width: 50%;
           font-size: 1.6rem;
@@ -216,16 +249,26 @@
         }
       }
     }
+
     &__info {
       font-size: 1.6rem;
       line-height: 1.6;
       margin: 18px 0 50px;
     }
   }
+
   .background-page.contact {
     padding: 24px;
   }
-  .contact ~ .footer {
+
+  .contact~.footer {
     background: #f3f6fc;
+  }
+}
+
+
+.contact__card-item-btn {
+  a {
+    color: #fff;
   }
 }

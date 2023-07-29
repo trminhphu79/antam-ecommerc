@@ -94,7 +94,7 @@ const productContent = (props) => {
           <h2 className="product-intro__title">{props.product?.title}</h2>
           <p className="product-intro__desc">{props.product?.content}</p>
           <p className="product-intro__contact">
-            Liên hệ: <span>0865.328.664</span>
+            Liên hệ: <span>038.8886.901</span>
           </p>
         </div>
       </div>

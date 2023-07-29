@@ -5,8 +5,8 @@ const Copyright = () => {
     <section className="copyright">
       <span>
         Copyright © 2022{" "}
-        <a href="https://chailoduocmyphamgiagoc.com/">
-          chailoduocmyphamgiagoc.com
+        <a href="https://xuongchailo.vn/">
+          xuongchailo.vn
         </a>
       </span>
     </section>

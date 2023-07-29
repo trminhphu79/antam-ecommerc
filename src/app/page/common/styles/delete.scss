@@ -43,7 +43,7 @@
         background-color: #919191;
     }
     &-btn--delete {
-        background-color: $btn-primary-color;
+        background-color: var(--btn-primary-color);
         width: 12rem;
     }
 }

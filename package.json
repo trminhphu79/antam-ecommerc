@@ -12,7 +12,8 @@
     "firebase": "^8.10.1",
     "joi-browser": "^13.4.0",
     "lodash": "^4.17.21",
-    "node-sass": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-custom-properties": "^9.1.1",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.0",
     "react": "^17.0.2",
@@ -25,6 +26,7 @@
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
     "redux-thunk": "^2.4.1",
+    "sass": "^1.64.1",
     "swiper": "^8.0.7",
     "web-vitals": "^1.1.1",
     "yup": "^0.32.11"
@@ -53,9 +55,11 @@
       "last 1 safari version"
     ]
   },
+  "resolutions": {
+    "postcss-custom-properties": "^9.1.1"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
     "tailwindcss": "^3.0.23"
   }
 }

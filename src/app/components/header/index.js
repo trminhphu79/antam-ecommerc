@@ -133,15 +133,15 @@ const Header = () => {
                 </span>
                 <span className="text-effect">
                   <span className="text-child">0</span>
-                  <span className="text-child">8</span>
-                  <span className="text-child">6</span>
-                  <span className="text-child">5</span>
                   <span className="text-child">3</span>
-                  <span className="text-child">2</span>
+                  <span className="text-child">8</span>
+                  <span className="text-child">8</span>
+                  <span className="text-child">8</span>
                   <span className="text-child">8</span>
                   <span className="text-child">6</span>
-                  <span className="text-child">6</span>
-                  <span className="text-child">4</span>
+                  <span className="text-child">9</span>
+                  <span className="text-child">0</span>
+                  <span className="text-child">1</span>
                 </span>
               </a>
             </button>

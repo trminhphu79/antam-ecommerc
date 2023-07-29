@@ -2,9 +2,9 @@
 .product-section {
   .product-btn-create {
     color: #fff;
-    background-color: $btn-primary-color;
+    background-color: var(--btn-primary-color);
     padding: 4px 10px;
-    border: 1px solid $btn-primary-color;
+    border: 1px solid var(--btn-primary-color);
     border-radius: 4px;
     a {
       text-decoration: none;
