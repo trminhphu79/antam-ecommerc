@@ -20,7 +20,7 @@ export const Footer = () => {
             <p className="footer-text">{companyName}</p>
             <p className="footer-text">
               <HiLocationMarker></HiLocationMarker>
-              B1/9 đường liên ấp 2-6 xã Vĩnh Lộc A huyện Bình Chánh thành phố Hồ
+              Tổ 4 ấp 2 xã Vĩnh Lộc A huyện Bình Chánh thành phố Hồ
               Chí Minh
             </p>
             <p className="footer-text">

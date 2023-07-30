@@ -69,7 +69,7 @@ export const Contact = () => {
             Hotline : <a href={"tel:" + phoneNumber}>038.8886.901</a> <br />
             Địa chỉ :{" "}
             <a target="_plank" href="https://goo.gl/maps/zWeALuNm3qTM427H7">
-              B1/9 đường liên ấp 2-6 xã Vĩnh Lộc A huyện Bình Chánh thành phố Hồ
+            Tổ 4 ấp 2 xã Vĩnh Lộc A huyện Bình Chánh thành phố Hồ
               Chí Minh
             </a>
           </p>
